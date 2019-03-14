@@ -1,1 +1,1 @@
-# EE2026-Design-Project
+# EE2026: Digital Design Project
