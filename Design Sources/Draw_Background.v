@@ -45,3 +45,4 @@ module Draw_Background(
                             // if true, a red pixel is put at coordinates (VGA_HORZ_COORD, VGA_VERT_COORD), 
      
 endmodule
+
