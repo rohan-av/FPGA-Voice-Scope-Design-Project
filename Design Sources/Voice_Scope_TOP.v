@@ -19,7 +19,8 @@ module Voice_Scope_TOP(
     output [3:0] VGA_BLUE,
     
     output VGA_VS,          // horizontal & vertical sync outputs to VGA connector
-    output VGA_HS
+    output VGA_HS,
+    output [11:0] MIC_in
     );
        
    
@@ -31,14 +32,18 @@ module Voice_Scope_TOP(
 
        
        
-    
+   
+   
 // Please create a clock divider module to generate a 20kHz clock signal. 
 // Instantiate it below
+    wire clk1;
+    clk_div twenty_khz (CLK, clk1);
     
 
    
        
 // Please instantiate the voice capturer module below
+    Voice_Capturer vc1 ( CLK, clk1, J_MIC3_Pin3, J_MIC3_Pin1, J_MIC3_Pin4, MIC_in);
    
 
 
