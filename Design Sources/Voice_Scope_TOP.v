@@ -43,12 +43,14 @@ module Voice_Scope_TOP(
    
        
 // Please instantiate the voice capturer module below
-    Voice_Capturer vc1 ( CLK, clk1, J_MIC3_Pin3, J_MIC3_Pin1, J_MIC3_Pin4, MIC_in);
-   
-
-
-
-
+    Voice_Capturer vc1 ( 
+    .CLK(CLK),
+    .cs(clk1),
+    .MISO(J_MIC3_Pin3), 
+    .clk_samp(J_MIC3_Pin1),
+    .sclk(J_MIC3_Pin4), 
+    .sample(MIC_in)
+    ); 
 
 //-----------------------------------------------------------------------------
 //                  STUDENT B - VGA
@@ -64,21 +66,48 @@ module Voice_Scope_TOP(
     wire [3:0] VGA_Blue_waveform;
     wire [9:0] wave_sample; 
     
+    TestWave_Gen t1 (clk1, wave_sample);
     
-    
+    Draw_Waveform d1 (
+    .clk_sample(clk1),
+    .wave_sample(wave_sample), 
+    .VGA_HORZ_COORD(VGA_HORZ_COORD), 
+    .VGA_VERT_COORD(VGA_VERT_COORD), 
+    .VGA_Red_waveform(VGA_Red_waveform), 
+    .VGA_Green_waveform(VGA_Green_waveform), 
+    .VGA_Blue_waveform(VGA_Blue_waveform)
+    );  
 
 // Please instantiate the background drawing module below   
     wire [3:0] VGA_Red_grid;
     wire [3:0] VGA_Green_grid;
     wire [3:0] VGA_Blue_grid;
     
-   
+    Draw_Background b1 (
+    .VGA_HORZ_COORD(VGA_HORZ_COORD), 
+    .VGA_VERT_COORD(VGA_VERT_COORD), 
+    .VGA_Red_Grid(VGA_Red_grid), 
+    .VGA_Green_Grid(VGA_Green_grid),
+    .VGA_Blue_Grid(VGA_Blue_grid)
+    );
     
 // Please instantiate the VGA display module below     
      
-     
-     
-     
-     
-                    
+    VGA_DISPLAY d2 (
+    .CLK(CLK), 
+    .VGA_RED_WAVEFORM(VGA_Red_waveform), 
+    .VGA_GREEN_WAVEFORM(VGA_Green_waveform), 
+    .VGA_BLUE_WAVEFORM(VGA_Blue_waveform), 
+    .VGA_RED_GRID(VGA_Red_grid), 
+    .VGA_GREEN_GRID(VGA_Green_grid), 
+    .VGA_BLUE_GRID(VGA_Blue_grid), 
+    .VGA_HORZ_COORD(VGA_HORZ_COORD), 
+    .VGA_VERT_COORD(VGA_VERT_COORD), 
+    .VGA_RED(VGA_RED), 
+    .VGA_GREEN(VGA_GREEN), 
+    .VGA_BLUE(VGA_BLUE), 
+    .VGA_VS(VGA_VS), 
+    .VGA_HS(VGA_HS)
+    );
+                       
 endmodule
