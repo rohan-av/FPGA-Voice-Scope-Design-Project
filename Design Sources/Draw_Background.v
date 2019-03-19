@@ -30,7 +30,7 @@ module Draw_Background(
     );
     
 // The code below draws two grid lines. Modify the codes to draw more grid lines. 
-    wire Condition_For_Grid = (VGA_HORZ_COORD == 800) ||  (VGA_VERT_COORD == 250) ;
+    wire Condition_For_Grid = (VGA_HORZ_COORD % 80 == 0) ||  (VGA_VERT_COORD % 64 == 0) ;
 
 
 // Using the gridline example, insert your code below to draw ticks on the x-axis and y-axis.
@@ -45,4 +45,3 @@ module Draw_Background(
                             // if true, a red pixel is put at coordinates (VGA_HORZ_COORD, VGA_VERT_COORD), 
      
 endmodule
-
