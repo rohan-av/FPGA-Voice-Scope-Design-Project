@@ -23,7 +23,8 @@ module Voice_Capturer(
     input MISO,                 // J_MIC3_Pin3, serial mic input
     output clk_samp,            // J_MIC3_Pin1
     output reg sclk,            // J_MIC3_Pin4, MIC3 serial clock
-    output reg [11:0]sample     // 12-bit audio sample data
+    output reg [11:0]sample,     // 12-bit audio sample data
+    output reg [9:0]display_sample
     );
     
     reg [11:0]count2 = 0;
@@ -47,6 +48,7 @@ module Voice_Capturer(
 
     always @ (posedge cs) begin
         sample <= temp[11:0];
+        display_sample <= temp[11:2];
     end
     
 endmodule
