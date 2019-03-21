@@ -36,11 +36,11 @@ module VGA_DISPLAY(
 
     );
     
-    
     // COMBINE ALL OUTPUTS ON EACH CHANNEL
     wire[3:0] VGA_RED_CHAN = VGA_RED_GRID | VGA_RED_WAVEFORM ;
     wire[3:0] VGA_GREEN_CHAN = VGA_GREEN_GRID | VGA_GREEN_WAVEFORM ; 
-    wire[3:0] VGA_BLUE_CHAN = VGA_BLUE_GRID | VGA_BLUE_WAVEFORM;   
+    wire[3:0] VGA_BLUE_CHAN = VGA_BLUE_GRID | VGA_BLUE_WAVEFORM; 
+    
     
     
     // VGA Clock Generator (108MHz)
@@ -65,7 +65,6 @@ module VGA_DISPLAY(
         ) ; 
     
 
-    
     // CLOCK THEM OUT
     always@(posedge CLK_VGA) begin      
         

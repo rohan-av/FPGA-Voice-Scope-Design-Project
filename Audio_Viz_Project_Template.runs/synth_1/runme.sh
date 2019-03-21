@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/sujay/Desktop/ee2026/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/synth_1'
+HD_PWD='C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

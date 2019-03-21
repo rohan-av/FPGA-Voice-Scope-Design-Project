@@ -17,28 +17,33 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/sujay/Desktop/ee2026/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.cache/wt [current_project]
-set_property parent.project_path C:/Users/sujay/Desktop/ee2026/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.xpr [current_project]
+set_property webtalk.parent_dir {C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_cache_permissions disable [current_project]
 read_verilog -library xil_defaultlib {
-  C:/Users/sujay/Desktop/ee2026/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VOICE_CAPTURER.v
-  C:/Users/sujay/Desktop/ee2026/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VGA_DISPLAY.v
-  C:/Users/sujay/Desktop/ee2026/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Waveform.v
-  C:/Users/sujay/Desktop/ee2026/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Background.v
-  C:/Users/sujay/Desktop/ee2026/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Voice_Scope_TOP.v
-  C:/Users/sujay/Desktop/ee2026/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/clk_div.v
-  C:/Users/sujay/Desktop/ee2026/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/TestWave_Gen.v
+  {C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VOICE_CAPTURER.v}
+  {C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VGA_DISPLAY.v}
+  {C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Waveform.v}
+  {C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Background.v}
+  {C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Voice_Scope_TOP.v}
+  {C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/clk_div.v}
+  {C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/TestWave_Gen.v}
+  {C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/dff.v}
+  {C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/single_pulse.v}
+  {C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/button_clk.v}
+  {C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/cycle_colour.v}
 }
 read_vhdl -library xil_defaultlib {
-  C:/Users/sujay/Desktop/ee2026/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VGA_CONTROL.vhd
-  C:/Users/sujay/Desktop/ee2026/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/CLK_108M.vhd
+  {C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VGA_CONTROL.vhd}
+  {C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/CLK_108M.vhd}
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -48,8 +53,8 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/sujay/Desktop/ee2026/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc
-set_property used_in_implementation false [get_files C:/Users/sujay/Desktop/ee2026/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc]
+read_xdc {{C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
