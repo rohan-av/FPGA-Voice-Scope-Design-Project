@@ -25,7 +25,7 @@ module clk_div(input CLK, output reg SLOW_CLK = 0);
     
     always@(posedge CLK)
         begin
-            counter <= (counter == 2499)? 0 : counter + 1;
-            SLOW_CLK = (counter == 0)? ~SLOW_CLK : SLOW_CLK;
+            counter <= (counter == 2499)? 0 : counter + 1;          
+            SLOW_CLK <= (counter == 0)? ~SLOW_CLK : SLOW_CLK;
         end  
 endmodule

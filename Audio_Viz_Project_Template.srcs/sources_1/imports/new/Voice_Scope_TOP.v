@@ -22,7 +22,9 @@ module Voice_Scope_TOP(
     
     output VGA_VS,          // horizontal & vertical sync outputs to VGA connector
     output VGA_HS,
-    output [11:0] MIC_in
+    output [11:0] peakval,
+    output [3:0] ss_enable,
+    output [7:0] ss_active
     );
        
    
@@ -31,13 +33,14 @@ module Voice_Scope_TOP(
 //-----------------------------------------------------------------------------
 //                  STUDENT A - MIC
 //-----------------------------------------------------------------------------
-
+   
    wire [2:0] colour_select;
    cycle_colour clr1 (CLK, colour_button, colour_select); 
        
 // Please create a clock divider module to generate a 20kHz clock signal. 
 // Instantiate it below
     
+    wire [11:0] MIC_in;
     wire new_clock;
     clk_div c0(CLK,new_clock);
    
@@ -52,7 +55,16 @@ module Voice_Scope_TOP(
      .sclk(J_MIC3_Pin4), 
      .sample(MIC_in)
      );
-
+    
+    volume_indicator vi1 (
+        .cs(new_clock),
+        .sample(MIC_in),
+        .freeze_sw(freeze_sw),
+        .ramp_sw(ramp_sw),
+        .intensity(peakval),
+        .ss_enable(ss_enable),
+        .ss_active(ss_active)
+        );
 //-----------------------------------------------------------------------------
 //                  STUDENT B - VGA
 //-----------------------------------------------------------------------------
@@ -70,7 +82,7 @@ module Voice_Scope_TOP(
     wire [3:0] VGA_Blue_waveform;
     wire [9:0] wave_sample; 
     
-    assign wave_sample = (ramp_sw == 1)? MIC_in[11:2] : test_wave;
+    assign wave_sample = (ramp_sw == 0)? MIC_in[11:2] : test_wave;
     
     Draw_Waveform d1 (
     .clk_sample(new_clock),
