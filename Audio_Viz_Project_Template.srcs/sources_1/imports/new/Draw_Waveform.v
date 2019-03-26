@@ -34,31 +34,31 @@ module Draw_Waveform(
             B_colour = 4'h0;
             end
         
-        3'b010: // white bg fff + dark blue waveform 004 + red grid b01
+        3'b010: // white bg fff + black waveform 000 + red grid b01
             begin
             R_colour = 4'h0;
             G_colour = 4'h0;
-            B_colour = 4'h4;
+            B_colour = 4'h0;
             end
-        3'b011: // dark blue bg 337 + orange waveform fa0
+        3'b011: // dark blue bg 228 + orange waveform fa0
             begin
             R_colour = 4'hf;
             G_colour = 4'ha;
             B_colour = 4'h0;
             end
         
-        3'b100: // purple bg c1d + white waveform fff + d6b
+        3'b100: // purple bg 614 + white waveform fff + d6b
             begin
             R_colour = 4'hf;
             G_colour = 4'hf;
             B_colour = 4'hf;
             end
         
-        3'b101: // light pink bg e8d + light blue waveform 8de  + apple green de8 grid
+        3'b101: // light pink bg e8d + deep purple 303  + apple green df8 grid
             begin
-            R_colour = 4'h8;
-            G_colour = 4'hd;
-            B_colour = 4'he;
+            R_colour = 4'h0;
+            G_colour = 4'h0;
+            B_colour = 4'h0;
             end
         
         default: // default waveform

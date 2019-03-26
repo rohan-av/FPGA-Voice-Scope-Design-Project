@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date                      : Sat Mar 23 16:22:20 2019
-| Host                      : LAPTOP-P6DBKN0G running 64-bit major release  (build 9200)
+| Date                      : Tue Mar 26 23:31:19 2019
+| Host                      : DESKTOP-K0CKIO3 running 64-bit major release  (build 9200)
 | Command                   : report_io -file Voice_Scope_TOP_io_placed.rpt
 | Design                    : Voice_Scope_TOP
 | Device                    : xc7a35t
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            45 |
+|            46 |
 +---------------+
 
 
@@ -214,7 +214,7 @@ Table of Contents
 | T2         |               | High Range | IO_L1N_T0_34                 | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | T3         |               | High Range | IO_L2N_T0_34                 | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | T17        |               | High Range | IO_L17P_T2_A14_D30_14        | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| T18        |               | High Range | IO_L17N_T2_A13_D29_14        | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| T18        | grid_button   | High Range | IO_L17N_T2_A13_D29_14        | INPUT         | LVCMOS33    |      14 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | T19        |               |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | U1         |               | High Range | IO_L3N_T0_DQS_34             | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | U2         | ss_enable[0]  | High Range | IO_L9N_T1_DQS_34             | OUTPUT        | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |

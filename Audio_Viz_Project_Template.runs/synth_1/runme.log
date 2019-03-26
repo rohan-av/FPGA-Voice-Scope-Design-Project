@@ -14,34 +14,37 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13432 
+INFO: Helper process launched with PID 23660 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 357.820 ; gain = 99.660
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 357.344 ; gain = 99.277
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Voice_Scope_TOP' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Voice_Scope_TOP.v:10]
-INFO: [Synth 8-6157] synthesizing module 'cycle_colour' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/cycle_colour.v:23]
-INFO: [Synth 8-6157] synthesizing module 'button_clk' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/button_clk.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'button_clk' (1#1) [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/button_clk.v:23]
-INFO: [Synth 8-6157] synthesizing module 'single_pulse' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/single_pulse.v:23]
-INFO: [Synth 8-6157] synthesizing module 'dff' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/dff.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'dff' (2#1) [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/dff.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'single_pulse' (3#1) [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/single_pulse.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'cycle_colour' (4#1) [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/cycle_colour.v:23]
-INFO: [Synth 8-6157] synthesizing module 'clk_div' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/clk_div.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'clk_div' (5#1) [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/clk_div.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Voice_Capturer' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VOICE_CAPTURER.v:20]
-INFO: [Synth 8-6155] done synthesizing module 'Voice_Capturer' (6#1) [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VOICE_CAPTURER.v:20]
-INFO: [Synth 8-6157] synthesizing module 'volume_indicator' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/volume_indicator.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'volume_indicator' (7#1) [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/volume_indicator.v:23]
-INFO: [Synth 8-6157] synthesizing module 'TestWave_Gen' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/TestWave_Gen.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'TestWave_Gen' (8#1) [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/TestWave_Gen.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Draw_Waveform' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Waveform.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Draw_Waveform' (9#1) [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Waveform.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Draw_Background' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Background.v:24]
+INFO: [Synth 8-6157] synthesizing module 'Voice_Scope_TOP' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Voice_Scope_TOP.v:10]
+INFO: [Synth 8-6157] synthesizing module 'cycle_colour' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/cycle_colour.v:23]
+INFO: [Synth 8-6157] synthesizing module 'button_clk' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/button_clk.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'button_clk' (1#1) [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/button_clk.v:23]
+INFO: [Synth 8-6157] synthesizing module 'single_pulse' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/single_pulse.v:23]
+INFO: [Synth 8-6157] synthesizing module 'dff' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/dff.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'dff' (2#1) [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/dff.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'single_pulse' (3#1) [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/single_pulse.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'cycle_colour' (4#1) [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/cycle_colour.v:23]
+INFO: [Synth 8-6157] synthesizing module 'cycle_grid' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/cycle_grid.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'cycle_grid' (5#1) [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/cycle_grid.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clk_div' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/clk_div.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clk_div' (6#1) [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/clk_div.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Voice_Capturer' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VOICE_CAPTURER.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'Voice_Capturer' (7#1) [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VOICE_CAPTURER.v:20]
+INFO: [Synth 8-6157] synthesizing module 'volume_indicator' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/volume_indicator.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'volume_indicator' (8#1) [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/volume_indicator.v:23]
+INFO: [Synth 8-6157] synthesizing module 'TestWave_Gen' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/TestWave_Gen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'TestWave_Gen' (9#1) [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/TestWave_Gen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Draw_Waveform' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Waveform.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Draw_Waveform' (10#1) [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Waveform.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Draw_Background' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Background.v:24]
 	Parameter tt bound to: 2'b01 
-INFO: [Synth 8-6155] done synthesizing module 'Draw_Background' (10#1) [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Background.v:24]
-INFO: [Synth 8-6157] synthesizing module 'VGA_DISPLAY' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VGA_DISPLAY.v:17]
-INFO: [Synth 8-638] synthesizing module 'CLK_108M' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/CLK_108M.vhd:83]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Background.v:141]
+INFO: [Synth 8-6155] done synthesizing module 'Draw_Background' (11#1) [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Background.v:24]
+INFO: [Synth 8-6157] synthesizing module 'VGA_DISPLAY' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VGA_DISPLAY.v:17]
+INFO: [Synth 8-638] synthesizing module 'CLK_108M' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/CLK_108M.vhd:83]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_MULT_F bound to: 10.125000 - type: float 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
@@ -90,16 +93,16 @@ INFO: [Synth 8-638] synthesizing module 'CLK_108M' [C:/Users/sujay/Desktop/ee202
 	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
 	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
 	Parameter STARTUP_WAIT bound to: 0 - type: bool 
-INFO: [Synth 8-113] binding component instance 'mmcm_adv_inst' to cell 'MMCME2_ADV' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/CLK_108M.vhd:125]
-INFO: [Synth 8-113] binding component instance 'clkf_buf' to cell 'BUFG' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/CLK_108M.vhd:187]
-INFO: [Synth 8-113] binding component instance 'clkout1_buf' to cell 'BUFG' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/CLK_108M.vhd:194]
-INFO: [Synth 8-256] done synthesizing module 'CLK_108M' (11#1) [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/CLK_108M.vhd:83]
-INFO: [Synth 8-638] synthesizing module 'VGA_CONTROL' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VGA_CONTROL.vhd:61]
-INFO: [Synth 8-256] done synthesizing module 'VGA_CONTROL' (12#1) [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VGA_CONTROL.vhd:61]
-INFO: [Synth 8-6155] done synthesizing module 'VGA_DISPLAY' (13#1) [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VGA_DISPLAY.v:17]
-INFO: [Synth 8-6155] done synthesizing module 'Voice_Scope_TOP' (14#1) [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Voice_Scope_TOP.v:10]
+INFO: [Synth 8-113] binding component instance 'mmcm_adv_inst' to cell 'MMCME2_ADV' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/CLK_108M.vhd:125]
+INFO: [Synth 8-113] binding component instance 'clkf_buf' to cell 'BUFG' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/CLK_108M.vhd:187]
+INFO: [Synth 8-113] binding component instance 'clkout1_buf' to cell 'BUFG' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/CLK_108M.vhd:194]
+INFO: [Synth 8-256] done synthesizing module 'CLK_108M' (12#1) [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/CLK_108M.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'VGA_CONTROL' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VGA_CONTROL.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'VGA_CONTROL' (13#1) [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VGA_CONTROL.vhd:61]
+INFO: [Synth 8-6155] done synthesizing module 'VGA_DISPLAY' (14#1) [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VGA_DISPLAY.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Voice_Scope_TOP' (15#1) [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Voice_Scope_TOP.v:10]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 412.930 ; gain = 154.770
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 412.816 ; gain = 154.750
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -112,10 +115,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 412.930 ; gain = 154.770
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 412.816 ; gain = 154.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 412.930 ; gain = 154.770
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 412.816 ; gain = 154.750
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -124,9 +127,9 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc]
-Finished Parsing XDC File [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Voice_Scope_TOP_propImpl.xdc].
+Parsing XDC File [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Voice_Scope_TOP_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Voice_Scope_TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
@@ -134,22 +137,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 736.234 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 739.371 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 736.234 ; gain = 478.074
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 739.371 ; gain = 481.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 736.234 ; gain = 478.074
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 739.371 ; gain = 481.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 736.234 ; gain = 478.074
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 739.371 ; gain = 481.305
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "SLOW_CLK0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-802] inferred FSM for state register 'ss_enable_reg' in module 'volume_indicator'
@@ -160,8 +163,12 @@ INFO: [Synth 8-5546] ROM "samplemax0" won't be mapped to RAM because it is too s
 INFO: [Synth 8-5544] ROM "ss_enable0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "ss_tens" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "full_display_cycle0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "VGA_Red_Grid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'VGA_Red_Grid_reg' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Background.v:144]
+WARNING: [Synth 8-327] inferring latch for variable 'VGA_Green_Grid_reg' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Background.v:145]
+WARNING: [Synth 8-327] inferring latch for variable 'VGA_Blue_Grid_reg' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Background.v:146]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 736.234 ; gain = 478.074
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 739.371 ; gain = 481.305
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -178,7 +185,7 @@ Detailed RTL Component Info :
 	   2 Input     12 Bit       Adders := 1     
 	   2 Input     11 Bit       Adders := 2     
 	   2 Input     10 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
 +---Registers : 
 	               13 Bit    Registers := 1     
 	               12 Bit    Registers := 5     
@@ -186,8 +193,8 @@ Detailed RTL Component Info :
 	               10 Bit    Registers := 1     
 	                8 Bit    Registers := 3     
 	                4 Bit    Registers := 6     
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 10    
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 13    
 +---RAMs : 
 	              12K Bit         RAMs := 1     
 +---Muxes : 
@@ -200,12 +207,14 @@ Detailed RTL Component Info :
 	   3 Input      8 Bit        Muxes := 1     
 	   4 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 5     
-	   6 Input      4 Bit        Muxes := 3     
-	  13 Input      4 Bit        Muxes := 3     
-	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 23    
+	   6 Input      4 Bit        Muxes := 27    
+	   4 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 3     
+	   6 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -226,6 +235,14 @@ Detailed RTL Component Info :
 +---Registers : 
 	                1 Bit    Registers := 1     
 Module cycle_colour 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+Module cycle_grid 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      3 Bit       Adders := 1     
@@ -291,7 +308,12 @@ Detailed RTL Component Info :
 Module Draw_Background 
 Detailed RTL Component Info : 
 +---Muxes : 
-	  13 Input      4 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 18    
+	   6 Input      4 Bit        Muxes := 24    
+	   4 Input      4 Bit        Muxes := 3     
+	   6 Input      3 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
 Module VGA_CONTROL 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -317,9 +339,9 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "samplemax0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "full_display_cycle0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "c0/SLOW_CLK0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "vi1/samplemax0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "d1/full_display_cycle0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-3886] merging instance 'vi1/ss_tens_reg[0]' (FDRE) to 'vi1/ss_tens_reg[3]'
 INFO: [Synth 8-3886] merging instance 'vi1/ss_tens_reg[1]' (FDRE) to 'vi1/ss_tens_reg[2]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vi1/ss_tens_reg[2] )
@@ -327,17 +349,17 @@ INFO: [Synth 8-3886] merging instance 'vi1/ss_tens_reg[3]' (FDRE) to 'vi1/ss_ten
 INFO: [Synth 8-3886] merging instance 'vi1/ss_tens_reg[4]' (FDRE) to 'vi1/ss_tens_reg[5]'
 INFO: [Synth 8-3886] merging instance 'vi1/ss_tens_reg[6]' (FDSE) to 'vi1/ss_tens_reg[7]'
 INFO: [Synth 8-3886] merging instance 'vi1/ss_tens_reg[7]' (FDSE) to 'vi1/ss_ones_reg[7]'
-INFO: [Synth 8-3886] merging instance 'd1/B_colour_reg[1]' (FD) to 'd1/B_colour_reg[3]'
-INFO: [Synth 8-3886] merging instance 'd1/R_colour_reg[1]' (FD) to 'd1/R_colour_reg[2]'
+INFO: [Synth 8-3886] merging instance 'd1/B_colour_reg[0]' (FD) to 'd1/B_colour_reg[1]'
+INFO: [Synth 8-3886] merging instance 'd1/B_colour_reg[2]' (FD) to 'd1/B_colour_reg[3]'
+INFO: [Synth 8-3886] merging instance 'd1/G_colour_reg[1]' (FD) to 'd1/G_colour_reg[3]'
 INFO: [Synth 8-3886] merging instance 'vi1/ss_enable_reg[0]' (FD) to 'vi1/ss_enable_reg[3]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\vi1/ss_enable_reg[3] )
 WARNING: [Synth 8-3332] Sequential element (vi1/ss_enable_reg[3]) is unused and will be removed from module Voice_Scope_TOP.
 WARNING: [Synth 8-3332] Sequential element (vi1/ss_tens_reg[2]) is unused and will be removed from module Voice_Scope_TOP.
 INFO: [Synth 8-3886] merging instance 'd1/B_colour_reg[3]' (FD) to 'd1/G_colour_reg[0]'
-INFO: [Synth 8-3886] merging instance 'd1/G_colour_reg[1]' (FD) to 'd1/R_colour_reg[0]'
 INFO: [Synth 8-3886] merging instance 'd1/G_colour_reg[3]' (FD) to 'd1/R_colour_reg[3]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 736.234 ; gain = 478.074
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 739.371 ; gain = 481.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -364,13 +386,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 736.934 ; gain = 478.773
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 742.938 ; gain = 484.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 768.773 ; gain = 510.613
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 772.523 ; gain = 514.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -396,7 +418,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 778.965 ; gain = 520.805
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 782.902 ; gain = 524.836
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -420,7 +442,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 778.965 ; gain = 520.805
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 782.902 ; gain = 524.836
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -433,7 +455,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 778.965 ; gain = 520.805
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 782.902 ; gain = 524.836
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -445,25 +467,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 778.965 ; gain = 520.805
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 782.902 ; gain = 524.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 778.965 ; gain = 520.805
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 782.902 ; gain = 524.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 778.965 ; gain = 520.805
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 782.902 ; gain = 524.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 778.965 ; gain = 520.805
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 782.902 ; gain = 524.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -480,65 +502,72 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |BUFG       |     4|
-|2     |CARRY4     |    47|
+|2     |CARRY4     |    53|
 |3     |LUT1       |    21|
-|4     |LUT2       |   111|
-|5     |LUT3       |    53|
-|6     |LUT4       |    42|
-|7     |LUT5       |    44|
-|8     |LUT6       |   178|
+|4     |LUT2       |   112|
+|5     |LUT3       |    56|
+|6     |LUT4       |    38|
+|7     |LUT5       |    64|
+|8     |LUT6       |   180|
 |9     |MMCME2_ADV |     1|
-|10    |MUXF7      |    20|
+|10    |MUXF7      |    21|
 |11    |RAM64M     |    60|
 |12    |RAM64X1D   |    20|
-|13    |FDRE       |   203|
+|13    |FDRE       |   234|
 |14    |FDSE       |     4|
-|15    |IBUF       |     5|
-|16    |OBUF       |    40|
+|15    |LD         |    12|
+|16    |IBUF       |     6|
+|17    |OBUF       |    40|
 +------+-----------+------+
 
 Report Instance Areas: 
 +------+-----------------+-----------------+------+
 |      |Instance         |Module           |Cells |
 +------+-----------------+-----------------+------+
-|1     |top              |                 |   853|
+|1     |top              |                 |   926|
 |2     |  c0             |clk_div          |    22|
 |3     |  clr1           |cycle_colour     |    63|
-|4     |    slowclk      |button_clk       |    36|
-|5     |    sp1          |single_pulse     |     2|
-|6     |      dff1       |dff              |     1|
-|7     |      dff2       |dff_0            |     1|
+|4     |    slowclk      |button_clk_1     |    36|
+|5     |    sp1          |single_pulse_2   |     5|
+|6     |      dff1       |dff_3            |     3|
+|7     |      dff2       |dff_4            |     2|
 |8     |  d1             |Draw_Waveform    |   211|
-|9     |  d2             |Draw_Background  |    25|
-|10    |  d3             |VGA_DISPLAY      |   224|
+|9     |  d2             |Draw_Background  |    34|
+|10    |  d3             |VGA_DISPLAY      |   243|
 |11    |    VGA_CLK_108M |CLK_108M         |     3|
-|12    |    VGA_CONTROL  |VGA_CONTROL      |   207|
-|13    |  u1             |TestWave_Gen     |    31|
-|14    |  vc1            |Voice_Capturer   |    71|
-|15    |  vi1            |volume_indicator |   159|
+|12    |    VGA_CONTROL  |VGA_CONTROL      |   226|
+|13    |  grd1           |cycle_grid       |    45|
+|14    |    slowclk      |button_clk       |    36|
+|15    |    sp1          |single_pulse     |     5|
+|16    |      dff1       |dff              |     4|
+|17    |      dff2       |dff_0            |     1|
+|18    |  u1             |TestWave_Gen     |    31|
+|19    |  vc1            |Voice_Capturer   |    71|
+|20    |  vi1            |volume_indicator |   158|
 +------+-----------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 778.965 ; gain = 520.805
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 782.902 ; gain = 524.836
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 778.965 ; gain = 197.500
-Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 778.965 ; gain = 520.805
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 782.902 ; gain = 198.281
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 782.902 ; gain = 524.836
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 153 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 173 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 80 instances were transformed.
+  A total of 92 instances were transformed.
+  LD => LDCE: 12 instances
   RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 60 instances
   RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 20 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-72 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+76 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 778.965 ; gain = 533.625
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 782.902 ; gain = 537.980
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/synth_1/Voice_Scope_TOP.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/Voice_Scope_TOP.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Voice_Scope_TOP_utilization_synth.rpt -pb Voice_Scope_TOP_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 778.965 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Mar 23 16:21:07 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 782.902 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 26 23:30:27 2019...

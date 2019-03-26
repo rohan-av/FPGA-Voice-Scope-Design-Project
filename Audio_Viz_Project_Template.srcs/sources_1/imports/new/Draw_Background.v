@@ -25,9 +25,10 @@ module Draw_Background(
     input [11:0] VGA_HORZ_COORD,
     input [11:0] VGA_VERT_COORD,
     input [2:0] colour_select,
-    output [3:0] VGA_Red_Grid,
-    output [3:0] VGA_Green_Grid,
-    output [3:0] VGA_Blue_Grid
+    input [2:0] grid_select,
+    output reg [3:0] VGA_Red_Grid,
+    output reg [3:0] VGA_Green_Grid,
+    output reg [3:0] VGA_Blue_Grid
     );
  
      reg [3:0] R_bgcolour;
@@ -36,20 +37,26 @@ module Draw_Background(
      reg [3:0] R_gridcolour;
      reg [3:0] G_gridcolour;
      reg [3:0] B_gridcolour;
+     reg [3:0] R_tickcolour;
+     reg [3:0] G_tickcolour;
+     reg [3:0] B_tickcolour;
      
      always@(*) begin
         case(colour_select)
-        3'b001: //dark blue bg 084 + neon green waveform 9e0 + white grid fff
+        3'b001: //dark blue bg 137 + neon green waveform 9e0 + white grid fff + darker blue tick 115
             begin
-            R_bgcolour = 4'h0;
-            G_bgcolour = 4'h8;
-            B_bgcolour = 4'h4;
+            R_bgcolour = 4'h1;
+            G_bgcolour = 4'h3;
+            B_bgcolour = 4'h7;
             R_gridcolour = 4'hf;
             G_gridcolour = 4'hf;
             B_gridcolour = 4'hf;
+            R_tickcolour = 4'h1;
+            G_tickcolour = 4'h1;
+            B_tickcolour = 4'h5;
             end
         
-        3'b010: // white bg fff + dark blue waveform 004 + red grid b01
+        3'b010: // white bg fff + black waveform 000 + red grid b01 + dark green ticks 181
             begin
             R_bgcolour = 4'hf;
             G_bgcolour = 4'hf;
@@ -57,36 +64,48 @@ module Draw_Background(
             R_gridcolour = 4'hb;
             G_gridcolour = 4'h0;
             B_gridcolour = 4'h1;
+            R_tickcolour = 4'h1;
+            G_tickcolour = 4'h8;
+            B_tickcolour = 4'h1;
             end
         
-        3'b011: // dark blue bg 337 + orange waveform fa0
+        3'b011: // dark blue bg 228 + orange waveform fa0 + dark green 181 grid + darker orange ticks e90
             begin
-            R_bgcolour = 4'h3;
-            G_bgcolour = 4'h3;
-            B_bgcolour = 4'h7;
-            R_gridcolour = 4'h3;
-            G_gridcolour = 4'h3;
-            B_gridcolour = 4'h7;
+            R_bgcolour = 4'h2;
+            G_bgcolour = 4'h2;
+            B_bgcolour = 4'h8;
+            R_gridcolour = 4'h1;
+            G_gridcolour = 4'h8;
+            B_gridcolour = 4'h1;
+            R_tickcolour = 4'he;
+            G_tickcolour = 4'h9;
+            B_tickcolour = 4'h0;       
             end
         
-        3'b100: // purple bg c1d + white waveform fff + d6b
+        3'b100: // purple bg 614 + white waveform fff + d6b + yellow ff1 ticks
             begin
-            R_bgcolour = 4'hc;
+            R_bgcolour = 4'h6;
             G_bgcolour = 4'h1;
-            B_bgcolour = 4'hd;
+            B_bgcolour = 4'h4;
             R_gridcolour = 4'hd;
             G_gridcolour = 4'h6;
             B_gridcolour = 4'hb;
+            R_tickcolour = 4'hf;
+            G_tickcolour = 4'hf;
+            B_tickcolour = 4'h1;
             end
         
-        3'b101: // light pink bg e8d + light blue waveform 8de  + apple green de8 grid
+        3'b101: // light pink bg e8d + deep purple 525  + apple green df8 grid
             begin
-            R_bgcolour = 4'he;
-            G_bgcolour = 4'h8;
-            B_bgcolour = 4'hd;
+            R_bgcolour = 4'hc;
+            G_bgcolour = 4'h6;
+            B_bgcolour = 4'hb;
             R_gridcolour = 4'hd;
-            G_gridcolour = 4'he;
+            G_gridcolour = 4'hf;
             B_gridcolour = 4'h8;
+            R_tickcolour = 4'hb;
+            G_tickcolour = 4'h0;
+            B_tickcolour = 4'h1;
             end
         
         default: // default waveform
@@ -97,12 +116,17 @@ module Draw_Background(
             R_gridcolour = 4'h0;
             G_gridcolour = 4'hD;
             B_gridcolour = 4'h0;
+            R_tickcolour = 4'hf;
+            G_tickcolour = 4'ha;
+            B_tickcolour = 4'h0;
             end
         endcase
      end
     
 // The code below draws two grid lines. Modify the codes to draw more grid lines. 
-    wire Condition_For_Grid = (VGA_HORZ_COORD % 80 == 0) ||  (VGA_VERT_COORD % 64 == 0) || (VGA_HORZ_COORD == 1279) || (VGA_VERT_COORD == 1023) ;
+    wire Condition_For_Grid_0 = (VGA_HORZ_COORD % 80 == 0) ||  (VGA_VERT_COORD % 64 == 0) || (VGA_HORZ_COORD == 1279) || (VGA_VERT_COORD == 1023) ;
+    wire Condition_For_Grid_1 = (VGA_HORZ_COORD % 20 == 0 && VGA_VERT_COORD % 16 == 0);
+    wire Condition_For_Grid_2 = (VGA_HORZ_COORD == 1279) || (VGA_VERT_COORD == 1023) || (VGA_HORZ_COORD == 0) ||  (VGA_VERT_COORD == 0);
     parameter [1:0] tt = 1; // tick thickness
 
 // Using the gridline example, insert your code below to draw ticks on the x-axis and y-axis.
@@ -113,9 +137,28 @@ module Draw_Background(
 
     
 // Please modify below codes to change the background color and to display ticks defined above
-    assign VGA_Red_Grid = Condition_For_Ticks ? 4'hF : Condition_For_Grid ? R_gridcolour : R_bgcolour ;
-    assign VGA_Green_Grid = Condition_For_Ticks ? 4'hA : Condition_For_Grid ? G_gridcolour : G_bgcolour ;
-    assign VGA_Blue_Grid = Condition_For_Ticks ? 4'h0 : Condition_For_Grid ? B_gridcolour : B_bgcolour ;
+    always @(*) begin
+        case(grid_select)
+            3'b000: 
+            begin
+                VGA_Red_Grid = Condition_For_Ticks ? R_tickcolour : Condition_For_Grid_0 ? R_gridcolour : R_bgcolour;
+                VGA_Green_Grid = Condition_For_Ticks ? G_tickcolour : Condition_For_Grid_0 ? G_gridcolour : G_bgcolour;
+                VGA_Blue_Grid = Condition_For_Ticks ? B_tickcolour : Condition_For_Grid_0 ? B_gridcolour : B_bgcolour;
+            end
+            3'b001: 
+            begin
+                VGA_Red_Grid = Condition_For_Ticks ? R_tickcolour : Condition_For_Grid_1 ? R_gridcolour : R_bgcolour;
+                VGA_Green_Grid = Condition_For_Ticks ? G_tickcolour : Condition_For_Grid_1 ? G_gridcolour : G_bgcolour;
+                VGA_Blue_Grid = Condition_For_Ticks ? B_tickcolour : Condition_For_Grid_1 ? B_gridcolour : B_bgcolour;
+            end
+            3'b010:
+            begin
+                VGA_Red_Grid = Condition_For_Ticks ? R_tickcolour : Condition_For_Grid_2 ? R_gridcolour : R_bgcolour;
+                VGA_Green_Grid = Condition_For_Ticks ? G_tickcolour : Condition_For_Grid_2 ? G_gridcolour : G_bgcolour;
+                VGA_Blue_Grid = Condition_For_Ticks ? B_tickcolour : Condition_For_Grid_2 ? B_gridcolour : B_bgcolour;
+            end
+        endcase
+    end
                             // if true, a red pixel is put at coordinates (VGA_HORZ_COORD, VGA_VERT_COORD), 
      
 endmodule

@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module cycle_colour(input CLK, input pushbutton, output reg [2:0] colour = 3'b001);
+module cycle_colour(input CLK, input pushbutton, output reg [2:0] colour = 3'b000);
     wire slow_clock;
     wire pulse;
     
