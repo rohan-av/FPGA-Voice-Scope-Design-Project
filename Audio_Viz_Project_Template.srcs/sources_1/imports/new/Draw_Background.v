@@ -48,9 +48,9 @@ module Draw_Background(
             R_bgcolour = 4'h1;
             G_bgcolour = 4'h3;
             B_bgcolour = 4'h7;
-            R_gridcolour = 4'hf;
-            G_gridcolour = 4'hf;
-            B_gridcolour = 4'hf;
+            R_gridcolour = 4'he;
+            G_gridcolour = 4'he;
+            B_gridcolour = 4'he;
             R_tickcolour = 4'h1;
             G_tickcolour = 4'h1;
             B_tickcolour = 4'h5;
@@ -58,9 +58,9 @@ module Draw_Background(
         
         3'b010: // white bg fff + black waveform 000 + red grid b01 + dark green ticks 181
             begin
-            R_bgcolour = 4'hf;
-            G_bgcolour = 4'hf;
-            B_bgcolour = 4'hf;
+            R_bgcolour = 4'h0;
+            G_bgcolour = 4'h0;
+            B_bgcolour = 4'h0;
             R_gridcolour = 4'hb;
             G_gridcolour = 4'h0;
             B_gridcolour = 4'h1;
@@ -90,19 +90,19 @@ module Draw_Background(
             R_gridcolour = 4'hd;
             G_gridcolour = 4'h6;
             B_gridcolour = 4'hb;
-            R_tickcolour = 4'hf;
-            G_tickcolour = 4'hf;
-            B_tickcolour = 4'h1;
+            R_tickcolour = 4'he;
+            G_tickcolour = 4'he;
+            B_tickcolour = 4'h0;
             end
         
-        3'b101: // light pink bg e8d + deep purple 525  + apple green df8 grid
+        3'b101: // light pink bg a49 + deep purple 525  + apple green df8 grid
             begin
-            R_bgcolour = 4'hc;
-            G_bgcolour = 4'h6;
-            B_bgcolour = 4'hb;
-            R_gridcolour = 4'hd;
-            G_gridcolour = 4'hf;
-            B_gridcolour = 4'h8;
+            R_bgcolour = 4'ha;
+            G_bgcolour = 4'h4;
+            B_bgcolour = 4'h9;
+            R_gridcolour = 4'hc;
+            G_gridcolour = 4'he;
+            B_gridcolour = 4'h7;
             R_tickcolour = 4'hb;
             G_tickcolour = 4'h0;
             B_tickcolour = 4'h1;
@@ -116,7 +116,7 @@ module Draw_Background(
             R_gridcolour = 4'h0;
             G_gridcolour = 4'hD;
             B_gridcolour = 4'h0;
-            R_tickcolour = 4'hf;
+            R_tickcolour = 4'he;
             G_tickcolour = 4'ha;
             B_tickcolour = 4'h0;
             end

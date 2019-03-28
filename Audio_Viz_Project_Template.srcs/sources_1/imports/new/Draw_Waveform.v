@@ -34,11 +34,11 @@ module Draw_Waveform(
             B_colour = 4'h0;
             end
         
-        3'b010: // white bg fff + black waveform 000 + red grid b01
+        3'b010: // white bg fff + brown waveform 642 + red grid b01 CHRISTMAS THEME
             begin
-            R_colour = 4'h0;
-            G_colour = 4'h0;
-            B_colour = 4'h0;
+            R_colour = 4'h7;
+            G_colour = 4'h5;
+            B_colour = 4'h3;
             end
         3'b011: // dark blue bg 228 + orange waveform fa0
             begin
@@ -54,7 +54,7 @@ module Draw_Waveform(
             B_colour = 4'hf;
             end
         
-        3'b101: // light pink bg e8d + deep purple 303  + apple green df8 grid
+        3'b101: // light pink bg a49 + deep purple 303  + apple green df8 grid
             begin
             R_colour = 4'h0;
             G_colour = 4'h0;

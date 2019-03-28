@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Mar 28 15:11:53 2019
-# Process ID: 10952
+# Start of session at: Thu Mar 28 15:36:41 2019
+# Process ID: 24424
 # Current directory: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1
 # Command line: vivado.exe -log Voice_Scope_TOP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Voice_Scope_TOP.tcl
 # Log file: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/Voice_Scope_TOP.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 28496 
+INFO: Helper process launched with PID 25840 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 357.820 ; gain = 99.902
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 357.668 ; gain = 99.453
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Voice_Scope_TOP' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Voice_Scope_TOP.v:10]
 INFO: [Synth 8-6157] synthesizing module 'cycle_colour' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/cycle_colour.v:23]
@@ -103,7 +103,7 @@ INFO: [Synth 8-256] done synthesizing module 'VGA_CONTROL' (13#1) [C:/Users/Roha
 INFO: [Synth 8-6155] done synthesizing module 'VGA_DISPLAY' (14#1) [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VGA_DISPLAY.v:17]
 INFO: [Synth 8-6155] done synthesizing module 'Voice_Scope_TOP' (15#1) [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Voice_Scope_TOP.v:10]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 412.883 ; gain = 154.965
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 413.094 ; gain = 154.879
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -116,10 +116,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 412.883 ; gain = 154.965
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 413.094 ; gain = 154.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 412.883 ; gain = 154.965
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 413.094 ; gain = 154.879
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -138,22 +138,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 738.328 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 737.668 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 738.328 ; gain = 480.410
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 737.668 ; gain = 479.453
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 738.328 ; gain = 480.410
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 737.668 ; gain = 479.453
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 738.328 ; gain = 480.410
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 737.668 ; gain = 479.453
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "SLOW_CLK0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-802] inferred FSM for state register 'ss_enable_reg' in module 'volume_indicator'
@@ -168,7 +168,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'VGA_Red_Grid_reg' [C:/Users
 WARNING: [Synth 8-327] inferring latch for variable 'VGA_Green_Grid_reg' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Background.v:145]
 WARNING: [Synth 8-327] inferring latch for variable 'VGA_Blue_Grid_reg' [C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Background.v:146]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 738.328 ; gain = 480.410
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 737.668 ; gain = 479.453
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -208,10 +208,10 @@ Detailed RTL Component Info :
 	   4 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 23    
-	   6 Input      4 Bit        Muxes := 27    
+	   6 Input      4 Bit        Muxes := 24    
 	   4 Input      4 Bit        Muxes := 3     
 	   2 Input      3 Bit        Muxes := 3     
-	   6 Input      3 Bit        Muxes := 3     
+	   6 Input      3 Bit        Muxes := 6     
 	   2 Input      1 Bit        Muxes := 4     
 	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -307,9 +307,9 @@ Module Draw_Background
 Detailed RTL Component Info : 
 +---Muxes : 
 	   2 Input      4 Bit        Muxes := 18    
-	   6 Input      4 Bit        Muxes := 24    
+	   6 Input      4 Bit        Muxes := 21    
 	   4 Input      4 Bit        Muxes := 3     
-	   6 Input      3 Bit        Muxes := 3     
+	   6 Input      3 Bit        Muxes := 6     
 	   2 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 1     
 Module VGA_CONTROL 
@@ -347,19 +347,17 @@ INFO: [Synth 8-3886] merging instance 'vi1/ss_tens_reg[4]' (FDRE) to 'vi1/ss_ten
 INFO: [Synth 8-3886] merging instance 'vi1/ss_tens_reg[6]' (FDSE) to 'vi1/ss_tens_reg[7]'
 INFO: [Synth 8-3886] merging instance 'vi1/ss_tens_reg[7]' (FDSE) to 'vi1/ss_ones_reg[7]'
 INFO: [Synth 8-3886] merging instance 'd1/B_colour_reg[0]' (FD) to 'd1/B_colour_reg[1]'
-INFO: [Synth 8-3886] merging instance 'd1/B_colour_reg[1]' (FD) to 'd1/B_colour_reg[2]'
 INFO: [Synth 8-3886] merging instance 'd1/B_colour_reg[2]' (FD) to 'd1/B_colour_reg[3]'
 INFO: [Synth 8-3886] merging instance 'd1/G_colour_reg[1]' (FD) to 'd1/G_colour_reg[3]'
-INFO: [Synth 8-3886] merging instance 'd1/R_colour_reg[0]' (FD) to 'd1/R_colour_reg[3]'
 INFO: [Synth 8-3886] merging instance 'd1/R_colour_reg[1]' (FD) to 'd1/R_colour_reg[2]'
 INFO: [Synth 8-3886] merging instance 'vi1/ss_enable_reg[0]' (FD) to 'vi1/ss_enable_reg[3]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\vi1/ss_enable_reg[3] )
 WARNING: [Synth 8-3332] Sequential element (vi1/ss_enable_reg[3]) is unused and will be removed from module Voice_Scope_TOP.
 WARNING: [Synth 8-3332] Sequential element (vi1/ss_tens_reg[2]) is unused and will be removed from module Voice_Scope_TOP.
-INFO: [Synth 8-3886] merging instance 'd1/B_colour_reg[3]' (FD) to 'd1/G_colour_reg[0]'
+INFO: [Synth 8-3886] merging instance 'd1/B_colour_reg[1]' (FD) to 'd1/G_colour_reg[0]'
 INFO: [Synth 8-3886] merging instance 'd1/G_colour_reg[3]' (FD) to 'd1/R_colour_reg[3]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 738.328 ; gain = 480.410
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 737.668 ; gain = 479.453
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -386,13 +384,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 738.746 ; gain = 480.828
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 738.445 ; gain = 480.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 768.746 ; gain = 510.828
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 766.996 ; gain = 508.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -418,7 +416,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 780.422 ; gain = 522.504
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 779.914 ; gain = 521.699
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -442,7 +440,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 780.422 ; gain = 522.504
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 779.914 ; gain = 521.699
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -455,7 +453,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 780.422 ; gain = 522.504
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 779.914 ; gain = 521.699
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -467,25 +465,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 780.422 ; gain = 522.504
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 779.914 ; gain = 521.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 780.422 ; gain = 522.504
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 779.914 ; gain = 521.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 780.422 ; gain = 522.504
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 779.914 ; gain = 521.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 780.422 ; gain = 522.504
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 779.914 ; gain = 521.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -504,17 +502,17 @@ Report Cell Usage:
 |1     |BUFG       |     4|
 |2     |CARRY4     |    53|
 |3     |LUT1       |    22|
-|4     |LUT2       |   114|
-|5     |LUT3       |    55|
-|6     |LUT4       |    46|
-|7     |LUT5       |    55|
-|8     |LUT6       |   184|
+|4     |LUT2       |   113|
+|5     |LUT3       |    56|
+|6     |LUT4       |    36|
+|7     |LUT5       |    63|
+|8     |LUT6       |   185|
 |9     |MMCME2_ADV |     1|
 |10    |MUXF7      |    20|
 |11    |RAM64M     |    60|
 |12    |RAM64X1D   |    20|
-|13    |FDRE       |   221|
-|14    |FDSE       |    13|
+|13    |FDRE       |   232|
+|14    |FDSE       |     4|
 |15    |LD         |    12|
 |16    |IBUF       |     6|
 |17    |OBUF       |    40|
@@ -524,18 +522,18 @@ Report Instance Areas:
 +------+-----------------+-----------------+------+
 |      |Instance         |Module           |Cells |
 +------+-----------------+-----------------+------+
-|1     |top              |                 |   926|
+|1     |top              |                 |   927|
 |2     |  c0             |clk_div          |    22|
-|3     |  clr1           |cycle_colour     |    60|
+|3     |  clr1           |cycle_colour     |    62|
 |4     |    slowclk      |button_clk_1     |    36|
 |5     |    sp1          |single_pulse_2   |     5|
 |6     |      dff1       |dff_3            |     3|
 |7     |      dff2       |dff_4            |     2|
-|8     |  d1             |Draw_Waveform    |   206|
-|9     |  d2             |Draw_Background  |    36|
-|10    |  d3             |VGA_DISPLAY      |   249|
+|8     |  d1             |Draw_Waveform    |   208|
+|9     |  d2             |Draw_Background  |    35|
+|10    |  d3             |VGA_DISPLAY      |   247|
 |11    |    VGA_CLK_108M |CLK_108M         |     3|
-|12    |    VGA_CONTROL  |VGA_CONTROL      |   232|
+|12    |    VGA_CONTROL  |VGA_CONTROL      |   230|
 |13    |  grd1           |cycle_grid       |    45|
 |14    |    slowclk      |button_clk       |    36|
 |15    |    sp1          |single_pulse     |     5|
@@ -546,11 +544,11 @@ Report Instance Areas:
 |20    |  vi1            |volume_indicator |   158|
 +------+-----------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 780.422 ; gain = 522.504
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 779.914 ; gain = 521.699
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 780.422 ; gain = 197.059
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 780.422 ; gain = 522.504
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 779.914 ; gain = 197.125
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 779.914 ; gain = 521.699
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 172 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -563,11 +561,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 20 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-77 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+75 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 780.422 ; gain = 535.520
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 779.914 ; gain = 534.469
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/Voice_Scope_TOP.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Voice_Scope_TOP_utilization_synth.rpt -pb Voice_Scope_TOP_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 780.422 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 28 15:12:25 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 779.914 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 28 15:37:13 2019...
