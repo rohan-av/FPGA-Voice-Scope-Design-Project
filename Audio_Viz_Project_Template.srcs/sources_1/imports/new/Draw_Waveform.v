@@ -73,7 +73,7 @@ module Draw_Waveform(
      
          if (freeze_sw)
          begin
-             full_display_cycle <= (i==1279) ? 1 : ((full_display_cycle==1) ? 1: 0);
+             full_display_cycle = (i==1279) ? 1 : ((full_display_cycle==1) ? 1: 0);
              i = (i==1279) ? 0 : i + 1;
              Sample_Memory[i] <= (full_display_cycle==1) ? Sample_Memory[i] : wave_sample;
          end
