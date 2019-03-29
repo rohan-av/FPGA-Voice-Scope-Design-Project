@@ -10,16 +10,22 @@ module Draw_Waveform(
     input [11:0] VGA_HORZ_COORD,
     input [11:0] VGA_VERT_COORD,
     input [2:0] colour_select,
-    output [3:0] VGA_Red_waveform,
-    output [3:0] VGA_Green_waveform,
-    output [3:0] VGA_Blue_waveform
+    output reg [3:0] VGA_Red_waveform,
+    output reg [3:0] VGA_Green_waveform,
+    output reg [3:0] VGA_Blue_waveform
     );
+    
+/*    //Maximum volume indicator centre - this is for circle to be moved over to draw background
+    parameter maxvol_x = 1000;
+    parameter maxvol_y = 350;
+    parameter radius = 25;*/
     
      //The Sample_Memory represents the memory array used to store the voice samples.
      //There are 1280 points and each point can range from 0 to 1023. 
      reg [9:0] Sample_Memory[1279:0];
      reg [10:0] i = 0;
      reg full_display_cycle = 0;
+     reg [3:0] wave_size = 4'h2;
      
      reg [3:0] R_colour;
      reg [3:0] G_colour;
@@ -81,13 +87,31 @@ module Draw_Waveform(
          begin
              full_display_cycle <= 0;
              i = (i==1279) ? 0 : i + 1;
-             Sample_Memory[i] <=  wave_sample;   
+             Sample_Memory[i] <=  wave_sample;
          end           
      end  
 
-    assign VGA_Red_waveform =   ((VGA_HORZ_COORD < 1280) && (VGA_VERT_COORD == (1024 - Sample_Memory[VGA_HORZ_COORD]))) ? R_colour : 0;
-    assign VGA_Green_waveform = ((VGA_HORZ_COORD < 1280) && (VGA_VERT_COORD == (1024 - Sample_Memory[VGA_HORZ_COORD]))) ? G_colour : 0;
-    assign VGA_Blue_waveform =  ((VGA_HORZ_COORD < 1280) && (VGA_VERT_COORD == (1024 - Sample_Memory[VGA_HORZ_COORD]))) ? B_colour : 0;
+    always@(*) begin
+    // this is for circle - to be moved over to draw_backgroun
+/*            if ((VGA_HORZ_COORD - maxvol_x)*(VGA_HORZ_COORD - maxvol_x) + (VGA_VERT_COORD - maxvol_y)*(VGA_VERT_COORD - maxvol_y) <= radius*radius) begin
+                VGA_Red_waveform = 4'h0;
+                VGA_Green_waveform = 4'hF;
+                VGA_Blue_waveform = 4'h0;
+                end*/  
+            if ((VGA_HORZ_COORD < 1280) && ((VGA_VERT_COORD - (1024 - Sample_Memory[VGA_HORZ_COORD]) <= wave_size) || ((1024 - Sample_Memory[VGA_HORZ_COORD]) - VGA_VERT_COORD <= wave_size)))
+                begin
+                    VGA_Red_waveform = R_colour;
+                    VGA_Green_waveform = G_colour;
+                    VGA_Blue_waveform = B_colour;
+                end
+            
+            else
+                begin
+                    VGA_Red_waveform = 0;
+                    VGA_Green_waveform = 0;
+                    VGA_Blue_waveform = 0;
+                end
+        end
 
     
 endmodule
