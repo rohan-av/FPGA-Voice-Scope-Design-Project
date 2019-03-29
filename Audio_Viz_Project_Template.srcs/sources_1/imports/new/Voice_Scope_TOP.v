@@ -110,6 +110,7 @@ module Voice_Scope_TOP(
     .VGA_VERT_COORD(VGA_VERT_COORD),
     .colour_select(colour_select),
     .grid_select(grid_select),
+    .intensity(peakval),
     .VGA_Red_Grid(VGA_Red_Grid),
     .VGA_Green_Grid(VGA_Green_Grid),
     .VGA_Blue_Grid(VGA_Blue_Grid)

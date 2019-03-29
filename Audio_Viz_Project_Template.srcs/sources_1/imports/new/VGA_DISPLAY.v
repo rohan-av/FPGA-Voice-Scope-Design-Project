@@ -36,10 +36,24 @@ module VGA_DISPLAY(
 
     );
     
+    // Text Generation
+    wire res;
+    Pixel_On_Text2 #(.displayText("CURRENT VOLUME")) t1(
+        CLK_VGA,
+        945, // text position.x (top left)
+        900, // text position.y (top left)
+        VGA_HORZ_COORD, // current position.x
+        VGA_VERT_COORD, // current position.y
+        res  // result, 1 if current pixel is on text, 0 otherwise
+     );
+     
+     wire [3:0] TEXT1;
+     assign TEXT1 = (res == 1)? 4'hF : 4'h0;
+    
     // COMBINE ALL OUTPUTS ON EACH CHANNEL
-    wire[3:0] VGA_RED_CHAN = (VGA_RED_GRID | VGA_RED_WAVEFORM) ;
-    wire[3:0] VGA_GREEN_CHAN = (VGA_GREEN_GRID | VGA_GREEN_WAVEFORM) ; 
-    wire[3:0] VGA_BLUE_CHAN = (VGA_BLUE_GRID | VGA_BLUE_WAVEFORM); 
+    wire[3:0] VGA_RED_CHAN = (VGA_RED_GRID | VGA_RED_WAVEFORM | TEXT1) ;
+    wire[3:0] VGA_GREEN_CHAN = (VGA_GREEN_GRID | VGA_GREEN_WAVEFORM | TEXT1) ; 
+    wire[3:0] VGA_BLUE_CHAN = (VGA_BLUE_GRID | VGA_BLUE_WAVEFORM | TEXT1); 
     
     
     
@@ -67,7 +81,7 @@ module VGA_DISPLAY(
 
     // CLOCK THEM OUT
     always@(posedge CLK_VGA) begin      
-        
+            // (res)? 4'hF
             VGA_RED <= {VGA_ACTIVE, VGA_ACTIVE, VGA_ACTIVE, VGA_ACTIVE} & VGA_RED_CHAN ;  
             VGA_GREEN <= {VGA_ACTIVE, VGA_ACTIVE, VGA_ACTIVE, VGA_ACTIVE} & VGA_GREEN_CHAN ; 
             VGA_BLUE <= {VGA_ACTIVE, VGA_ACTIVE, VGA_ACTIVE, VGA_ACTIVE} & VGA_BLUE_CHAN ; 

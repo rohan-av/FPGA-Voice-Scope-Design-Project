@@ -15,11 +15,6 @@ module Draw_Waveform(
     output reg [3:0] VGA_Blue_waveform
     );
     
-/*    //Maximum volume indicator centre - this is for circle to be moved over to draw background
-    parameter maxvol_x = 1000;
-    parameter maxvol_y = 350;
-    parameter radius = 25;*/
-    
      //The Sample_Memory represents the memory array used to store the voice samples.
      //There are 1280 points and each point can range from 0 to 1023. 
      reg [9:0] Sample_Memory[1279:0];
@@ -92,12 +87,6 @@ module Draw_Waveform(
      end  
 
     always@(*) begin
-    // this is for circle - to be moved over to draw_backgroun
-/*            if ((VGA_HORZ_COORD - maxvol_x)*(VGA_HORZ_COORD - maxvol_x) + (VGA_VERT_COORD - maxvol_y)*(VGA_VERT_COORD - maxvol_y) <= radius*radius) begin
-                VGA_Red_waveform = 4'h0;
-                VGA_Green_waveform = 4'hF;
-                VGA_Blue_waveform = 4'h0;
-                end*/  
             if ((VGA_HORZ_COORD < 1280) && ((VGA_VERT_COORD - (1024 - Sample_Memory[VGA_HORZ_COORD]) <= wave_size) || ((1024 - Sample_Memory[VGA_HORZ_COORD]) - VGA_VERT_COORD <= wave_size)))
                 begin
                     VGA_Red_waveform = R_colour;
