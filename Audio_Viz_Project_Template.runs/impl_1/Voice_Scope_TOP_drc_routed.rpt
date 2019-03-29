@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Mar 30 02:09:41 2019
-| Host         : LAPTOP-P6DBKN0G running 64-bit major release  (build 9200)
+| Date         : Thu Mar 28 15:38:12 2019
+| Host         : DESKTOP-K0CKIO3 running 64-bit major release  (build 9200)
 | Command      : report_drc -file Voice_Scope_TOP_drc_routed.rpt -pb Voice_Scope_TOP_drc_routed.pb -rpx Voice_Scope_TOP_drc_routed.rpx
 | Design       : Voice_Scope_TOP
 | Device       : xc7a35tcpg236-1
@@ -24,15 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 14
+             Violations found: 2
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| DPIP-1   | Warning  | Input pipelining                                    | 4          |
-| DPOP-1   | Warning  | PREG Output pipelining                              | 2          |
-| DPOP-2   | Warning  | MREG Output pipelining                              | 2          |
-| PDRC-153 | Warning  | Gated clock check                                   | 5          |
+| PDRC-153 | Warning  | Gated clock check                                   | 1          |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -50,69 +47,9 @@ Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_des
 Refer to the device configuration user guide for more information.
 Related violations: <none>
 
-DPIP-1#1 Warning
-Input pipelining  
-DSP d2/dist0 input d2/dist0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#2 Warning
-Input pipelining  
-DSP d2/dist0 input d2/dist0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#3 Warning
-Input pipelining  
-DSP d2/dist0__0 input d2/dist0__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#4 Warning
-Input pipelining  
-DSP d2/dist0__0 input d2/dist0__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPOP-1#1 Warning
-PREG Output pipelining  
-DSP d2/dist0 output d2/dist0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#2 Warning
-PREG Output pipelining  
-DSP d2/dist0__0 output d2/dist0__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-2#1 Warning
-MREG Output pipelining  
-DSP d2/dist0 multiplier stage d2/dist0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#2 Warning
-MREG Output pipelining  
-DSP d2/dist0__0 multiplier stage d2/dist0__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
 PDRC-153#1 Warning
 Gated clock check  
-Net d2/VGA_Green_Grid_reg[2]_i_2_n_0 is a gated clock net sourced by a combinational pin d2/VGA_Green_Grid_reg[2]_i_2/O, cell d2/VGA_Green_Grid_reg[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#2 Warning
-Gated clock check  
-Net grd1/E[0] is a gated clock net sourced by a combinational pin grd1/VGA_Blue_Grid_reg[3]_i_2/O, cell grd1/VGA_Blue_Grid_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#3 Warning
-Gated clock check  
-Net grd1/VGA_GREEN_reg[3][0] is a gated clock net sourced by a combinational pin grd1/VGA_Green_Grid_reg[1]_i_2/O, cell grd1/VGA_Green_Grid_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#4 Warning
-Gated clock check  
-Net grd1/VGA_GREEN_reg[3][1] is a gated clock net sourced by a combinational pin grd1/VGA_Green_Grid_reg[3]_i_2/O, cell grd1/VGA_Green_Grid_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#5 Warning
-Gated clock check  
-Net grd1/VGA_RED_reg[3][0] is a gated clock net sourced by a combinational pin grd1/VGA_Red_Grid_reg[3]_i_2/O, cell grd1/VGA_Red_Grid_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net grd1/E[0] is a gated clock net sourced by a combinational pin grd1/VGA_Red_Grid_reg[3]_i_2/O, cell grd1/VGA_Red_Grid_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 

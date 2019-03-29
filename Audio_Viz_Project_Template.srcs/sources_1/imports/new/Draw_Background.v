@@ -26,11 +26,9 @@ module Draw_Background(
     input [11:0] VGA_VERT_COORD,
     input [2:0] colour_select,
     input [2:0] grid_select,
-    input [11:0] intensity,
     output reg [3:0] VGA_Red_Grid,
     output reg [3:0] VGA_Green_Grid,
     output reg [3:0] VGA_Blue_Grid
-    //output reg [71:0] percent
     );
  
      reg [3:0] R_bgcolour;
@@ -43,32 +41,7 @@ module Draw_Background(
      reg [3:0] G_tickcolour;
      reg [3:0] B_tickcolour;
      
-     //Maximum volume indicator centre - this is for circle to be moved over to draw background
-     parameter maxvol_x = 1000;
-     parameter maxvol_y = 900;
-     parameter radius = 40;
-     wire [20:0] dist = (VGA_HORZ_COORD - maxvol_x)*(VGA_HORZ_COORD - maxvol_x) + (VGA_VERT_COORD - maxvol_y)*(VGA_VERT_COORD - maxvol_y);
-     
      always@(*) begin
-
-     end
-    
-// The code below draws two grid lines. Modify the codes to draw more grid lines. 
-    wire Condition_For_Grid_0 = (VGA_HORZ_COORD % 80 == 0) ||  (VGA_VERT_COORD % 64 == 0) || (VGA_HORZ_COORD == 1279) || (VGA_VERT_COORD == 1023) ;
-    wire Condition_For_Grid_1 = (VGA_HORZ_COORD % 20 == 0 && VGA_VERT_COORD % 16 == 0);
-    wire Condition_For_Grid_2 = (VGA_HORZ_COORD == 1279) || (VGA_VERT_COORD == 1023) || (VGA_HORZ_COORD == 0) ||  (VGA_VERT_COORD == 0);
-    parameter [1:0] tt = 1; // tick thickness
-
-// Using the gridline example, insert your code below to draw ticks on the x-axis and y-axis.
-    wire Condition_For_Ticks = (((VGA_HORZ_COORD % 20 > 20 - tt) || (VGA_HORZ_COORD % 20 < tt)) && (VGA_VERT_COORD > 505 && VGA_VERT_COORD < 519 )) 
-                               || (((VGA_VERT_COORD % 16 > 16 - tt) || (VGA_VERT_COORD % 16 < tt)) && (VGA_HORZ_COORD > 633 && VGA_HORZ_COORD < 647)) 
-                               || (VGA_VERT_COORD > 510 && VGA_VERT_COORD < 514 ) || (VGA_HORZ_COORD > 638 && VGA_HORZ_COORD < 642);
-
-
-    
-// Please modify below codes to change the background color and to display ticks defined above
-    always @(*) begin
-        //percent = " 000 %";
         case(colour_select)
         3'b001: //dark blue bg 137 + neon green waveform 9e0 + white grid fff + darker blue tick 115
             begin
@@ -148,7 +121,23 @@ module Draw_Background(
             B_tickcolour = 4'h0;
             end
         endcase
+     end
     
+// The code below draws two grid lines. Modify the codes to draw more grid lines. 
+    wire Condition_For_Grid_0 = (VGA_HORZ_COORD % 80 == 0) ||  (VGA_VERT_COORD % 64 == 0) || (VGA_HORZ_COORD == 1279) || (VGA_VERT_COORD == 1023) ;
+    wire Condition_For_Grid_1 = (VGA_HORZ_COORD % 20 == 0 && VGA_VERT_COORD % 16 == 0);
+    wire Condition_For_Grid_2 = (VGA_HORZ_COORD == 1279) || (VGA_VERT_COORD == 1023) || (VGA_HORZ_COORD == 0) ||  (VGA_VERT_COORD == 0);
+    parameter [1:0] tt = 1; // tick thickness
+
+// Using the gridline example, insert your code below to draw ticks on the x-axis and y-axis.
+    wire Condition_For_Ticks = (((VGA_HORZ_COORD % 20 > 20 - tt) || (VGA_HORZ_COORD % 20 < tt)) && (VGA_VERT_COORD > 505 && VGA_VERT_COORD < 519 )) 
+                               || (((VGA_VERT_COORD % 16 > 16 - tt) || (VGA_VERT_COORD % 16 < tt)) && (VGA_HORZ_COORD > 633 && VGA_HORZ_COORD < 647)) 
+                               || (VGA_VERT_COORD > 510 && VGA_VERT_COORD < 514 ) || (VGA_HORZ_COORD > 638 && VGA_HORZ_COORD < 642);
+
+
+    
+// Please modify below codes to change the background color and to display ticks defined above
+    always @(*) begin
         case(grid_select)
             3'b000: 
             begin
@@ -169,105 +158,7 @@ module Draw_Background(
                 VGA_Blue_Grid = Condition_For_Ticks ? B_tickcolour : Condition_For_Grid_2 ? B_gridcolour : B_bgcolour;
             end
         endcase
-        
-        if (VGA_VERT_COORD <= maxvol_y) begin
-            //level 12, red
-            if (intensity >= 12'b1111_1111_1111 && dist <= ((radius + 120)*(radius + 120)) && dist >= ((radius + 112)*(radius + 112))) begin
-                        VGA_Red_Grid = 4'hF;
-                        VGA_Green_Grid = 4'h0;
-                        VGA_Blue_Grid = 4'h0;
-                        //percent = " 100 %";
-                        end
-            
-            //level 11, red
-            if (intensity >= 12'b0111_1111_1111 && dist <= ((radius + 110)*(radius + 110)) && dist >= ((radius + 102)*(radius + 102))) begin
-                        VGA_Red_Grid = 4'hC;
-                        VGA_Green_Grid = 4'h0;
-                        VGA_Blue_Grid = 4'h0;
-                        //percent = " 092 %";
-                        end
-            
-            //level 10, red
-            if (intensity >= 12'b0011_1111_1111 && dist <= ((radius + 100)*(radius + 100)) && dist >= ((radius + 92)*(radius + 92))) begin
-                        VGA_Red_Grid = 4'h9;
-                        VGA_Green_Grid = 4'h0;
-                        VGA_Blue_Grid = 4'h0;
-                        //percent = " 083 %";
-                        end
-            
-            //level 9, red
-            if (intensity >= 12'b0001_1111_1111 && dist <= ((radius + 90)*(radius + 90)) && dist >= ((radius + 82)*(radius + 82))) begin
-                        VGA_Red_Grid = 4'h6;
-                        VGA_Green_Grid = 4'h0;
-                        VGA_Blue_Grid = 4'h0;
-                        //percent = " 075 %";
-                        end
-            
-            //level 8, yellow
-            if (intensity >= 12'b0000_1111_1111 && dist <= ((radius + 80)*(radius + 80)) && dist >= ((radius + 72)*(radius + 72))) begin
-                        VGA_Red_Grid = 4'h6;
-                        VGA_Green_Grid = 4'h6;
-                        VGA_Blue_Grid = 4'h0;
-                        //percent = " 067 %";
-                        end
-            
-            //level 7, yellow
-            if (intensity >= 12'b0000_0111_1111 && dist <= ((radius + 70)*(radius + 70)) && dist >= ((radius + 62)*(radius + 62))) begin
-                        VGA_Red_Grid = 4'h9;
-                        VGA_Green_Grid = 4'h9;
-                        VGA_Blue_Grid = 4'h0;
-                        //percent = " 058 %";
-                        end
-            
-            //level 6, yellow
-            if (intensity >= 12'b0000_0011_1111 && dist <= ((radius + 60)*(radius + 60)) && dist >= ((radius + 52)*(radius + 52))) begin
-                        VGA_Red_Grid = 4'hC;
-                        VGA_Green_Grid = 4'hC;
-                        VGA_Blue_Grid = 4'h0;
-                        //percent = " 050 %";
-                        end
-                           
-            //level 5, yellow
-            if (intensity >= 12'b0000_0001_1111 && dist <= ((radius + 50)*(radius + 50)) && dist >= ((radius + 42)*(radius + 42))) begin
-                        VGA_Red_Grid = 4'hF;
-                        VGA_Green_Grid = 4'hF;
-                        VGA_Blue_Grid = 4'h0;
-                        //percent = " 042 %";
-                        end   
-            
-            //level 4, green
-            if (intensity >= 12'b0000_0000_1111 && dist <= ((radius + 40)*(radius + 40)) && dist >= ((radius + 32)*(radius + 32))) begin
-                        VGA_Red_Grid = 4'h0;
-                        VGA_Green_Grid = 4'h6;
-                        VGA_Blue_Grid = 4'h0;
-                        //percent = " 033 %";
-                        end   
-            
-            //level 3, green
-            if (intensity >= 12'b0000_0000_0111 && dist <= ((radius + 30)*(radius + 30)) && dist >= ((radius + 22)*(radius + 22))) begin
-                        VGA_Red_Grid = 4'h0;
-                        VGA_Green_Grid = 4'h9;
-                        VGA_Blue_Grid = 4'h0;
-                        //percent = " 025 %";
-                        end   
-            
-            //level 2, green
-            if (intensity >= 12'b0000_0000_0011 && dist <= ((radius + 20)*(radius + 20)) && dist >= ((radius + 12)*(radius + 12))) begin
-                        VGA_Red_Grid = 4'h0;
-                        VGA_Green_Grid = 4'hC;
-                        VGA_Blue_Grid = 4'h0;
-                        //percent = " 017 %";
-                        end   
-            
-            //level 1, green
-            if (intensity >= 12'b0000_0000_0001 && dist <= ((radius + 10)*(radius + 10)) && dist >= ((radius + 2)*(radius + 2))) begin
-                        VGA_Red_Grid = 4'h0;
-                        VGA_Green_Grid = 4'hF;
-                        VGA_Blue_Grid = 4'h0;
-                        //percent = " 008 %";
-                        end   
-        end  
     end
-    
-    
+                            // if true, a red pixel is put at coordinates (VGA_HORZ_COORD, VGA_VERT_COORD), 
+     
 endmodule
