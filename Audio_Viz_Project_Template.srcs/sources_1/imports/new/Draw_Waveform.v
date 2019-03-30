@@ -6,6 +6,7 @@
 module Draw_Waveform(
     input clk_sample, //20kHz clock
     input freeze_sw,
+    input advanced_sw,   
     input [9:0] wave_sample,
     input [11:0] VGA_HORZ_COORD,
     input [11:0] VGA_VERT_COORD,
@@ -15,8 +16,15 @@ module Draw_Waveform(
     output reg [3:0] VGA_Blue_waveform
     );
     
+    //scaled wave properties
+    parameter scale = 6;
+    parameter xadjust = 30;
+    parameter yadjust = 750;
+    
      //The Sample_Memory represents the memory array used to store the voice samples.
      //There are 1280 points and each point can range from 0 to 1023. 
+     // The reduced memory register scales the wave by 1/6
+     reg [9:0] Scaled_Memory[1279:0];
      reg [9:0] Sample_Memory[1279:0];
      reg [10:0] i = 0;
      reg full_display_cycle = 0;
@@ -57,9 +65,9 @@ module Draw_Waveform(
         
         3'b101: // light pink bg a49 + deep purple 303  + apple green df8 grid
             begin
-            R_colour = 4'h0;
-            G_colour = 4'h0;
-            B_colour = 4'h0;
+            R_colour = 4'hf;
+            G_colour = 4'hf;
+            B_colour = 4'hf;
             end
         
         default: // default waveform
@@ -71,28 +79,37 @@ module Draw_Waveform(
         endcase
      
      //Each wave_sample is displayed on the screen from left to right. 
-     
+        
          if (freeze_sw)
          begin
              full_display_cycle = (i==1279) ? 1 : ((full_display_cycle==1) ? 1: 0);
              i = (i==1279) ? 0 : i + 1;
              Sample_Memory[i] <= (full_display_cycle==1) ? Sample_Memory[i] : wave_sample;
+             Scaled_Memory[(i /scale) + xadjust] <= (full_display_cycle==1) ? Scaled_Memory[(i/scale) + xadjust] : (wave_sample/scale) + yadjust;
          end
          else
          begin
              full_display_cycle <= 0;
              i = (i==1279) ? 0 : i + 1;
              Sample_Memory[i] <=  wave_sample;
+             Scaled_Memory[(i/scale) + xadjust] <= (wave_sample/scale) + yadjust;
          end           
      end  
 
     always@(*) begin
-            if ((VGA_HORZ_COORD < 1280) && ((VGA_VERT_COORD - (1024 - Sample_Memory[VGA_HORZ_COORD]) <= wave_size) || ((1024 - Sample_Memory[VGA_HORZ_COORD]) - VGA_VERT_COORD <= wave_size)))
+            if ((advanced_sw == 0) && (VGA_HORZ_COORD < 1280) && ((VGA_VERT_COORD - (1024 - Sample_Memory[VGA_HORZ_COORD]) <= wave_size) || ((1024 - Sample_Memory[VGA_HORZ_COORD]) - VGA_VERT_COORD <= wave_size)))
                 begin
                     VGA_Red_waveform = R_colour;
                     VGA_Green_waveform = G_colour;
                     VGA_Blue_waveform = B_colour;
                 end
+            
+            else if ((advanced_sw == 1) && (VGA_HORZ_COORD < 640) && (VGA_VERT_COORD == (1024 - Scaled_Memory[VGA_HORZ_COORD])))
+                begin
+                    VGA_Red_waveform = R_colour;
+                    VGA_Green_waveform = G_colour;
+                    VGA_Blue_waveform = B_colour;
+                end      
             
             else
                 begin

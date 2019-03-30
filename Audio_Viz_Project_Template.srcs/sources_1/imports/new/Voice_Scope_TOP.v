@@ -11,6 +11,7 @@ module Voice_Scope_TOP(
     input CLK,
     input ramp_sw,
     input freeze_sw,
+    input advanced_sw,
     input colour_button,
     input grid_button,
     input  J_MIC3_Pin3,   // PmodMIC3 audio input data (serial)
@@ -27,8 +28,13 @@ module Voice_Scope_TOP(
     output [3:0] ss_enable,
     output [7:0] ss_active
     );
-       
-   
+    
+    //max volume indicator + accompanying text coordinates   
+    
+    //scaled wave properties
+    parameter scale = 6;
+    parameter xadjust = 30;
+    parameter yadjust = 750;
       
        
 //-----------------------------------------------------------------------------
@@ -91,6 +97,7 @@ module Voice_Scope_TOP(
     Draw_Waveform d1 (
     .clk_sample(new_clock),
     .freeze_sw(freeze_sw),
+    .advanced_sw(advanced_sw),
     .wave_sample(wave_sample),
     .VGA_HORZ_COORD(VGA_HORZ_COORD),
     .VGA_VERT_COORD(VGA_VERT_COORD),
@@ -108,6 +115,7 @@ module Voice_Scope_TOP(
     Draw_Background d2 (
     .VGA_HORZ_COORD(VGA_HORZ_COORD),
     .VGA_VERT_COORD(VGA_VERT_COORD),
+    .advanced_sw(advanced_sw),
     .colour_select(colour_select),
     .grid_select(grid_select),
     .intensity(peakval),
@@ -119,6 +127,7 @@ module Voice_Scope_TOP(
 // Please instantiate the VGA display module below          
      VGA_DISPLAY d3 (
      .CLK(CLK),
+     .advanced_sw(advanced_sw),
      .VGA_RED_WAVEFORM(VGA_Red_waveform),
      .VGA_GREEN_WAVEFORM(VGA_Green_waveform),
      .VGA_BLUE_WAVEFORM(VGA_Blue_waveform),

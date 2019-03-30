@@ -24,6 +24,7 @@
 module Draw_Background(
     input [11:0] VGA_HORZ_COORD,
     input [11:0] VGA_VERT_COORD,
+    input advanced_sw,   
     input [2:0] colour_select,
     input [2:0] grid_select,
     input [11:0] intensity,
@@ -43,9 +44,16 @@ module Draw_Background(
      reg [3:0] G_tickcolour;
      reg [3:0] B_tickcolour;
      
+     //max volume indicator + accompanying text coordinates   
+     parameter maxvol_x = 1100;
+     parameter maxvol_y = 950;
+     
+     //scaled wave properties
+     parameter scale = 6;
+     parameter xadjust = 30;
+     parameter yadjust = 750;
+     
      //Maximum volume indicator centre - this is for circle to be moved over to draw background
-     parameter maxvol_x = 1000;
-     parameter maxvol_y = 900;
      parameter radius = 40;
      wire [20:0] dist = (VGA_HORZ_COORD - maxvol_x)*(VGA_HORZ_COORD - maxvol_x) + (VGA_VERT_COORD - maxvol_y)*(VGA_VERT_COORD - maxvol_y);
      
@@ -54,15 +62,15 @@ module Draw_Background(
      end
     
 // The code below draws two grid lines. Modify the codes to draw more grid lines. 
-    wire Condition_For_Grid_0 = (VGA_HORZ_COORD % 80 == 0) ||  (VGA_VERT_COORD % 64 == 0) || (VGA_HORZ_COORD == 1279) || (VGA_VERT_COORD == 1023) ;
-    wire Condition_For_Grid_1 = (VGA_HORZ_COORD % 20 == 0 && VGA_VERT_COORD % 16 == 0);
-    wire Condition_For_Grid_2 = (VGA_HORZ_COORD == 1279) || (VGA_VERT_COORD == 1023) || (VGA_HORZ_COORD == 0) ||  (VGA_VERT_COORD == 0);
+    wire Condition_For_Grid_0 = (advanced_sw == 0) && ((VGA_HORZ_COORD % 80 == 0) ||  (VGA_VERT_COORD % 64 == 0) || (VGA_HORZ_COORD == 1279) || (VGA_VERT_COORD == 1023));
+    wire Condition_For_Grid_1 = (advanced_sw == 0) && ((VGA_HORZ_COORD % 20 == 0 && VGA_VERT_COORD % 16 == 0));
+    wire Condition_For_Grid_2 = (advanced_sw == 0) && (VGA_HORZ_COORD == 1279) || (VGA_VERT_COORD == 1023) || (VGA_HORZ_COORD == 0) ||  (VGA_VERT_COORD == 0);
     parameter [1:0] tt = 1; // tick thickness
 
 // Using the gridline example, insert your code below to draw ticks on the x-axis and y-axis.
-    wire Condition_For_Ticks = (((VGA_HORZ_COORD % 20 > 20 - tt) || (VGA_HORZ_COORD % 20 < tt)) && (VGA_VERT_COORD > 505 && VGA_VERT_COORD < 519 )) 
+    wire Condition_For_Ticks = (advanced_sw == 0) && ((((VGA_HORZ_COORD % 20 > 20 - tt) || (VGA_HORZ_COORD % 20 < tt)) && (VGA_VERT_COORD > 505 && VGA_VERT_COORD < 519 )) 
                                || (((VGA_VERT_COORD % 16 > 16 - tt) || (VGA_VERT_COORD % 16 < tt)) && (VGA_HORZ_COORD > 633 && VGA_HORZ_COORD < 647)) 
-                               || (VGA_VERT_COORD > 510 && VGA_VERT_COORD < 514 ) || (VGA_HORZ_COORD > 638 && VGA_HORZ_COORD < 642);
+                               || (VGA_VERT_COORD > 510 && VGA_VERT_COORD < 514 ) || (VGA_HORZ_COORD > 638 && VGA_HORZ_COORD < 642));
 
 
     
@@ -75,12 +83,14 @@ module Draw_Background(
             R_bgcolour = 4'h1;
             G_bgcolour = 4'h3;
             B_bgcolour = 4'h7;
-            R_gridcolour = 4'he;
-            G_gridcolour = 4'he;
-            B_gridcolour = 4'he;
-            R_tickcolour = 4'h1;
-            G_tickcolour = 4'h1;
-            B_tickcolour = 4'h5;
+            if (advanced_sw == 0) begin
+                R_gridcolour = 4'he;
+                G_gridcolour = 4'he;
+                B_gridcolour = 4'he;
+                R_tickcolour = 4'h1;
+                G_tickcolour = 4'h1;
+                B_tickcolour = 4'h5;
+                end
             end
         
         3'b010: // white bg fff + black waveform 000 + red grid b01 + dark green ticks 181
@@ -170,7 +180,23 @@ module Draw_Background(
             end
         endcase
         
-        if (VGA_VERT_COORD <= maxvol_y) begin
+        // box for scaled wave
+        if (advanced_sw == 1 && ((VGA_HORZ_COORD == xadjust || VGA_HORZ_COORD == (xadjust + 1280/scale)) && (VGA_VERT_COORD >= (1024 - yadjust - 1024/scale) && VGA_VERT_COORD <= (1024 - yadjust))))
+            begin
+                VGA_Red_Grid = 4'hF;
+                VGA_Green_Grid = 4'hF;
+                VGA_Blue_Grid = 4'hF;
+            end
+            
+         if (advanced_sw == 1 && ((VGA_VERT_COORD == (1024 - yadjust) || VGA_VERT_COORD == (1024 - yadjust - 1024/scale)) && (VGA_HORZ_COORD >= xadjust && VGA_HORZ_COORD <= (xadjust + 1280/scale))))
+            begin
+                VGA_Red_Grid = 4'hF;
+                VGA_Green_Grid = 4'hF;
+                VGA_Blue_Grid = 4'hF;
+            end
+        
+        // max volume indicator
+        else if (VGA_VERT_COORD <= maxvol_y && advanced_sw == 1) begin
             //level 12, red
             if (intensity >= 12'b1111_1111_1111 && dist <= ((radius + 120)*(radius + 120)) && dist >= ((radius + 112)*(radius + 112))) begin
                         VGA_Red_Grid = 4'hF;
@@ -265,7 +291,8 @@ module Draw_Background(
                         VGA_Green_Grid = 4'hF;
                         VGA_Blue_Grid = 4'h0;
                         //percent = " 008 %";
-                        end   
+                        end
+            
         end  
     end
     

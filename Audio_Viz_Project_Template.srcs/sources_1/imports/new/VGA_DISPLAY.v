@@ -16,6 +16,7 @@
 
 module VGA_DISPLAY(
     input CLK,
+    input advanced_sw,
 
     input [3:0] VGA_RED_WAVEFORM, 
     input [3:0] VGA_GREEN_WAVEFORM, 
@@ -36,29 +37,69 @@ module VGA_DISPLAY(
 
     );
     
+    wire CLK_VGA;
+    
+    //max volume indicator + accompanying text coordinates   
+    parameter maxvol_x = 1100;
+    parameter maxvol_y = 950;
+    
     // Text Generation
-    wire res;
-    Pixel_On_Text2 #(.displayText("CURRENT VOLUME")) t1(
+    wire basic1;
+    wire basic2;
+    wire advanced1;
+    
+    Pixel_On_Text2 #(.displayText("EE2026 VOICE SCOPE")) t1(
         CLK_VGA,
-        945, // text position.x (top left)
-        900, // text position.y (top left)
+        25, // text position.x (top left)
+        25, // text position.y (top left)
+        VGA_HORZ_COORD, // current position.x
+        VGA_VERT_COORD, // current position.y
+        basic1  // result, 1 if current pixel is on text, 0 otherwise
+     );
+     
+    Pixel_On_Text2 #(.displayText("Toggle SW0 for advanced features")) t2(
+         CLK_VGA,
+         25, // text position.x (top left)
+         45, // text position.y (top left)
+         VGA_HORZ_COORD, // current position.x
+         VGA_VERT_COORD, // current position.y
+         basic2  // result, 1 if current pixel is on text, 0 otherwise
+      );
+      
+      Pixel_On_Text2 #(.displayText("EE2026 VOICE SCOPE (ADVANCED)")) t3(
+          CLK_VGA,
+          25, // text position.x (top left)
+          25, // text position.y (top left)
+          VGA_HORZ_COORD, // current position.x
+          VGA_VERT_COORD, // current position.y
+          advanced1  // result, 1 if current pixel is on text, 0 otherwise
+       );
+    
+    
+    wire res;
+    Pixel_On_Text2 #(.displayText("CURRENT VOLUME")) t4(
+        CLK_VGA,
+        maxvol_x - 55, // text position.x (top left)
+        maxvol_y, // text position.y (top left)
         VGA_HORZ_COORD, // current position.x
         VGA_VERT_COORD, // current position.y
         res  // result, 1 if current pixel is on text, 0 otherwise
      );
      
+     wire [3:0] TEXT0;
      wire [3:0] TEXT1;
-     assign TEXT1 = (res == 1)? 4'hF : 4'h0;
+     
+     assign TEXT0 = (advanced_sw == 0)? (((basic1 | basic2) == 1)? 4'hF : 4'h0) : (advanced1 == 1)? 4'hF : 4'h0;
+     assign TEXT1 = (res == 1 && advanced_sw == 1)? 4'hF : 4'h0;
     
     // COMBINE ALL OUTPUTS ON EACH CHANNEL
-    wire[3:0] VGA_RED_CHAN = (VGA_RED_GRID | VGA_RED_WAVEFORM | TEXT1) ;
-    wire[3:0] VGA_GREEN_CHAN = (VGA_GREEN_GRID | VGA_GREEN_WAVEFORM | TEXT1) ; 
-    wire[3:0] VGA_BLUE_CHAN = (VGA_BLUE_GRID | VGA_BLUE_WAVEFORM | TEXT1); 
+    wire[3:0] VGA_RED_CHAN = (VGA_RED_GRID | VGA_RED_WAVEFORM | TEXT0 | TEXT1) ;
+    wire[3:0] VGA_GREEN_CHAN = (VGA_GREEN_GRID | VGA_GREEN_WAVEFORM | TEXT0 | TEXT1) ; 
+    wire[3:0] VGA_BLUE_CHAN = (VGA_BLUE_GRID | VGA_BLUE_WAVEFORM | TEXT0 | TEXT1); 
     
     
     
     // VGA Clock Generator (108MHz)
-    wire CLK_VGA;
     CLK_108M VGA_CLK_108M( 
             CLK,   // 100 MHz
             CLK_VGA     // 108 MHz
