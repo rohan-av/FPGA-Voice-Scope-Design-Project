@@ -53,6 +53,11 @@ module Draw_Background(
      parameter xadjust = 30;
      parameter yadjust = 750;
      
+     //envelope wave properties
+     parameter scale2 = 6;
+     parameter xadjust2 = 1280 - 30 - (1280/scale2);
+     parameter yadjust2 = 750;
+     
      //Maximum volume indicator centre - this is for circle to be moved over to draw background
      parameter radius = 40;
      wire [20:0] dist = (VGA_HORZ_COORD - maxvol_x)*(VGA_HORZ_COORD - maxvol_x) + (VGA_VERT_COORD - maxvol_y)*(VGA_VERT_COORD - maxvol_y);
@@ -194,6 +199,21 @@ module Draw_Background(
                 VGA_Green_Grid = 4'hF;
                 VGA_Blue_Grid = 4'hF;
             end
+            
+         //box for envelope
+          if (advanced_sw == 1 && ((VGA_HORZ_COORD == xadjust2 || VGA_HORZ_COORD == (xadjust2 + 1280/scale2)) && (VGA_VERT_COORD >= (1024 - yadjust2 - 1024/scale2) && VGA_VERT_COORD <= (1024 - yadjust2))))
+             begin
+                 VGA_Red_Grid = 4'hF;
+                 VGA_Green_Grid = 4'hF;
+                 VGA_Blue_Grid = 4'hF;
+             end
+             
+          if (advanced_sw == 1 && ((VGA_VERT_COORD == (1024 - yadjust2) || VGA_VERT_COORD == (1024 - yadjust2 - 1024/scale2)) && (VGA_HORZ_COORD >= xadjust2 && VGA_HORZ_COORD <= (xadjust2 + 1280/scale2))))
+             begin
+                 VGA_Red_Grid = 4'hF;
+                 VGA_Green_Grid = 4'hF;
+                 VGA_Blue_Grid = 4'hF;
+             end
         
         // max volume indicator
         else if (VGA_VERT_COORD <= maxvol_y && advanced_sw == 1) begin

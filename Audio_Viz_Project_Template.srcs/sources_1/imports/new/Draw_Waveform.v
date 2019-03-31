@@ -21,11 +21,22 @@ module Draw_Waveform(
     parameter xadjust = 30;
     parameter yadjust = 750;
     
+    //envelope wave properties
+    reg [10:0] prev_j = 0;
+    reg [10:0] j = 0;
+    parameter scale2 = 6;
+    parameter xadjust2 = 1280 - 30 - (1280/scale2);
+    parameter yadjust2 = 750;
+    
+    
      //The Sample_Memory represents the memory array used to store the voice samples.
      //There are 1280 points and each point can range from 0 to 1023. 
      // The reduced memory register scales the wave by 1/6
      reg [9:0] Scaled_Memory[1279:0];
      reg [9:0] Sample_Memory[1279:0];
+     reg [9:0] Minscaled_Memory[1279:0];
+     reg [9:0] Maxscaled_Memory[1279:0];
+     
      reg [10:0] i = 0;
      reg full_display_cycle = 0;
      reg [3:0] wave_size = 4'h2;
@@ -79,24 +90,35 @@ module Draw_Waveform(
         endcase
      
      //Each wave_sample is displayed on the screen from left to right. 
-        
+        i = (i==1279) ? 0 : i + 1;
+        j = (i % 159 == scale2)? ((j == 1279)? 0 : j + 1) : j;
+        prev_j <= j;
+        Minscaled_Memory[(j/scale2) + xadjust2] = (prev_j < j)? 10'b0 : Minscaled_Memory[(j/scale2) + xadjust2];
+        Maxscaled_Memory[(j/scale2) + xadjust2] = (prev_j < j)? 10'b0 : Maxscaled_Memory[(j/scale2) + xadjust2];
+        Minscaled_Memory[(j/scale2) + xadjust2] = (Minscaled_Memory[(j/scale2) + xadjust2] == 10'b0)? 10'b11111_11111 : Minscaled_Memory[(j/scale2) + xadjust2];
          if (freeze_sw)
          begin
              full_display_cycle = (i==1279) ? 1 : ((full_display_cycle==1) ? 1: 0);
-             i = (i==1279) ? 0 : i + 1;
              Sample_Memory[i] <= (full_display_cycle==1) ? Sample_Memory[i] : wave_sample;
-             Scaled_Memory[(i /scale) + xadjust] <= (full_display_cycle==1) ? Scaled_Memory[(i/scale) + xadjust] : (wave_sample/scale) + yadjust;
+             Scaled_Memory[(i/scale) + xadjust] <= (full_display_cycle==1) ? Scaled_Memory[(i/scale) + xadjust] : (wave_sample/scale) + yadjust;
+             Maxscaled_Memory[(j/scale2) + xadjust2] <= (full_display_cycle==1) ? Maxscaled_Memory[(j/scale2) + xadjust2] : (((wave_sample/scale2) + yadjust2) > Maxscaled_Memory[(j/scale2) + xadjust2])? ((wave_sample/scale2) + yadjust2) : Maxscaled_Memory[(j/scale2) + xadjust2];
+             Minscaled_Memory[(j/scale2) + xadjust2] <= (full_display_cycle==1) ? Minscaled_Memory[(j/scale2) + xadjust2] : (((wave_sample/scale2) + yadjust2) <= Minscaled_Memory[(j/scale2) + xadjust2])? ((wave_sample/scale2) + yadjust2) : Minscaled_Memory[(j/scale2) + xadjust2];
          end
          else
          begin
-             full_display_cycle <= 0;
-             i = (i==1279) ? 0 : i + 1;
+             full_display_cycle <= 0;         
              Sample_Memory[i] <=  wave_sample;
              Scaled_Memory[(i/scale) + xadjust] <= (wave_sample/scale) + yadjust;
+             Maxscaled_Memory[(j/scale2) + xadjust2] <= (((wave_sample/scale2) + yadjust2) > Maxscaled_Memory[(j/scale2) + xadjust2])? ((wave_sample/scale2) + yadjust2) : Maxscaled_Memory[(j/scale2) + xadjust2];
+             Minscaled_Memory[(j/scale2) + xadjust2] <= (((wave_sample/scale2) + yadjust2) <= Minscaled_Memory[(j/scale2) + xadjust2])? ((wave_sample/scale2) + yadjust2) : Minscaled_Memory[(j/scale2) + xadjust2];
          end           
      end  
 
     always@(*) begin
+            VGA_Red_waveform = 0;
+            VGA_Green_waveform = 0;
+            VGA_Blue_waveform = 0;
+        
             if ((advanced_sw == 0) && (VGA_HORZ_COORD < 1280) && ((VGA_VERT_COORD - (1024 - Sample_Memory[VGA_HORZ_COORD]) <= wave_size) || ((1024 - Sample_Memory[VGA_HORZ_COORD]) - VGA_VERT_COORD <= wave_size)))
                 begin
                     VGA_Red_waveform = R_colour;
@@ -104,20 +126,18 @@ module Draw_Waveform(
                     VGA_Blue_waveform = B_colour;
                 end
             
-            else if ((advanced_sw == 1) && (VGA_HORZ_COORD < 640) && (VGA_VERT_COORD == (1024 - Scaled_Memory[VGA_HORZ_COORD])))
+            if ((advanced_sw == 1) && (VGA_HORZ_COORD < 640) && (VGA_VERT_COORD == (1024 - Scaled_Memory[VGA_HORZ_COORD])))
                 begin
                     VGA_Red_waveform = R_colour;
                     VGA_Green_waveform = G_colour;
                     VGA_Blue_waveform = B_colour;
-                end      
-            
-            else
-                begin
-                    VGA_Red_waveform = 0;
-                    VGA_Green_waveform = 0;
-                    VGA_Blue_waveform = 0;
                 end
-        end
-
-    
+            
+            if ((advanced_sw == 1) && (VGA_HORZ_COORD > 640) && (VGA_HORZ_COORD <= (j + xadjust2))  && (VGA_VERT_COORD >= (1024 - Maxscaled_Memory[VGA_HORZ_COORD])) && (VGA_VERT_COORD <= (1024 - Minscaled_Memory[VGA_HORZ_COORD])))
+                begin
+                VGA_Red_waveform = R_colour;
+                VGA_Green_waveform = G_colour;
+                VGA_Blue_waveform = B_colour;
+            end
+        end   
 endmodule

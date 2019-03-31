@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sun Mar 31 02:49:29 2019
+| Date         : Sun Mar 31 14:18:20 2019
 | Host         : LAPTOP-P6DBKN0G running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Voice_Scope_TOP_control_sets_placed.rpt
 | Design       : Voice_Scope_TOP
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    51 |
-| Unused register locations in slices containing registers |    70 |
+| Number of unique control sets                            |    55 |
+| Unused register locations in slices containing registers |    72 |
 +----------------------------------------------------------+-------+
 
 
@@ -38,7 +38,7 @@ Table of Contents
 |      4 |            1 |
 |      8 |            2 |
 |     10 |            2 |
-|    16+ |           40 |
+|    16+ |           44 |
 +--------+--------------+
 
 
@@ -48,72 +48,76 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             364 |           69 |
+| No           | No                    | No                     |             386 |           89 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             110 |           23 |
+| No           | Yes                   | No                     |             110 |           20 |
 | Yes          | No                    | No                     |              28 |            5 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              68 |            9 |
+| Yes          | Yes                   | No                     |              68 |           11 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------------+--------------------------------------------+----------------------------------+------------------+----------------+
-|            Clock Signal           |                Enable Signal               |         Set/Reset Signal         | Slice Load Count | Bel Load Count |
-+-----------------------------------+--------------------------------------------+----------------------------------+------------------+----------------+
-|  d2/VGA_Blue_Grid_reg[1]/G0       |                                            |                                  |                1 |              2 |
-|  d2/VGA_Blue_Grid_reg[0]/G0       |                                            |                                  |                1 |              2 |
-|  d2/VGA_Blue_Grid_reg[2]/G0       |                                            |                                  |                1 |              2 |
-|  d2/VGA_Blue_Grid_reg[3]/G0       |                                            |                                  |                1 |              2 |
-|  d2/VGA_Green_Grid_reg[3]_i_2_n_0 |                                            | d3/VGA_CONTROL/AS[1]             |                1 |              2 |
-|  d2/VGA_Green_Grid_reg[2]_i_2_n_0 |                                            | d2/VGA_Green_Grid_reg[2]_i_3_n_0 |                1 |              2 |
-|  d2/VGA_Green_Grid_reg[1]_i_2_n_0 |                                            | d3/VGA_CONTROL/AS[0]             |                1 |              4 |
-|  d2/VGA_Red_Grid_reg[3]_i_2_n_0   |                                            | d3/VGA_CONTROL/VGA_Red_Grid0     |                1 |              8 |
-|  J_MIC3_Pin1_OBUF_BUFG            |                                            | vi1/ss_active[5]_i_1_n_0         |                1 |              8 |
-|  clr1/slowclk/clock               |                                            |                                  |                1 |             10 |
-|  grd1/slowclk/clock               |                                            |                                  |                1 |             10 |
-|  J_MIC3_Pin1_OBUF_BUFG            | vi1/intensity[11]_i_1_n_0                  | vi1/intensity[8]_i_1_n_0         |                2 |             20 |
-|  CLK_IBUF_BUFG                    |                                            | c0/counter[11]_i_1_n_0           |                3 |             22 |
-|  CLK_IBUF_BUFG                    |                                            | J_MIC3_Pin1_OBUF_BUFG            |                3 |             24 |
-|  d3/VGA_CLK_108M/clk_out1         | d3/VGA_CONTROL/eqOp2_in                    | d3/VGA_CONTROL/v_cntr_reg0       |                3 |             24 |
-| ~vc1/J_MIC3_Pin4_OBUF             |                                            |                                  |                4 |             24 |
-|  J_MIC3_Pin1_OBUF_BUFG            | vc1/E[0]                                   | vi1/samplemax0                   |                4 |             24 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Scaled_Memory_reg_64_127_0_2_i_1_n_0    |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | vi1/intensity[11]_i_1_n_0                  |                                  |                5 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Scaled_Memory_reg_192_255_0_2_i_1_n_0   |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_1024_1087_0_2_i_1_n_0 |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_1152_1215_0_2_i_1_n_0 |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_1088_1151_0_2_i_1_n_0 |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_0_63_0_2_i_4_n_0      |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_320_383_0_2_i_1_n_0   |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_384_447_0_2_i_1_n_0   |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_192_255_0_2_i_1_n_0   |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_256_319_0_2_i_1_n_0   |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_128_191_0_2_i_1_n_0   |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_1216_1279_0_2_i_1_n_0 |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_448_511_0_2_i_1_n_0   |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_704_767_0_2_i_1_n_0   |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_640_703_0_2_i_1_n_0   |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_512_575_0_2_i_1_n_0   |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_576_639_0_2_i_1_n_0   |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_64_127_0_2_i_1_n_0    |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Scaled_Memory_reg_0_63_0_2_i_4_n_0      |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_832_895_0_2_i_1_n_0   |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_768_831_0_2_i_1_n_0   |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_960_1023_0_2_i_1_n_0  |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Scaled_Memory_reg_448_511_0_2_i_1_n_0   |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Scaled_Memory_reg_256_319_0_2_i_1_n_0   |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Scaled_Memory_reg_128_191_0_2_i_1_n_0   |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_896_959_0_2_i_1_n_0   |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Scaled_Memory_reg_384_447_0_2_i_1_n_0   |                                  |                4 |             28 |
-|  J_MIC3_Pin1_OBUF_BUFG            | d1/Scaled_Memory_reg_320_383_0_2_i_1_n_0   |                                  |                4 |             28 |
-|  clr1/E[0]                        |                                            |                                  |                6 |             36 |
-|  d3/VGA_CLK_108M/clk_out1         |                                            |                                  |               12 |             40 |
-|  d3/VGA_CLK_108M/clk_out1         |                                            | d3/VGA_CONTROL/eqOp2_in          |               12 |             40 |
-|  CLK_IBUF_BUFG                    |                                            |                                  |               16 |            102 |
-|  J_MIC3_Pin1_OBUF_BUFG            |                                            |                                  |               29 |            162 |
-+-----------------------------------+--------------------------------------------+----------------------------------+------------------+----------------+
++-----------------------------------+-----------------------------------------------+----------------------------------+------------------+----------------+
+|            Clock Signal           |                 Enable Signal                 |         Set/Reset Signal         | Slice Load Count | Bel Load Count |
++-----------------------------------+-----------------------------------------------+----------------------------------+------------------+----------------+
+|  d2/VGA_Green_Grid_reg[2]_i_2_n_0 |                                               | d3/VGA_CONTROL/AS[1]             |                1 |              2 |
+|  d2/VGA_Green_Grid_reg[3]_i_2_n_0 |                                               | d3/VGA_CONTROL/AS[2]             |                1 |              2 |
+|  d2/VGA_Blue_Grid_reg[2]/G0       |                                               |                                  |                1 |              2 |
+|  d2/VGA_Blue_Grid_reg[0]/G0       |                                               |                                  |                1 |              2 |
+|  d2/VGA_Blue_Grid_reg[1]/G0       |                                               |                                  |                1 |              2 |
+|  d2/VGA_Blue_Grid_reg[3]/G0       |                                               |                                  |                1 |              2 |
+|  grd1/VGA_GREEN_reg[0][0]         |                                               | d3/VGA_CONTROL/AS[0]             |                1 |              4 |
+|  J_MIC3_Pin1_OBUF_BUFG            |                                               | vi1/ss_active[5]_i_1_n_0         |                1 |              8 |
+|  grd1/VGA_RED_reg[3]_0[0]         |                                               | d3/VGA_CONTROL/VGA_BLUE_reg[0]_0 |                1 |              8 |
+|  grd1/slowclk/clock               |                                               |                                  |                2 |             10 |
+|  clr1/slowclk/clock               |                                               |                                  |                3 |             10 |
+|  J_MIC3_Pin1_OBUF_BUFG            | vi1/intensity[11]_i_1_n_0                     | vi1/intensity[8]_i_1_n_0         |                4 |             20 |
+|  CLK_IBUF_BUFG                    |                                               | c0/counter[11]_i_1_n_0           |                3 |             22 |
+|  d3/VGA_CLK_108M/clk_out1         | d3/VGA_CONTROL/eqOp2_in                       | d3/VGA_CONTROL/v_cntr_reg0       |                3 |             24 |
+|  CLK_IBUF_BUFG                    |                                               | J_MIC3_Pin1_OBUF_BUFG            |                3 |             24 |
+|  J_MIC3_Pin1_OBUF_BUFG            | vc1/E[0]                                      | vi1/samplemax0                   |                4 |             24 |
+| ~vc1/J_MIC3_Pin4_OBUF             |                                               |                                  |                4 |             24 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_1088_1151_0_2_i_1_n_0    |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_1152_1215_0_2_i_1_n_0    |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_0_63_0_2_i_4_n_0         |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_1024_1087_0_2_i_1_n_0    |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_256_319_0_2_i_1_n_0      |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_128_191_0_2_i_1_n_0      |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_320_383_0_2_i_1_n_0      |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_1216_1279_0_2_i_1_n_0    |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_384_447_0_2_i_1_n_0      |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_192_255_0_2_i_1_n_0      |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_64_127_0_2_i_1_n_0       |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_448_511_0_2_i_1_n_0      |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_704_767_0_2_i_1_n_0      |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_896_959_0_2_i_1_n_0      |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Scaled_Memory_reg_256_319_0_2_i_1_n_0      |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_832_895_0_2_i_1_n_0      |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Scaled_Memory_reg_128_191_0_2_i_1_n_0      |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Scaled_Memory_reg_192_255_0_2_i_1_n_0      |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Scaled_Memory_reg_0_63_0_2_i_4_n_0         |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Scaled_Memory_reg_384_447_0_2_i_1_n_0      |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Scaled_Memory_reg_448_511_0_2_i_1_n_0      |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Scaled_Memory_reg_64_127_0_2_i_1_n_0       |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | vi1/intensity[11]_i_1_n_0                     |                                  |                5 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_960_1023_0_2_i_1_n_0     |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_768_831_0_2_i_1_n_0      |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Scaled_Memory_reg_320_383_0_2_i_1_n_0      |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_640_703_0_2_i_1_n_0      |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_512_575_0_2_i_1_n_0      |                                  |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Sample_Memory_reg_576_639_0_2_i_1_n_0      |                                  |                4 |             28 |
+|  clr1/E[0]                        |                                               |                                  |               10 |             36 |
+|  d3/VGA_CLK_108M/clk_out1         |                                               |                                  |               14 |             40 |
+|  d3/VGA_CLK_108M/clk_out1         |                                               | d3/VGA_CONTROL/eqOp2_in          |                9 |             40 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Minscaled_Memory_reg_1024_1151_0_0_i_1_n_0 |                                  |               10 |             80 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Maxscaled_Memory_reg_1152_1279_0_0_i_1_n_0 |                                  |               10 |             80 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Minscaled_Memory_reg_1152_1279_0_0_i_1_n_0 |                                  |               10 |             80 |
+|  J_MIC3_Pin1_OBUF_BUFG            | d1/Maxscaled_Memory_reg_1024_1151_0_0_i_1_n_0 |                                  |               10 |             80 |
+|  CLK_IBUF_BUFG                    |                                               |                                  |               16 |            102 |
+|  J_MIC3_Pin1_OBUF_BUFG            |                                               |                                  |               60 |            344 |
++-----------------------------------+-----------------------------------------------+----------------------------------+------------------+----------------+
 
 
