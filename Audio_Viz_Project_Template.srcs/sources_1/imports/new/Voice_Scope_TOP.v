@@ -52,6 +52,7 @@ module Voice_Scope_TOP(
     
     wire [11:0] MIC_in;
     wire new_clock;
+    wire slow_clock; // 10 Hz clock
     clk_div c0(CLK,new_clock);
    
        
@@ -91,10 +92,15 @@ module Voice_Scope_TOP(
     wire [3:0] VGA_Green_waveform;
     wire [3:0] VGA_Blue_waveform;
     wire [9:0] wave_sample; 
+    wire [6:0] wave_sample_2;
+    wire [11:0] avg;
+  
+    rolling_average ra(new_clock, MIC_in, freeze_sw, ramp_sw, avg, slow_clock);
+    assign wave_sample = (ramp_sw == 0)? MIC_in[11:4] : test_wave;
+    assign wave_sample_2 = avg[11:4];
     
-    assign wave_sample = (ramp_sw == 0)? MIC_in[11:2] : test_wave;
     
-    Draw_Waveform d1 (
+    Draw_Joy_Waveform d1 (
     .clk_sample(new_clock),
     .freeze_sw(freeze_sw),
     .advanced_sw(advanced_sw),
