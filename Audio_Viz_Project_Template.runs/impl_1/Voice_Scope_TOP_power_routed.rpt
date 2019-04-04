@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Thu Apr  4 15:15:52 2019
+| Date             : Thu Apr  4 15:35:32 2019
 | Host             : LAPTOP-P6DBKN0G running 64-bit major release  (build 9200)
 | Command          : report_power -file Voice_Scope_TOP_power_routed.rpt -pb Voice_Scope_TOP_power_summary_routed.pb -rpx Voice_Scope_TOP_power_routed.rpx
 | Design           : Voice_Scope_TOP
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.302        |
+| Total On-Chip Power (W)  | 0.303        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.230        |
@@ -52,22 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.005 |        5 |       --- |             --- |
-| Slice Logic              |     0.014 |     6250 |       --- |             --- |
-|   LUT as Logic           |     0.011 |     2312 |     20800 |           11.12 |
+| Clocks                   |     0.004 |        5 |       --- |             --- |
+| Slice Logic              |     0.014 |     6365 |       --- |             --- |
+|   LUT as Logic           |     0.011 |     2342 |     20800 |           11.26 |
 |   LUT as Distributed RAM |     0.002 |     2896 |      9600 |           30.17 |
-|   CARRY4                 |    <0.001 |      228 |      8150 |            2.80 |
-|   Register               |    <0.001 |      347 |     41600 |            0.83 |
+|   CARRY4                 |    <0.001 |      240 |      8150 |            2.94 |
+|   Register               |    <0.001 |      395 |     41600 |            0.95 |
 |   F7/F8 Muxes            |    <0.001 |       69 |     32600 |            0.21 |
-|   Others                 |     0.000 |       66 |       --- |             --- |
+|   Others                 |     0.000 |       80 |       --- |             --- |
 |   BUFG                   |     0.000 |        1 |        32 |            3.13 |
-| Signals                  |     0.067 |     4781 |       --- |             --- |
+| Signals                  |     0.068 |     4863 |       --- |             --- |
 | Block RAM                |     0.008 |      2.5 |        50 |            5.00 |
 | MMCM                     |     0.123 |        1 |         5 |           20.00 |
 | DSPs                     |     0.001 |        2 |        90 |            2.22 |
-| I/O                      |     0.012 |       49 |       106 |           46.23 |
+| I/O                      |     0.012 |       51 |       106 |           48.11 |
 | Static Power             |     0.072 |          |           |                 |
-| Total                    |     0.302 |          |           |                 |
+| Total                    |     0.303 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -335,7 +335,7 @@ Table of Contents
 |   d2                                  |     0.003 |
 |   d3                                  |     0.159 |
 |     VGA_CLK_108M                      |     0.124 |
-|     VGA_CONTROL                       |     0.024 |
+|     VGA_CONTROL                       |     0.023 |
 |     p0                                |     0.002 |
 |       FontRom                         |     0.002 |
 |     p1                                |    <0.001 |
@@ -350,7 +350,7 @@ Table of Contents
 |     t3                                |    <0.001 |
 |     t4                                |     0.001 |
 |       FontRom                         |     0.001 |
-|   dj1                                 |     0.042 |
+|   dj1                                 |     0.041 |
 |     Block0_reg_r1_0_63_0_2            |    <0.001 |
 |     Block0_reg_r1_0_63_3_5            |    <0.001 |
 |     Block0_reg_r1_0_63_6_6            |    <0.001 |
@@ -1151,12 +1151,21 @@ Table of Contents
 |     Block9_reg_r2_64_127_3_5          |    <0.001 |
 |     Block9_reg_r2_64_127_6_6          |    <0.001 |
 |     Block9_reg_r2_64_127_7_7          |    <0.001 |
+|     slowclk                           |    <0.001 |
+|     sp2                               |    <0.001 |
+|       dff1                            |    <0.001 |
+|       dff2                            |    <0.001 |
+|   dpt1                                |    <0.001 |
+|     slowclk                           |    <0.001 |
+|     sp1                               |     0.000 |
+|       dff1                            |     0.000 |
+|       dff2                            |     0.000 |
 |   grd1                                |    <0.001 |
 |     slowclk                           |    <0.001 |
 |     sp1                               |     0.000 |
 |       dff1                            |     0.000 |
 |       dff2                            |     0.000 |
-|   u1                                  |     0.001 |
+|   u1                                  |     0.002 |
 |   vc1                                 |    <0.001 |
 |   vi1                                 |    <0.001 |
 +---------------------------------------+-----------+

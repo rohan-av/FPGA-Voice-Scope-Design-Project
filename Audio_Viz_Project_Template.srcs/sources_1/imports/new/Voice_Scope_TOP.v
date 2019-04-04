@@ -14,6 +14,8 @@ module Voice_Scope_TOP(
     input axis_sw,
     input freeze_sw,
     input advanced_sw,
+    input depth_button,
+    input fill_button,
     input colour_button,
     input grid_button,
     input  J_MIC3_Pin3,   // PmodMIC3 audio input data (serial)
@@ -48,6 +50,9 @@ module Voice_Scope_TOP(
    
    wire [2:0] grid_select;
    cycle_grid grd1 (CLK, grid_button, grid_select);
+   
+   wire [1:0] depth_select;
+   cycle_depth dpt1 (CLK, depth_button, depth_select);
        
 // Please create a clock divider module to generate a 20kHz clock signal. 
 // Instantiate it below
@@ -128,7 +133,8 @@ module Voice_Scope_TOP(
     .wave_sample(wave_sample_8),
     .VGA_HORZ_COORD(VGA_HORZ_COORD),
     .VGA_VERT_COORD(VGA_VERT_COORD),
-    .colour_select(colour_select),
+    .depth_select(depth_select),
+    .pushbutton(fill_button),
     .VGA_Red_waveform(VGA_Red_Joy_waveform),
     .VGA_Green_waveform(VGA_Green_Joy_waveform),
     .VGA_Blue_waveform(VGA_Blue_Joy_waveform)
