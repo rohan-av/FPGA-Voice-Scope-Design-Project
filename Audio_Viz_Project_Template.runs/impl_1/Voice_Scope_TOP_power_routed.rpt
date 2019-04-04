@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Thu Apr  4 15:35:32 2019
+| Date             : Thu Apr  4 20:21:11 2019
 | Host             : LAPTOP-P6DBKN0G running 64-bit major release  (build 9200)
 | Command          : report_power -file Voice_Scope_TOP_power_routed.rpt -pb Voice_Scope_TOP_power_summary_routed.pb -rpx Voice_Scope_TOP_power_routed.rpx
 | Design           : Voice_Scope_TOP
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.303        |
+| Total On-Chip Power (W)  | 0.295        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.230        |
+| Dynamic (W)              | 0.223        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 83.5         |
@@ -53,21 +53,21 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.004 |        5 |       --- |             --- |
-| Slice Logic              |     0.014 |     6365 |       --- |             --- |
-|   LUT as Logic           |     0.011 |     2342 |     20800 |           11.26 |
+| Slice Logic              |     0.013 |     6256 |       --- |             --- |
+|   LUT as Logic           |     0.011 |     2270 |     20800 |           10.91 |
 |   LUT as Distributed RAM |     0.002 |     2896 |      9600 |           30.17 |
-|   CARRY4                 |    <0.001 |      240 |      8150 |            2.94 |
-|   Register               |    <0.001 |      395 |     41600 |            0.95 |
+|   CARRY4                 |    <0.001 |      231 |      8150 |            2.83 |
+|   Register               |    <0.001 |      403 |     41600 |            0.97 |
 |   F7/F8 Muxes            |    <0.001 |       69 |     32600 |            0.21 |
-|   Others                 |     0.000 |       80 |       --- |             --- |
+|   Others                 |     0.000 |       78 |       --- |             --- |
 |   BUFG                   |     0.000 |        1 |        32 |            3.13 |
-| Signals                  |     0.068 |     4863 |       --- |             --- |
-| Block RAM                |     0.008 |      2.5 |        50 |            5.00 |
+| Signals                  |     0.062 |     4762 |       --- |             --- |
+| Block RAM                |     0.006 |      1.5 |        50 |            3.00 |
 | MMCM                     |     0.123 |        1 |         5 |           20.00 |
 | DSPs                     |     0.001 |        2 |        90 |            2.22 |
 | I/O                      |     0.012 |       51 |       106 |           48.11 |
 | Static Power             |     0.072 |          |           |                 |
-| Total                    |     0.303 |          |           |                 |
+| Total                    |     0.295 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.105 |       0.095 |      0.010 |
+| Vccint    |       1.000 |     0.098 |       0.088 |      0.010 |
 | Vccaux    |       1.800 |     0.081 |       0.069 |      0.013 |
 | Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -86,7 +86,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.001 |       0.001 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.000 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -133,8 +133,8 @@ Table of Contents
 +--------------------+------------------------------------+-----------------+
 | Clock              | Domain                             | Constraint (ns) |
 +--------------------+------------------------------------+-----------------+
-| clk_out1_clk_wiz_0 | d3/VGA_CLK_108M/clk_out1_clk_wiz_0 |             9.3 |
-| clkfbout_clk_wiz_0 | d3/VGA_CLK_108M/clkfbout_clk_wiz_0 |            10.0 |
+| clk_out1_clk_wiz_0 | d5/VGA_CLK_108M/clk_out1_clk_wiz_0 |             9.3 |
+| clkfbout_clk_wiz_0 | d5/VGA_CLK_108M/clkfbout_clk_wiz_0 |            10.0 |
 | sys_clk_pin        | CLK                                |            10.0 |
 +--------------------+------------------------------------+-----------------+
 
@@ -148,14 +148,14 @@ Table of Contents
 +---------------------------------------+-----------+
 | Name                                  | Power (W) |
 +---------------------------------------+-----------+
-| Voice_Scope_TOP                       |     0.230 |
+| Voice_Scope_TOP                       |     0.223 |
 |   c0                                  |    <0.001 |
 |   clr1                                |    <0.001 |
 |     slowclk                           |    <0.001 |
 |     sp1                               |     0.000 |
 |       dff1                            |     0.000 |
 |       dff2                            |     0.000 |
-|   d1                                  |     0.010 |
+|   d1                                  |     0.009 |
 |     Maxscaled_Memory_reg_0_127_0_0    |    <0.001 |
 |     Maxscaled_Memory_reg_0_127_1_1    |    <0.001 |
 |     Maxscaled_Memory_reg_0_127_2_2    |    <0.001 |
@@ -332,25 +332,22 @@ Table of Contents
 |     Scaled_Memory_reg_64_127_3_5      |    <0.001 |
 |     Scaled_Memory_reg_64_127_6_8      |    <0.001 |
 |     Scaled_Memory_reg_64_127_9_9      |     0.000 |
-|   d2                                  |     0.003 |
-|   d3                                  |     0.159 |
+|   d2                                  |    <0.001 |
+|   d3                                  |     0.002 |
+|   d5                                  |     0.156 |
 |     VGA_CLK_108M                      |     0.124 |
-|     VGA_CONTROL                       |     0.023 |
-|     p0                                |     0.002 |
+|     VGA_CONTROL                       |     0.021 |
+|     p0                                |    <0.001 |
+|     p1                                |     0.002 |
 |       FontRom                         |     0.002 |
-|     p1                                |    <0.001 |
-|     p12                               |     0.002 |
+|     p12                               |    <0.001 |
+|     t1                                |     0.004 |
+|       FontRom                         |     0.003 |
+|     t2                                |    <0.001 |
+|     t3                                |     0.003 |
 |       FontRom                         |     0.002 |
-|     p4                                |     0.001 |
-|       FontRom                         |     0.001 |
-|     p9                                |    <0.001 |
-|     t1                                |     0.001 |
-|     t2                                |     0.003 |
-|       FontRom                         |     0.002 |
-|     t3                                |    <0.001 |
-|     t4                                |     0.001 |
-|       FontRom                         |     0.001 |
-|   dj1                                 |     0.041 |
+|     t4                                |    <0.001 |
+|   dj1                                 |     0.039 |
 |     Block0_reg_r1_0_63_0_2            |    <0.001 |
 |     Block0_reg_r1_0_63_3_5            |    <0.001 |
 |     Block0_reg_r1_0_63_6_6            |    <0.001 |
@@ -1165,7 +1162,7 @@ Table of Contents
 |     sp1                               |     0.000 |
 |       dff1                            |     0.000 |
 |       dff2                            |     0.000 |
-|   u1                                  |     0.002 |
+|   u1                                  |     0.001 |
 |   vc1                                 |    <0.001 |
 |   vi1                                 |    <0.001 |
 +---------------------------------------+-----------+

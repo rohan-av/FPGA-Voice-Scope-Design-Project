@@ -144,7 +144,6 @@ module Voice_Scope_TOP(
     wire [3:0] VGA_Red_Grid;
     wire [3:0] VGA_Green_Grid;
     wire [3:0] VGA_Blue_Grid;
-    wire [3:0] level;
     
     Draw_Background d2 (
     .VGA_HORZ_COORD(VGA_HORZ_COORD),
@@ -153,15 +152,42 @@ module Voice_Scope_TOP(
     .axis_sw(axis_sw),
     .colour_select(colour_select),
     .grid_select(grid_select),
-    .intensity(peakval),
     .VGA_Red_Grid(VGA_Red_Grid),
     .VGA_Green_Grid(VGA_Green_Grid),
-    .VGA_Blue_Grid(VGA_Blue_Grid),
+    .VGA_Blue_Grid(VGA_Blue_Grid)
+    );
+    
+    wire [3:0] VGA_Rvol;
+    wire [3:0] VGA_Gvol;
+    wire [3:0] VGA_Bvol;
+    wire [3:0] level;
+    
+    volume_visual d3(
+    .VGA_VERT_COORD(VGA_VERT_COORD),
+    .VGA_HORZ_COORD(VGA_HORZ_COORD),
+    .advanced_sw(advanced_sw),
+    .intensity(peakval),
+    .VGA_Red_Grid(VGA_Rvol),
+    .VGA_Green_Grid(VGA_Gvol),
+    .VGA_Blue_Grid(VGA_Bvol),
     .level(level)
     );
     
+    wire [3:0] VGA_RBox;
+    wire [3:0] VGA_GBox;
+    wire [3:0] VGA_BBox;
+    
+    draw_boxes d4(
+    .advanced_sw(advanced_sw),
+    .VGA_HORZ_COORD(VGA_HORZ_COORD),
+    .VGA_VERT_COORD(VGA_VERT_COORD),
+    .VGA_Red_Grid(VGA_RBox),
+    .VGA_Green_Grid(VGA_GBox),
+    .VGA_Blue_Grid(VGA_BBox)
+    );
+    
 // Please instantiate the VGA display module below          
-     VGA_DISPLAY d3 (
+     VGA_DISPLAY d5 (
      .CLK(CLK),
      .advanced_sw(advanced_sw),
      .level(level),
@@ -174,6 +200,12 @@ module Voice_Scope_TOP(
      .VGA_RED_GRID(VGA_Red_Grid),
      .VGA_GREEN_GRID(VGA_Green_Grid),
      .VGA_BLUE_GRID(VGA_Blue_Grid),
+     .VGA_RED_VOL(VGA_Rvol),
+     .VGA_GREEN_VOL(VGA_Gvol),
+     .VGA_BLUE_VOL(VGA_Bvol),
+     .VGA_RED_BOX(VGA_RBox),
+     .VGA_GREEN_BOX(VGA_GBox),
+     .VGA_BLUE_BOX(VGA_BBox),
      .VGA_HORZ_COORD(VGA_HORZ_COORD),
      .VGA_VERT_COORD(VGA_VERT_COORD),
      .VGA_RED(VGA_RED),
