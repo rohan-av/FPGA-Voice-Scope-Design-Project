@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 04.04.2019 15:24:11
+// Create Date: 04.04.2019 16:00:29
 // Design Name: 
-// Module Name: cycle_depth
+// Module Name: cycle_fill
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module cycle_depth(input CLK, input pushbutton, output reg [1:0] depth = 2'b00);
+module cycle_fill(input CLK, input pushbutton, output reg [3:0] fill = 3'b000);
     wire slow_clock;
     wire pulse;
     
@@ -29,6 +29,6 @@ module cycle_depth(input CLK, input pushbutton, output reg [1:0] depth = 2'b00);
     
     always@(posedge slow_clock)
         begin
-        depth = (pulse == 1)? ((depth == 2'b01)? 2'b00 : depth + 1) : depth ;
+        fill = (pulse == 1)? ((fill == 4'b1001)? 4'b0000 : fill + 1) : fill;
         end
 endmodule

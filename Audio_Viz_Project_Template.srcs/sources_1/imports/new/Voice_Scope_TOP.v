@@ -53,6 +53,9 @@ module Voice_Scope_TOP(
    
    wire [1:0] depth_select;
    cycle_depth dpt1 (CLK, depth_button, depth_select);
+   
+   wire [3:0] fill_select;
+   cycle_fill fll1 (CLK, fill_button, fill_select);
        
 // Please create a clock divider module to generate a 20kHz clock signal. 
 // Instantiate it below
@@ -134,7 +137,7 @@ module Voice_Scope_TOP(
     .VGA_HORZ_COORD(VGA_HORZ_COORD),
     .VGA_VERT_COORD(VGA_VERT_COORD),
     .depth_select(depth_select),
-    .pushbutton(fill_button),
+    .fill_counter(fill_select),
     .VGA_Red_waveform(VGA_Red_Joy_waveform),
     .VGA_Green_waveform(VGA_Green_Joy_waveform),
     .VGA_Blue_waveform(VGA_Blue_Joy_waveform)

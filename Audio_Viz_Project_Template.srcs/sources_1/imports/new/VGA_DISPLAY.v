@@ -246,10 +246,17 @@ module VGA_DISPLAY(
             VGA_VERT_COORD  
         ) ; 
     
-
+    reg counter = 0;
+    wire slclk;
+    assign slclk = (counter == 1)? 1: 0;
     // CLOCK THEM OUT
-    always@(posedge CLK_VGA) begin      
+    always@(posedge CLK_VGA) begin
+        counter = (counter == 1) ? 0 : counter + 1;
+        
+    end
+    always@(*) begin      
             // (res)? 4'hF
+            
             VGA_RED <= {VGA_ACTIVE, VGA_ACTIVE, VGA_ACTIVE, VGA_ACTIVE} & VGA_RED_CHAN ;  
             VGA_GREEN <= {VGA_ACTIVE, VGA_ACTIVE, VGA_ACTIVE, VGA_ACTIVE} & VGA_GREEN_CHAN ; 
             VGA_BLUE <= {VGA_ACTIVE, VGA_ACTIVE, VGA_ACTIVE, VGA_ACTIVE} & VGA_BLUE_CHAN ; 
