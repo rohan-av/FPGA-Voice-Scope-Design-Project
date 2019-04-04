@@ -9,7 +9,9 @@
 
 module Voice_Scope_TOP(
     input CLK,
+    input waveform_sw,
     input ramp_sw,
+    input axis_sw,
     input freeze_sw,
     input advanced_sw,
     input colour_button,
@@ -108,6 +110,7 @@ module Voice_Scope_TOP(
     Draw_Waveform d1 (
     .clk_sample(new_clock),
     .freeze_sw(freeze_sw),
+    .waveform_sw(waveform_sw),
     .advanced_sw(advanced_sw),
     .wave_sample(wave_sample),
     .VGA_HORZ_COORD(VGA_HORZ_COORD),
@@ -141,6 +144,7 @@ module Voice_Scope_TOP(
     .VGA_HORZ_COORD(VGA_HORZ_COORD),
     .VGA_VERT_COORD(VGA_VERT_COORD),
     .advanced_sw(advanced_sw),
+    .axis_sw(axis_sw),
     .colour_select(colour_select),
     .grid_select(grid_select),
     .intensity(peakval),

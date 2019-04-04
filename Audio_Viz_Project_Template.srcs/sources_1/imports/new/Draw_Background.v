@@ -24,8 +24,8 @@
 module Draw_Background(
     input [11:0] VGA_HORZ_COORD,
     input [11:0] VGA_VERT_COORD,
-    input freeze_sw,
-    input advanced_sw,   
+    input advanced_sw,
+    input axis_sw,   
     input [2:0] colour_select,
     input [2:0] grid_select,
     input [11:0] intensity,
@@ -70,11 +70,11 @@ module Draw_Background(
 // The code below draws two grid lines. Modify the codes to draw more grid lines. 
     wire Condition_For_Grid_0 = (advanced_sw == 0) && ((VGA_HORZ_COORD % 80 == 0) ||  (VGA_VERT_COORD % 64 == 0) || (VGA_HORZ_COORD == 1279) || (VGA_VERT_COORD == 1023));
     wire Condition_For_Grid_1 = (advanced_sw == 0) && ((VGA_HORZ_COORD % 20 == 0 && VGA_VERT_COORD % 16 == 0));
-    wire Condition_For_Grid_2 = (advanced_sw == 0) && (VGA_HORZ_COORD == 1279) || (VGA_VERT_COORD == 1023) || (VGA_HORZ_COORD == 0) ||  (VGA_VERT_COORD == 0);
+    wire Condition_For_Grid_2 = (advanced_sw == 0 && advanced_sw == 1); //false
     parameter [1:0] tt = 1; // tick thickness
 
 // Using the gridline example, insert your code below to draw ticks on the x-axis and y-axis.
-    wire Condition_For_Ticks = (advanced_sw == 0) && ((((VGA_HORZ_COORD % 20 > 20 - tt) || (VGA_HORZ_COORD % 20 < tt)) && (VGA_VERT_COORD > 505 && VGA_VERT_COORD < 519 )) 
+    wire Condition_For_Ticks = (axis_sw == 0) && (advanced_sw == 0) && ((((VGA_HORZ_COORD % 20 > 20 - tt) || (VGA_HORZ_COORD % 20 < tt)) && (VGA_VERT_COORD > 505 && VGA_VERT_COORD < 519 )) 
                                || (((VGA_VERT_COORD % 16 > 16 - tt) || (VGA_VERT_COORD % 16 < tt)) && (VGA_HORZ_COORD > 633 && VGA_HORZ_COORD < 647)) 
                                || (VGA_VERT_COORD > 510 && VGA_VERT_COORD < 514 ) || (VGA_HORZ_COORD > 638 && VGA_HORZ_COORD < 642));
 

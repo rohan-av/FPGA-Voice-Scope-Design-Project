@@ -5,6 +5,7 @@
 
 module Draw_Waveform(
     input clk_sample, //20kHz clock
+    input waveform_sw,
     input freeze_sw,
     input advanced_sw,   
     input [9:0] wave_sample,
@@ -93,9 +94,9 @@ module Draw_Waveform(
         i = (i==1279) ? 0 : i + 1;
         j = (i % 159 == scale2)? ((j == 1279)? 0 : j + 1) : j;
         prev_j <= j;
-        Minscaled_Memory[(j/scale2)] = (prev_j < j)? 10'b0 : Minscaled_Memory[(j/scale2)];
-        Maxscaled_Memory[(j/scale2)] = (prev_j < j)? 10'b0 : Maxscaled_Memory[(j/scale2)];
-        Minscaled_Memory[(j/scale2)] = (Minscaled_Memory[(j/scale2)] == 10'b0)? 10'b11111_11111 : Minscaled_Memory[(j/scale2)];
+        Minscaled_Memory[(j/scale2)] = (prev_j < j && freeze_sw == 0)? 10'b0 : Minscaled_Memory[(j/scale2)];
+        Maxscaled_Memory[(j/scale2)] = (prev_j < j && freeze_sw == 0)? 10'b0 : Maxscaled_Memory[(j/scale2)];
+        Minscaled_Memory[(j/scale2)] = (Minscaled_Memory[(j/scale2)] == 10'b0 && freeze_sw == 0)? 10'b11111_11111 : Minscaled_Memory[(j/scale2)];
          if (freeze_sw)
          begin
              full_display_cycle = (i==1279) ? 1 : ((full_display_cycle==1) ? 1: 0);
@@ -119,21 +120,21 @@ module Draw_Waveform(
             VGA_Green_waveform = 0;
             VGA_Blue_waveform = 0;
         
-            if ((advanced_sw == 0) && (VGA_HORZ_COORD < 1280) && ((VGA_VERT_COORD - (1024 - Sample_Memory[VGA_HORZ_COORD]) <= wave_size) || ((1024 - Sample_Memory[VGA_HORZ_COORD]) - VGA_VERT_COORD <= wave_size)))
+            if (~waveform_sw && (advanced_sw == 0) && (VGA_HORZ_COORD < 1280) && ((VGA_VERT_COORD - (1024 - Sample_Memory[VGA_HORZ_COORD]) <= wave_size) || ((1024 - Sample_Memory[VGA_HORZ_COORD]) - VGA_VERT_COORD <= wave_size)))
                 begin
                     VGA_Red_waveform = R_colour;
                     VGA_Green_waveform = G_colour;
                     VGA_Blue_waveform = B_colour;
                 end
             
-            if ((advanced_sw == 1) && (VGA_HORZ_COORD < (1280/scale) + xadjust) && (VGA_HORZ_COORD > xadjust) && (VGA_VERT_COORD == (1024 - Scaled_Memory[VGA_HORZ_COORD - xadjust])))
+            if (~waveform_sw && (advanced_sw == 1) && (VGA_HORZ_COORD < (1280/scale) + xadjust) && (VGA_HORZ_COORD > xadjust) && (VGA_VERT_COORD == (1024 - Scaled_Memory[VGA_HORZ_COORD - xadjust])))
                 begin
                     VGA_Red_waveform = R_colour;
                     VGA_Green_waveform = G_colour;
                     VGA_Blue_waveform = B_colour;
                 end
             
-            if ((advanced_sw == 1) && (VGA_HORZ_COORD > xadjust2) && (VGA_HORZ_COORD < (j/scale2) + xadjust2)  && (VGA_VERT_COORD >= (1024 - Maxscaled_Memory[VGA_HORZ_COORD - xadjust2])) && (VGA_VERT_COORD <= (1024 - Minscaled_Memory[VGA_HORZ_COORD- xadjust2])))
+            if (~waveform_sw && (advanced_sw == 1) && (VGA_HORZ_COORD > xadjust2) && (VGA_HORZ_COORD < (j/scale2) + xadjust2)  && (VGA_VERT_COORD >= (1024 - Maxscaled_Memory[VGA_HORZ_COORD - xadjust2])) && (VGA_VERT_COORD <= (1024 - Minscaled_Memory[VGA_HORZ_COORD- xadjust2])))
                 begin
                 VGA_Red_waveform = R_colour;
                 VGA_Green_waveform = G_colour;
