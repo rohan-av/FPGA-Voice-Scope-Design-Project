@@ -3,11 +3,6 @@
 // You may study and modify the code inside this module to imporve the display feature or introduce other features
 //////////////////////////////////////////////////////////////////////////////////
 
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// You may study and modify the code inside this module to imporve the display feature or introduce other features
-//////////////////////////////////////////////////////////////////////////////////
-
 module Draw_Waveform(
     input clk_sample, //20kHz clock
     input freeze_sw,
@@ -37,10 +32,10 @@ module Draw_Waveform(
      //The Sample_Memory represents the memory array used to store the voice samples.
      //There are 1280 points and each point can range from 0 to 1023. 
      // The reduced memory register scales the wave by 1/6
-     reg [9:0] Scaled_Memory[1279:0];
+     reg [9:0] Scaled_Memory[(1279/scale):0];
      reg [9:0] Sample_Memory[1279:0];
-     reg [9:0] Minscaled_Memory[1279:0];
-     reg [9:0] Maxscaled_Memory[1279:0];
+     reg [9:0] Minscaled_Memory[(1279/scale2):0];
+     reg [9:0] Maxscaled_Memory[(1279/scale2):0];
      
      reg [10:0] i = 0;
      reg full_display_cycle = 0;
@@ -98,24 +93,24 @@ module Draw_Waveform(
         i = (i==1279) ? 0 : i + 1;
         j = (i % 159 == scale2)? ((j == 1279)? 0 : j + 1) : j;
         prev_j <= j;
-        Minscaled_Memory[(j/scale2) + xadjust2] = (prev_j < j)? 10'b0 : Minscaled_Memory[(j/scale2) + xadjust2];
-        Maxscaled_Memory[(j/scale2) + xadjust2] = (prev_j < j)? 10'b0 : Maxscaled_Memory[(j/scale2) + xadjust2];
-        Minscaled_Memory[(j/scale2) + xadjust2] = (Minscaled_Memory[(j/scale2) + xadjust2] == 10'b0)? 10'b11111_11111 : Minscaled_Memory[(j/scale2) + xadjust2];
+        Minscaled_Memory[(j/scale2)] = (prev_j < j)? 10'b0 : Minscaled_Memory[(j/scale2)];
+        Maxscaled_Memory[(j/scale2)] = (prev_j < j)? 10'b0 : Maxscaled_Memory[(j/scale2)];
+        Minscaled_Memory[(j/scale2)] = (Minscaled_Memory[(j/scale2)] == 10'b0)? 10'b11111_11111 : Minscaled_Memory[(j/scale2)];
          if (freeze_sw)
          begin
              full_display_cycle = (i==1279) ? 1 : ((full_display_cycle==1) ? 1: 0);
              Sample_Memory[i] <= (full_display_cycle==1) ? Sample_Memory[i] : wave_sample;
-             Scaled_Memory[(i/scale) + xadjust] <= (full_display_cycle==1) ? Scaled_Memory[(i/scale) + xadjust] : (wave_sample/scale) + yadjust;
-             Maxscaled_Memory[(j/scale2) + xadjust2] <= (full_display_cycle==1) ? Maxscaled_Memory[(j/scale2) + xadjust2] : (((wave_sample/scale2) + yadjust2) > Maxscaled_Memory[(j/scale2) + xadjust2])? ((wave_sample/scale2) + yadjust2) : Maxscaled_Memory[(j/scale2) + xadjust2];
-             Minscaled_Memory[(j/scale2) + xadjust2] <= (full_display_cycle==1) ? Minscaled_Memory[(j/scale2) + xadjust2] : (((wave_sample/scale2) + yadjust2) <= Minscaled_Memory[(j/scale2) + xadjust2])? ((wave_sample/scale2) + yadjust2) : Minscaled_Memory[(j/scale2) + xadjust2];
+             Scaled_Memory[(i/scale)] <= (full_display_cycle==1) ? Scaled_Memory[(i/scale)] : (wave_sample/scale) + yadjust;
+             Maxscaled_Memory[(j/scale2)] <= (full_display_cycle==1) ? Maxscaled_Memory[(j/scale2)] : (((wave_sample/scale2) + yadjust2) > Maxscaled_Memory[(j/scale2)])? ((wave_sample/scale2) + yadjust2) : Maxscaled_Memory[(j/scale2)];
+             Minscaled_Memory[(j/scale2)] <= (full_display_cycle==1) ? Minscaled_Memory[(j/scale2)] : (((wave_sample/scale2) + yadjust2) <= Minscaled_Memory[(j/scale2)])? ((wave_sample/scale2) + yadjust2) : Minscaled_Memory[(j/scale2)];
          end
          else
          begin
              full_display_cycle <= 0;         
              Sample_Memory[i] <=  wave_sample;
-             Scaled_Memory[(i/scale) + xadjust] <= (wave_sample/scale) + yadjust;
-             Maxscaled_Memory[(j/scale2) + xadjust2] <= (((wave_sample/scale2) + yadjust2) > Maxscaled_Memory[(j/scale2) + xadjust2])? ((wave_sample/scale2) + yadjust2) : Maxscaled_Memory[(j/scale2) + xadjust2];
-             Minscaled_Memory[(j/scale2) + xadjust2] <= (((wave_sample/scale2) + yadjust2) <= Minscaled_Memory[(j/scale2) + xadjust2])? ((wave_sample/scale2) + yadjust2) : Minscaled_Memory[(j/scale2) + xadjust2];
+             Scaled_Memory[(i/scale)] <= (wave_sample/scale) + yadjust;
+             Maxscaled_Memory[(j/scale2)] <= (((wave_sample/scale2) + yadjust2) > Maxscaled_Memory[(j/scale2)])? ((wave_sample/scale2) + yadjust2) : Maxscaled_Memory[(j/scale2)];
+             Minscaled_Memory[(j/scale2)] <= (((wave_sample/scale2) + yadjust2) <= Minscaled_Memory[(j/scale2)])? ((wave_sample/scale2) + yadjust2) : Minscaled_Memory[(j/scale2)];
          end           
      end  
 
@@ -131,14 +126,14 @@ module Draw_Waveform(
                     VGA_Blue_waveform = B_colour;
                 end
             
-            if ((advanced_sw == 1) && (VGA_HORZ_COORD < 640) && (VGA_VERT_COORD == (1024 - Scaled_Memory[VGA_HORZ_COORD])))
+            if ((advanced_sw == 1) && (VGA_HORZ_COORD < (1280/scale) + xadjust) && (VGA_HORZ_COORD > xadjust) && (VGA_VERT_COORD == (1024 - Scaled_Memory[VGA_HORZ_COORD - xadjust])))
                 begin
                     VGA_Red_waveform = R_colour;
                     VGA_Green_waveform = G_colour;
                     VGA_Blue_waveform = B_colour;
                 end
             
-            if ((advanced_sw == 1) && (VGA_HORZ_COORD > 640) && (VGA_HORZ_COORD <= (j + xadjust2))  && (VGA_VERT_COORD >= (1024 - Maxscaled_Memory[VGA_HORZ_COORD])) && (VGA_VERT_COORD <= (1024 - Minscaled_Memory[VGA_HORZ_COORD])))
+            if ((advanced_sw == 1) && (VGA_HORZ_COORD > xadjust2) && (VGA_HORZ_COORD < (j/scale2) + xadjust2)  && (VGA_VERT_COORD >= (1024 - Maxscaled_Memory[VGA_HORZ_COORD - xadjust2])) && (VGA_VERT_COORD <= (1024 - Minscaled_Memory[VGA_HORZ_COORD- xadjust2])))
                 begin
                 VGA_Red_waveform = R_colour;
                 VGA_Green_waveform = G_colour;

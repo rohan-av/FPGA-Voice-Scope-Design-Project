@@ -135,6 +135,7 @@ module Voice_Scope_TOP(
     wire [3:0] VGA_Red_Grid;
     wire [3:0] VGA_Green_Grid;
     wire [3:0] VGA_Blue_Grid;
+    wire [3:0] level;
     
     Draw_Background d2 (
     .VGA_HORZ_COORD(VGA_HORZ_COORD),
@@ -145,13 +146,15 @@ module Voice_Scope_TOP(
     .intensity(peakval),
     .VGA_Red_Grid(VGA_Red_Grid),
     .VGA_Green_Grid(VGA_Green_Grid),
-    .VGA_Blue_Grid(VGA_Blue_Grid)
+    .VGA_Blue_Grid(VGA_Blue_Grid),
+    .level(level)
     );
     
 // Please instantiate the VGA display module below          
      VGA_DISPLAY d3 (
      .CLK(CLK),
      .advanced_sw(advanced_sw),
+     .level(level),
      .VGA_RED_WAVEFORM(VGA_Red_waveform),
      .VGA_GREEN_WAVEFORM(VGA_Green_waveform),
      .VGA_BLUE_WAVEFORM(VGA_Blue_waveform),
