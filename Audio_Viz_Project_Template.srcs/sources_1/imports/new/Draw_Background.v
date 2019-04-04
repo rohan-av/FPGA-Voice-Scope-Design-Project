@@ -55,6 +55,9 @@ module Draw_Background(
                                || (VGA_VERT_COORD > 510 && VGA_VERT_COORD < 514 ) || (VGA_HORZ_COORD > 638 && VGA_HORZ_COORD < 642));
 
 
+// Black box for menu booleans
+    wire menu_horz = (advanced_sw == 1 && VGA_HORZ_COORD >= 30 && VGA_HORZ_COORD <= 250)? 1: 0;
+    wire menu_vert = (advanced_sw == 1 && VGA_VERT_COORD >= 400 && VGA_VERT_COORD <= 800)? 1: 0;  
     
 // Please modify below codes to change the background color and to display ticks defined above
     always @(*) begin
@@ -139,25 +142,27 @@ module Draw_Background(
             B_tickcolour = 4'h0;
             end
         endcase
+    end
     
+    always@(*) begin
         case(grid_select)
             3'b000: 
             begin
-                VGA_Red_Grid = Condition_For_Ticks ? R_tickcolour : Condition_For_Grid_0 ? R_gridcolour : R_bgcolour;
-                VGA_Green_Grid = Condition_For_Ticks ? G_tickcolour : Condition_For_Grid_0 ? G_gridcolour : G_bgcolour;
-                VGA_Blue_Grid = Condition_For_Ticks ? B_tickcolour : Condition_For_Grid_0 ? B_gridcolour : B_bgcolour;
+                VGA_Red_Grid = Condition_For_Ticks ? R_tickcolour : Condition_For_Grid_0 ? R_gridcolour : (menu_horz && menu_vert)? R_bgcolour + 1:  R_bgcolour;
+                VGA_Green_Grid = Condition_For_Ticks ? G_tickcolour : Condition_For_Grid_0 ? G_gridcolour : (menu_horz && menu_vert)? G_bgcolour + 1:  G_bgcolour;
+                VGA_Blue_Grid = Condition_For_Ticks ? B_tickcolour : Condition_For_Grid_0 ? B_gridcolour : (menu_horz && menu_vert)? B_bgcolour + 1:  B_bgcolour;
             end
             3'b001: 
             begin
-                VGA_Red_Grid = Condition_For_Ticks ? R_tickcolour : Condition_For_Grid_1 ? R_gridcolour : R_bgcolour;
-                VGA_Green_Grid = Condition_For_Ticks ? G_tickcolour : Condition_For_Grid_1 ? G_gridcolour : G_bgcolour;
-                VGA_Blue_Grid = Condition_For_Ticks ? B_tickcolour : Condition_For_Grid_1 ? B_gridcolour : B_bgcolour;
+                VGA_Red_Grid = Condition_For_Ticks ? R_tickcolour : Condition_For_Grid_1 ? R_gridcolour : (menu_horz && menu_vert)? R_bgcolour + 1:  R_bgcolour;
+                VGA_Green_Grid = Condition_For_Ticks ? G_tickcolour : Condition_For_Grid_1 ? G_gridcolour : (menu_horz && menu_vert)? G_bgcolour + 1:  G_bgcolour;
+                VGA_Blue_Grid = Condition_For_Ticks ? B_tickcolour : Condition_For_Grid_1 ? B_gridcolour : (menu_horz && menu_vert)? B_bgcolour + 1:  B_bgcolour;
             end
             3'b010:
             begin
-                VGA_Red_Grid = Condition_For_Ticks ? R_tickcolour : Condition_For_Grid_2 ? R_gridcolour : R_bgcolour;
-                VGA_Green_Grid = Condition_For_Ticks ? G_tickcolour : Condition_For_Grid_2 ? G_gridcolour : G_bgcolour;
-                VGA_Blue_Grid = Condition_For_Ticks ? B_tickcolour : Condition_For_Grid_2 ? B_gridcolour : B_bgcolour;
+                VGA_Red_Grid = Condition_For_Ticks ? R_tickcolour : Condition_For_Grid_2 ? R_gridcolour : (menu_horz && menu_vert)? R_bgcolour + 1:  R_bgcolour;
+                VGA_Green_Grid = Condition_For_Ticks ? G_tickcolour : Condition_For_Grid_2 ? G_gridcolour : (menu_horz && menu_vert)? G_bgcolour + 1:  G_bgcolour;
+                VGA_Blue_Grid = Condition_For_Ticks ? B_tickcolour : Condition_For_Grid_2 ? B_gridcolour : (menu_horz && menu_vert)? B_bgcolour + 1:  B_bgcolour;
             end
         endcase
     end    

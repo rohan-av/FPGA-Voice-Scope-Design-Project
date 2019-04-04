@@ -44,7 +44,7 @@ module volume_visual(
         VGA_Red_Grid = 4'h0;
         VGA_Green_Grid = 4'h0;
         VGA_Blue_Grid = 4'h0;
-        level = 4'b0;
+        level = 4'h0;
         
         if (VGA_VERT_COORD <= maxvol_y && advanced_sw == 1) begin
             //lvl 12, red
@@ -52,7 +52,7 @@ module volume_visual(
                         VGA_Red_Grid = 4'hF;
                         VGA_Green_Grid = 4'h0;
                         VGA_Blue_Grid = 4'h0;
-                        level = (level < 4'd12)? 4'd12 : level; //percent = " 100 %";
+                        level = (level < 4'hC)? 4'hC : level; //percent = " 100 %";
                         end
             
             //lvl 11, red
@@ -60,7 +60,7 @@ module volume_visual(
                         VGA_Red_Grid = 4'hC;
                         VGA_Green_Grid = 4'h0;
                         VGA_Blue_Grid = 4'h0;
-                        level = (level < 4'd11)? 4'd11 : level; //percent = " 092 %";
+                        level = (level < 4'hB)? 4'hB : level; //percent = " 092 %";
                         end
             
             //lvl 10, red
@@ -68,7 +68,7 @@ module volume_visual(
                         VGA_Red_Grid = 4'h9;
                         VGA_Green_Grid = 4'h0;
                         VGA_Blue_Grid = 4'h0;
-                        level = (level < 4'd10)? 4'd10 : level; //percent = " 083 %";
+                        level = (level < 4'hA)? 4'hA : level; //percent = " 083 %";
                         end
             
             //lvl 9, red
@@ -76,7 +76,7 @@ module volume_visual(
                         VGA_Red_Grid = 4'h6;
                         VGA_Green_Grid = 4'h0;
                         VGA_Blue_Grid = 4'h0;
-                        level = (level < 4'd9)? 4'd9 : level; //percent = " 075 %";
+                        level = (level < 4'h9)? 4'h9 : level; //percent = " 075 %";
                         end
             
             //lvl 8, yellow
@@ -84,7 +84,7 @@ module volume_visual(
                         VGA_Red_Grid = 4'h6;
                         VGA_Green_Grid = 4'h6;
                         VGA_Blue_Grid = 4'h0;
-                        level = (level < 4'd8)? 4'd8 : level; //percent = " 067 %";
+                        level = (level < 4'h8)? 4'h8 : level; //percent = " 067 %";
                         end
             
             //lvl 7, yellow
@@ -92,7 +92,7 @@ module volume_visual(
                         VGA_Red_Grid = 4'h9;
                         VGA_Green_Grid = 4'h9;
                         VGA_Blue_Grid = 4'h0;
-                        level = (level < 4'd7)? 4'd7 : level; //percent = " 058 %";
+                        level = (level < 4'h7)? 4'h7 : level; //percent = " 058 %";
                         end
             
             //lvl 6, yellow
@@ -100,7 +100,7 @@ module volume_visual(
                         VGA_Red_Grid = 4'hC;
                         VGA_Green_Grid = 4'hC;
                         VGA_Blue_Grid = 4'h0;
-                        level = (level < 4'd6)? 4'd6 : level; //percent = " 050 %";
+                        level = (level < 4'h6)? 4'h6 : level; //percent = " 050 %";
                         end
                            
             //lvl 5, yellow
@@ -108,7 +108,7 @@ module volume_visual(
                         VGA_Red_Grid = 4'hF;
                         VGA_Green_Grid = 4'hF;
                         VGA_Blue_Grid = 4'h0;
-                        level = (level < 4'd5)? 4'd5 : level; //percent = " 042 %";
+                        level = (level < 4'h5)? 4'h5 : level; //percent = " 042 %";
                         end   
             
             //lvl 4, green
@@ -116,7 +116,7 @@ module volume_visual(
                         VGA_Red_Grid = 4'h0;
                         VGA_Green_Grid = 4'h6;
                         VGA_Blue_Grid = 4'h0;
-                        level = (level < 4'd4)? 4'd4 : level; //percent = " 033 %";
+                        level = (level < 4'h4)? 4'h4 : level; //percent = " 033 %";
                         end   
             
             //lvl 3, green
@@ -124,7 +124,7 @@ module volume_visual(
                         VGA_Red_Grid = 4'h0;
                         VGA_Green_Grid = 4'h9;
                         VGA_Blue_Grid = 4'h0;
-                        level = (level < 4'd3)? 4'd3 : level; //percent = " 025 %";
+                        level = (level < 4'h3)? 4'h3 : level; //percent = " 025 %";
                         end   
             
             //lvl 2, green
@@ -132,7 +132,7 @@ module volume_visual(
                         VGA_Red_Grid = 4'h0;
                         VGA_Green_Grid = 4'hC;
                         VGA_Blue_Grid = 4'h0;
-                        level = (level < 4'd2)? 4'd2 : level; //percent = " 017 %";
+                        level = (level < 4'h2)? 4'h2 : level; //percent = " 017 %";
                         end   
             
             //lvl 1, green
@@ -140,7 +140,7 @@ module volume_visual(
                         VGA_Red_Grid = 4'h0;
                         VGA_Green_Grid = 4'hF;
                         VGA_Blue_Grid = 4'h0;
-                        level = (level < 4'd1)? 4'd1 : level; //percent = " 008 %";
+                        level = (level < 4'h1)? 4'h1 : level; //percent = " 008 %";
                         end
         end
     end

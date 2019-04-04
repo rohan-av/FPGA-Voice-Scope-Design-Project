@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Thu Apr  4 20:21:11 2019
+| Date             : Fri Apr  5 00:07:08 2019
 | Host             : LAPTOP-P6DBKN0G running 64-bit major release  (build 9200)
 | Command          : report_power -file Voice_Scope_TOP_power_routed.rpt -pb Voice_Scope_TOP_power_summary_routed.pb -rpx Voice_Scope_TOP_power_routed.rpx
 | Design           : Voice_Scope_TOP
@@ -53,19 +53,19 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.004 |        5 |       --- |             --- |
-| Slice Logic              |     0.013 |     6256 |       --- |             --- |
-|   LUT as Logic           |     0.011 |     2270 |     20800 |           10.91 |
+| Slice Logic              |     0.013 |     6211 |       --- |             --- |
+|   LUT as Logic           |     0.010 |     2255 |     20800 |           10.84 |
 |   LUT as Distributed RAM |     0.002 |     2896 |      9600 |           30.17 |
-|   CARRY4                 |    <0.001 |      231 |      8150 |            2.83 |
-|   Register               |    <0.001 |      403 |     41600 |            0.97 |
-|   F7/F8 Muxes            |    <0.001 |       69 |     32600 |            0.21 |
-|   Others                 |     0.000 |       78 |       --- |             --- |
+|   CARRY4                 |    <0.001 |      232 |      8150 |            2.85 |
+|   Register               |    <0.001 |      372 |     41600 |            0.89 |
+|   F7/F8 Muxes            |    <0.001 |       68 |     32600 |            0.21 |
+|   Others                 |     0.000 |       74 |       --- |             --- |
 |   BUFG                   |     0.000 |        1 |        32 |            3.13 |
-| Signals                  |     0.062 |     4762 |       --- |             --- |
-| Block RAM                |     0.006 |      1.5 |        50 |            3.00 |
+| Signals                  |     0.065 |     4711 |       --- |             --- |
+| Block RAM                |     0.004 |      1.5 |        50 |            3.00 |
 | MMCM                     |     0.123 |        1 |         5 |           20.00 |
 | DSPs                     |     0.001 |        2 |        90 |            2.22 |
-| I/O                      |     0.012 |       51 |       106 |           48.11 |
+| I/O                      |     0.011 |       51 |       106 |           48.11 |
 | Static Power             |     0.072 |          |           |                 |
 | Total                    |     0.295 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.098 |       0.088 |      0.010 |
+| Vccint    |       1.000 |     0.099 |       0.089 |      0.010 |
 | Vccaux    |       1.800 |     0.081 |       0.069 |      0.013 |
 | Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -133,8 +133,8 @@ Table of Contents
 +--------------------+------------------------------------+-----------------+
 | Clock              | Domain                             | Constraint (ns) |
 +--------------------+------------------------------------+-----------------+
-| clk_out1_clk_wiz_0 | d5/VGA_CLK_108M/clk_out1_clk_wiz_0 |             9.3 |
-| clkfbout_clk_wiz_0 | d5/VGA_CLK_108M/clkfbout_clk_wiz_0 |            10.0 |
+| clk_out1_clk_wiz_0 | d6/VGA_CLK_108M/clk_out1_clk_wiz_0 |             9.3 |
+| clkfbout_clk_wiz_0 | d6/VGA_CLK_108M/clkfbout_clk_wiz_0 |            10.0 |
 | sys_clk_pin        | CLK                                |            10.0 |
 +--------------------+------------------------------------+-----------------+
 
@@ -333,21 +333,20 @@ Table of Contents
 |     Scaled_Memory_reg_64_127_6_8      |    <0.001 |
 |     Scaled_Memory_reg_64_127_9_9      |     0.000 |
 |   d2                                  |    <0.001 |
-|   d3                                  |     0.002 |
-|   d5                                  |     0.156 |
+|   d3                                  |     0.003 |
+|   d5                                  |     0.002 |
+|     m0                                |     0.002 |
+|       FontRom                         |     0.002 |
+|     m1                                |    <0.001 |
+|   d6                                  |     0.151 |
 |     VGA_CLK_108M                      |     0.124 |
 |     VGA_CONTROL                       |     0.021 |
-|     p0                                |    <0.001 |
-|     p1                                |     0.002 |
-|       FontRom                         |     0.002 |
-|     p12                               |    <0.001 |
-|     t1                                |     0.004 |
+|     t1                                |     0.003 |
 |       FontRom                         |     0.003 |
 |     t2                                |    <0.001 |
-|     t3                                |     0.003 |
-|       FontRom                         |     0.002 |
-|     t4                                |    <0.001 |
-|   dj1                                 |     0.039 |
+|     t3                                |     0.002 |
+|       FontRom                         |     0.001 |
+|   dj1                                 |     0.042 |
 |     Block0_reg_r1_0_63_0_2            |    <0.001 |
 |     Block0_reg_r1_0_63_3_5            |    <0.001 |
 |     Block0_reg_r1_0_63_6_6            |    <0.001 |

@@ -186,8 +186,24 @@ module Voice_Scope_TOP(
     .VGA_Blue_Grid(VGA_BBox)
     );
     
+    wire CLK_VGA;
+    wire [3:0] MENU_TEXTR;
+    wire [3:0] MENU_TEXTG;
+    wire [3:0] MENU_TEXTB;
+    
+    menu_options d5(
+    .freeze_sw(freeze_sw),
+    .ramp_sw(ramp_sw),
+    .VGA_HORZ_COORD(VGA_HORZ_COORD),
+    .VGA_VERT_COORD(VGA_VERT_COORD),
+    .CLK_VGA(CLK_VGA),
+    .MENU_TEXTR(MENU_TEXTR),
+    .MENU_TEXTG(MENU_TEXTG),
+    .MENU_TEXTB(MENU_TEXTB)
+    );
+    
 // Please instantiate the VGA display module below          
-     VGA_DISPLAY d5 (
+     VGA_DISPLAY d6(
      .CLK(CLK),
      .advanced_sw(advanced_sw),
      .level(level),
@@ -206,13 +222,17 @@ module Voice_Scope_TOP(
      .VGA_RED_BOX(VGA_RBox),
      .VGA_GREEN_BOX(VGA_GBox),
      .VGA_BLUE_BOX(VGA_BBox),
+     .MENU_R(MENU_TEXTR),
+     .MENU_G(MENU_TEXTG),
+     .MENU_B(MENU_TEXTB),
      .VGA_HORZ_COORD(VGA_HORZ_COORD),
      .VGA_VERT_COORD(VGA_VERT_COORD),
      .VGA_RED(VGA_RED),
      .VGA_GREEN(VGA_GREEN),
      .VGA_BLUE(VGA_BLUE),
      .VGA_VS(VGA_VS),
-     .VGA_HS(VGA_HS)
+     .VGA_HS(VGA_HS),
+     .VGA_CLOCK(CLK_VGA)
      );
                       
 endmodule
