@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Thu Apr  4 16:40:44 2019
+| Date         : Thu Apr  4 20:00:56 2019
 | Host         : DESKTOP-K0CKIO3 running 64-bit major release  (build 9200)
 | Command      : report_drc -file Voice_Scope_TOP_drc_routed.rpt -pb Voice_Scope_TOP_drc_routed.pb -rpx Voice_Scope_TOP_drc_routed.rpx
 | Design       : Voice_Scope_TOP
@@ -112,7 +112,7 @@ Related violations: <none>
 
 PDRC-153#5 Warning
 Gated clock check  
-Net d3/VGA_CONTROL/VGA_RED[0]_57[0] is a gated clock net sourced by a combinational pin d3/VGA_CONTROL/level_reg[3]_i_2/O, cell d3/VGA_CONTROL/level_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net d3/VGA_CONTROL/VGA_RED[0]_56[0] is a gated clock net sourced by a combinational pin d3/VGA_CONTROL/level_reg[3]_i_2/O, cell d3/VGA_CONTROL/level_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#6 Warning

@@ -1,0 +1,249 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 7540
+License: Customer
+
+Current time: 	Thu Apr 04 17:32:30 SGT 2019
+Time zone: 	Singapore Time (Asia/Singapore)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1536x864
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 209 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	Rohan
+User home directory: C:/Users/Rohan
+User working directory: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project
+User country: 	SG
+User language: 	en
+User locale: 	en_SG
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/Rohan/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/Rohan/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/Rohan/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/vivado.log
+Vivado journal file location: 	C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/vivado.jou
+Engine tmp dir: 	C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/.Xil/Vivado-7540-DESKTOP-K0CKIO3
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	247 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 617 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\Rohan\Desktop\Vivado\master\EE2026-Design-Project\Audio_Viz_Project_Template.xpr. Version: Vivado v2018.2 
+// bx (ck):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// [GUI Memory]: 58 MB (+58642kb) [00:00:05]
+// [Engine Memory]: 496 MB (+368966kb) [00:00:05]
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 76 MB (+15464kb) [00:00:07]
+// [Engine Memory]: 559 MB (+39614kb) [00:00:07]
+// [GUI Memory]: 85 MB (+5206kb) [00:00:08]
+// [Engine Memory]: 609 MB (+23408kb) [00:00:09]
+// [GUI Memory]: 95 MB (+6477kb) [00:00:09]
+// [GUI Memory]: 102 MB (+2009kb) [00:00:09]
+// HMemoryUtils.trashcanNow. Engine heap size: 617 MB. GUI used memory: 41 MB. Current time: 4/4/19 5:32:30 PM SGT
+// Project name: Audio_Viz_Project_Template; location: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project; part: xc7a35tcpg236-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 857.352 ; gain = 112.984 
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectMenuItem(PAResourceCommand.PACommandNames_FILESET_WINDOW, "Sources"); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+// Run Command: PAResourceCommand.PACommandNames_FILESET_WINDOW
+// [Engine Memory]: 644 MB (+4260kb) [00:00:15]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), clr1 : cycle_colour (cycle_colour.v)]", 2, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), dj1 : Draw_Joy_Waveform (Draw_Joy_Waveform.v)]", 11, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), dj1 : Draw_Joy_Waveform (Draw_Joy_Waveform.v)]", 11, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 41 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 187, 96); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 187, 96); // ce (w, ck)
+// Elapsed time: 86 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 290, 158); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 582, 120); // ce (w, ck)
+// Elapsed time: 322 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 210, 63); // ce (w, ck)
+// Elapsed time: 84 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 382, 180); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 100, 351); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 59, 359); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 56, 359); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 209, 283); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 138, 342); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Draw_Joy_Waveform.v", 401, 349); // ce (w, ck)
+// Elapsed time: 92 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 66, 348); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 663, 345); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 72, 354); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 646, 375); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 647, 361); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 219, 367); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 299, 160); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 91, 388); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 283, 386); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 267, 373); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 77, 348); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1801996 ms. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 659 MB. GUI used memory: 44 MB. Current time: 4/4/19 6:15:03 PM SGT
+// HMemoryUtils.trashcanNow. Engine heap size: 659 MB. GUI used memory: 40 MB. Current time: 4/4/19 7:51:34 PM SGT
+// Elapsed time: 7690 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 189, 283); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 94, 225); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 102, 359); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 579, 267); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 581, 248); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 102, 351); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 669 MB. GUI used memory: 41 MB. Current time: 4/4/19 7:52:33 PM SGT
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 676 MB (+327kb) [02:20:14]
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// bx (ck):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Thu Apr  4 19:52:39 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Thu Apr  4 19:52:39 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// TclEventType: RUN_FAILED
+// ah (ck): Synthesis Failed: addNotify
+// Elapsed time: 327 seconds
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", true); // g (Q, ah): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 647, 247); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 351, 307); // ce (w, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// aj (ck): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (aj)
+// bx (ck):  Save Constraints : addNotify
+// A (ck): No Implementation Results Available: addNotify
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Save Project"); // aj (ck)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Thu Apr  4 19:58:20 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Thu Apr  4 19:58:20 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 909 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+// Elapsed time: 165 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 121, 383); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 74, 326); // ce (w, ck)
+// Elapsed time: 213 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 100, 344); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 86, 316); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 113, 354); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 111, 352, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 93, 332); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 92, 350); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 96, 350); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 683 MB. GUI used memory: 42 MB. Current time: 4/4/19 8:22:34 PM SGT
+// Elapsed time: 1060 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 254, 262); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 105, 347); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 123, 359); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 84, 348); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)

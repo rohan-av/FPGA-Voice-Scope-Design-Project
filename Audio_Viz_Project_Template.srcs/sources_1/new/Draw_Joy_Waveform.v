@@ -387,6 +387,13 @@ module Draw_Joy_Waveform(
             VGA_Red_waveform = 0;
             VGA_Green_waveform = 0;
             VGA_Blue_waveform = 0;
-        end    
+        end
+        
+        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD <= 960) && (VGA_VERT_COORD <= 361))   
+        begin
+            VGA_Red_waveform = 0;
+            VGA_Green_waveform = 0;
+            VGA_Blue_waveform = 0;
+        end
     end
 endmodule

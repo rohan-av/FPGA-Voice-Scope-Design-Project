@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Thu Apr  4 16:40:51 2019
+| Date             : Thu Apr  4 20:01:02 2019
 | Host             : DESKTOP-K0CKIO3 running 64-bit major release  (build 9200)
 | Command          : report_power -file Voice_Scope_TOP_power_routed.rpt -pb Voice_Scope_TOP_power_summary_routed.pb -rpx Voice_Scope_TOP_power_routed.rpx
 | Design           : Voice_Scope_TOP
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.302        |
+| Total On-Chip Power (W)  | 0.299        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.229        |
+| Dynamic (W)              | 0.227        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 83.5         |
@@ -53,21 +53,21 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.004 |        5 |       --- |             --- |
-| Slice Logic              |     0.014 |     6364 |       --- |             --- |
-|   LUT as Logic           |     0.011 |     2349 |     20800 |           11.29 |
+| Slice Logic              |     0.014 |     6366 |       --- |             --- |
+|   LUT as Logic           |     0.011 |     2347 |     20800 |           11.28 |
 |   LUT as Distributed RAM |     0.002 |     2896 |      9600 |           30.17 |
 |   CARRY4                 |    <0.001 |      240 |      8150 |            2.94 |
 |   Register               |    <0.001 |      390 |     41600 |            0.94 |
-|   F7/F8 Muxes            |    <0.001 |       69 |     32600 |            0.21 |
+|   F7/F8 Muxes            |    <0.001 |       70 |     32600 |            0.21 |
 |   Others                 |     0.000 |       79 |       --- |             --- |
 |   BUFG                   |     0.000 |        1 |        32 |            3.13 |
-| Signals                  |     0.067 |     4876 |       --- |             --- |
+| Signals                  |     0.065 |     4874 |       --- |             --- |
 | Block RAM                |     0.008 |      2.5 |        50 |            5.00 |
 | MMCM                     |     0.123 |        1 |         5 |           20.00 |
 | DSPs                     |     0.001 |        2 |        90 |            2.22 |
 | I/O                      |     0.012 |       51 |       106 |           48.11 |
 | Static Power             |     0.072 |          |           |                 |
-| Total                    |     0.302 |          |           |                 |
+| Total                    |     0.299 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.104 |       0.094 |      0.010 |
+| Vccint    |       1.000 |     0.102 |       0.092 |      0.010 |
 | Vccaux    |       1.800 |     0.081 |       0.069 |      0.013 |
 | Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -148,14 +148,14 @@ Table of Contents
 +---------------------------------------+-----------+
 | Name                                  | Power (W) |
 +---------------------------------------+-----------+
-| Voice_Scope_TOP                       |     0.229 |
+| Voice_Scope_TOP                       |     0.227 |
 |   c0                                  |    <0.001 |
 |   clr1                                |    <0.001 |
 |     slowclk                           |    <0.001 |
 |     sp1                               |     0.000 |
 |       dff1                            |     0.000 |
 |       dff2                            |     0.000 |
-|   d1                                  |     0.009 |
+|   d1                                  |     0.010 |
 |     Maxscaled_Memory_reg_0_127_0_0    |    <0.001 |
 |     Maxscaled_Memory_reg_0_127_1_1    |    <0.001 |
 |     Maxscaled_Memory_reg_0_127_2_2    |    <0.001 |
@@ -350,7 +350,7 @@ Table of Contents
 |     t3                                |    <0.001 |
 |     t4                                |     0.001 |
 |       FontRom                         |     0.001 |
-|   dj1                                 |     0.043 |
+|   dj1                                 |     0.040 |
 |     Block0_reg_r1_0_63_0_2            |    <0.001 |
 |     Block0_reg_r1_0_63_3_5            |    <0.001 |
 |     Block0_reg_r1_0_63_6_6            |    <0.001 |
