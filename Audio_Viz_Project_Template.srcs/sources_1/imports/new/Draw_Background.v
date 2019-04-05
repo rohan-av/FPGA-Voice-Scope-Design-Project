@@ -30,12 +30,12 @@ module Draw_Background(
     input [2:0] grid_select,
     output reg [3:0] VGA_Red_Grid,
     output reg [3:0] VGA_Green_Grid,
-    output reg [3:0] VGA_Blue_Grid
+    output reg [3:0] VGA_Blue_Grid,
+    output reg [3:0] R_bgcolour,
+    output reg [3:0] G_bgcolour,
+    output reg [3:0] B_bgcolour
     );
  
-     reg [3:0] R_bgcolour;
-     reg [3:0] G_bgcolour;
-     reg [3:0] B_bgcolour;
      reg [3:0] R_gridcolour;
      reg [3:0] G_gridcolour;
      reg [3:0] B_gridcolour;

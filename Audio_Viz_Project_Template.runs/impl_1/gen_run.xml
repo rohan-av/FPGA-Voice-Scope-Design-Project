@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1554431277">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1554435725">
   <File Type="BITSTR-BMM" Name="Voice_Scope_TOP_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Voice_Scope_TOP_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Voice_Scope_TOP_timing_summary_init.rpt"/>
@@ -285,6 +285,20 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/text_manager.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/colour_boxes.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/menu_bg.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
