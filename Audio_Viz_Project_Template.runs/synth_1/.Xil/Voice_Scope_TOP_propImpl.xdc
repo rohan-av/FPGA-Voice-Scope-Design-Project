@@ -67,6 +67,8 @@ set_property src_info {type:XDC file:1 line:113 export:INPUT save:INPUT read:REA
 set_property PACKAGE_PIN T18 [get_ports grid_button]
 set_property src_info {type:XDC file:1 line:115 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W19 [get_ports fill_button]
+set_property src_info {type:XDC file:1 line:117 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN T17 [get_ports vert_button]
 set_property src_info {type:XDC file:1 line:119 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN U17 [get_ports depth_button]
 set_property src_info {type:XDC file:1 line:126 export:INPUT save:INPUT read:READ} [current_design]

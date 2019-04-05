@@ -24,15 +24,13 @@ module mouse_sync(
     input clock_100Mhz, // 100 Mhz clock source on Basys 3 FPGA
     input Mouse_Data, // Mouse PS2 data
     input Mouse_Clk, // Mouse PS2 Clock
-    output reg [7:0] x_coord,
-    output reg [7:0] y_coord,
-    output left_click,
-    output right_click
+    input [1:0] vert_select,
+    output reg [1:0] counter0 = 0,
+    output reg [1:0] counter1 = 0,
+    output reg [1:0] counter2 = 0
     );
     
     reg [5:0] Mouse_bits; // count number of bits receiving from the PS2 mouse
-    assign left_click = (Mouse_bits==1 && Mouse_Data==1);
-    assign right_click = (Mouse_bits==2 && Mouse_Data==1);
     
  // counting the number of bits receiving from the Mouse Data 
  // 33 bits to be received from the Mouse 
@@ -46,12 +44,27 @@ module mouse_sync(
     
     always @(negedge Mouse_Clk)
     begin
-            if (Mouse_bits >= 13 && Mouse_bits <= 20) begin
-                x_coord[Mouse_bits - 13] <= 1'b1;
+            if (Mouse_bits == 1)
+            begin
+                if (Mouse_Data == 1)
+                begin
+                    case (vert_select)
+                        0: counter0 <= (counter0 == 3) ? 0 : counter0 + 1;
+                        1: counter1 <= (counter1 == 3) ? 0 : counter1 + 1;
+                        2: counter2 <= (counter2 == 3) ? 0 : counter2 + 1;
+                    endcase
+                end
             end
-            
-            else if (Mouse_bits >= 24 && Mouse_bits <= 30) begin
-                y_coord[Mouse_bits - 24] <= 1'b1;
+            if (Mouse_bits == 2)
+                begin
+                if (Mouse_Data == 1)
+                begin
+                    case (vert_select)
+                        0: counter0 <= (counter0 == 0) ? 3 : counter0 - 1;
+                        1: counter1 <= (counter1 == 0) ? 3 : counter1 - 1;
+                        2: counter2 <= (counter2 == 0) ? 3 : counter2 - 1;
+                    endcase
+                end
             end
     end
      

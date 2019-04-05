@@ -55,6 +55,8 @@ read_verilog -library xil_defaultlib {
   C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/cycle_fill.v
   C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/block_filler.v
   C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/mouse_sync.v
+  C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/clr_selection.v
+  C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/cycle_vert.v
 }
 read_vhdl -library xil_defaultlib {
   C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VGA_CONTROL.vhd
