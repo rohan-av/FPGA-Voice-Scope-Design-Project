@@ -5,10 +5,20 @@ module Draw_Joy_Waveform(
     input freeze_sw,
     input advanced_sw,
     input [7:0] wave_sample, //smaller wave sample
+//    input [7:0] Block0,
+//    input [7:0] Block1,
+//    input [7:0] Block2,
+//    input [7:0] Block3,
+//    input [7:0] Block4,
+//    input [7:0] Block5,
+//    input [7:0] Block6,
+//    input [7:0] Block7,
+//    input [7:0] Block8,
+//    input [7:0] Block9,
     input [11:0] VGA_HORZ_COORD,
     input [11:0] VGA_VERT_COORD,
     input [1:0] depth_select, // 0: normal, 1: fill in with counter, 2: green depth, 3: full terrain
-    input pushbutton,
+    input [3:0] fill_counter,
     output reg [3:0] VGA_Red_waveform,
     output reg [3:0] VGA_Green_waveform,
     output reg [3:0] VGA_Blue_waveform
@@ -30,19 +40,11 @@ module Draw_Joy_Waveform(
     reg [7:0] Block6[639:0];
     reg [7:0] Block7[639:0];
     reg [7:0] Block8[639:0];
-    reg [7:0] Block9[639:0];
+    //reg [7:0] Block9[639:0];
     reg swap_time = 0;
     reg first_run = 0;
     
-    reg [3:0] fill_counter = 0;
-    wire slow_clock;
-    wire pulse;
-    
-    button_clk slowclk(clk_sample, slow_clock);
-    single_pulse sp2 (slow_clock, pushbutton, pulse);
-    
     always @(posedge clk_sample) begin
-        fill_counter = (depth_select == 1 && pulse == 1)? ((fill_counter == 4'b1001) ? 4'b0000 : fill_counter + 1) : fill_counter;
         if (first_run == 0)
         begin
             Block0[i]=0;
@@ -54,7 +56,7 @@ module Draw_Joy_Waveform(
             Block6[i]=0;
             Block7[i]=0;
             Block8[i]=0;
-            Block9[i]=0;
+            //Block9[i]=0;
             first_run = (i==639) ? 1 : 0;
             i = (i==639) ? 0 : i + 1;
         end
@@ -78,7 +80,7 @@ module Draw_Joy_Waveform(
             begin
                 i = (i==639) ? 0 : i + 1;
                 swap_time = 1;
-                Block9[i] = Block8[i];
+                //Block9[i] = Block8[i];
                 Block8[i] = Block7[i];
                 Block7[i] = Block6[i];
                 Block6[i] = Block5[i];
@@ -100,13 +102,18 @@ module Draw_Joy_Waveform(
     end
     
     always@(*) begin
-        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && ((VGA_VERT_COORD - (362 - Block0[VGA_HORZ_COORD-320]))<3))
+    if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960))
+        begin
+        VGA_Red_waveform = 0;
+        VGA_Green_waveform = 0;
+        VGA_Blue_waveform = 0;
+        if ((VGA_VERT_COORD == (362 - Block0[VGA_HORZ_COORD-320])))
         begin
             VGA_Red_waveform = R_colour;
             VGA_Green_waveform = G_colour;
             VGA_Blue_waveform = B_colour;
         end 
-        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && (VGA_VERT_COORD >= 365 - Block0[VGA_HORZ_COORD-320]))
+        if ((VGA_VERT_COORD >= 365 - Block0[VGA_HORZ_COORD-320]))
         begin
             case (depth_select)
                 2'b00:
@@ -121,15 +128,21 @@ module Draw_Joy_Waveform(
                     VGA_Green_waveform = (fill_counter == 0) ? 4'hf : 0;
                     VGA_Blue_waveform = (fill_counter == 0) ? 4'hf : 0;
                     end
+                default:
+                    begin
+                    VGA_Red_waveform = 0;
+                    VGA_Green_waveform = 0;
+                    VGA_Blue_waveform = 0;
+                    end
             endcase
         end
-        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && ((VGA_VERT_COORD - (412 - Block1[VGA_HORZ_COORD-320]))<3))
+        if ((VGA_VERT_COORD == (412 - Block1[VGA_HORZ_COORD-320])))
         begin
             VGA_Red_waveform = R_colour;
             VGA_Green_waveform = G_colour;
             VGA_Blue_waveform = B_colour;
         end 
-        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && (VGA_VERT_COORD >= 415 - Block1[VGA_HORZ_COORD-320]))
+        if ((VGA_VERT_COORD >= 415 - Block1[VGA_HORZ_COORD-320]))
         begin
             case (depth_select)
                 2'b00:
@@ -144,15 +157,21 @@ module Draw_Joy_Waveform(
                     VGA_Green_waveform = (fill_counter == 1) ? 4'hf : 0;
                     VGA_Blue_waveform = (fill_counter == 1) ? 4'hf : 0;
                     end
+                default:
+                    begin
+                    VGA_Red_waveform = 0;
+                    VGA_Green_waveform = 0;
+                    VGA_Blue_waveform = 0;
+                    end
             endcase
         end
-        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && ((VGA_VERT_COORD - (462 - Block2[VGA_HORZ_COORD-320]))<3))
+        if ((VGA_VERT_COORD == (462 - Block2[VGA_HORZ_COORD-320])))
         begin
             VGA_Red_waveform = R_colour;
             VGA_Green_waveform = G_colour;
             VGA_Blue_waveform = B_colour;
         end 
-        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && (VGA_VERT_COORD >= 465 - Block2[VGA_HORZ_COORD-320]))
+        if ((VGA_VERT_COORD >= 465 - Block2[VGA_HORZ_COORD-320]))
         begin
             case (depth_select)
                 2'b00:
@@ -167,15 +186,21 @@ module Draw_Joy_Waveform(
                     VGA_Green_waveform = (fill_counter == 2) ? 4'hf : 0;
                     VGA_Blue_waveform = (fill_counter == 2) ? 4'hf : 0;
                     end
+                default:
+                    begin
+                    VGA_Red_waveform = 0;
+                    VGA_Green_waveform = 0;
+                    VGA_Blue_waveform = 0;
+                    end
             endcase
         end
-        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && ((VGA_VERT_COORD - (512 - Block3[VGA_HORZ_COORD-320]))<3))
+        if ((VGA_VERT_COORD == (512 - Block3[VGA_HORZ_COORD-320])))
         begin
             VGA_Red_waveform = R_colour;
             VGA_Green_waveform = G_colour;
             VGA_Blue_waveform = B_colour;
         end 
-        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && (VGA_VERT_COORD >= 515 - Block3[VGA_HORZ_COORD-320]))
+        if (VGA_VERT_COORD >= 515 - Block3[VGA_HORZ_COORD-320])
         begin
             case (depth_select)
                 2'b00:
@@ -190,15 +215,21 @@ module Draw_Joy_Waveform(
                     VGA_Green_waveform = (fill_counter == 3) ? 4'hf : 0;
                     VGA_Blue_waveform = (fill_counter == 3) ? 4'hf : 0;
                     end
+                default:
+                    begin
+                    VGA_Red_waveform = 0;
+                    VGA_Green_waveform = 0;
+                    VGA_Blue_waveform = 0;
+                    end
             endcase
         end
-        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && ((VGA_VERT_COORD - (562 - Block4[VGA_HORZ_COORD-320]))<3))
+        if ((VGA_VERT_COORD == (562 - Block4[VGA_HORZ_COORD-320])))
         begin
             VGA_Red_waveform = R_colour;
             VGA_Green_waveform = G_colour;
             VGA_Blue_waveform = B_colour;
         end 
-        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && (VGA_VERT_COORD >= 565 - Block4[VGA_HORZ_COORD-320]))
+        if (VGA_VERT_COORD >= 565 - Block4[VGA_HORZ_COORD-320])
         begin
             case (depth_select)
                 2'b00:
@@ -213,15 +244,21 @@ module Draw_Joy_Waveform(
                     VGA_Green_waveform = (fill_counter == 4) ? 4'hf : 0;
                     VGA_Blue_waveform = (fill_counter == 4) ? 4'hf : 0;
                     end
+                default:
+                    begin
+                    VGA_Red_waveform = 0;
+                    VGA_Green_waveform = 0;
+                    VGA_Blue_waveform = 0;
+                    end
             endcase
         end
-        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && ((VGA_VERT_COORD - (612 - Block5[VGA_HORZ_COORD-320]))<3))
+        if ((VGA_VERT_COORD == (612 - Block5[VGA_HORZ_COORD-320])))
         begin
             VGA_Red_waveform = R_colour;
             VGA_Green_waveform = G_colour;
             VGA_Blue_waveform = B_colour;
         end 
-        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && (VGA_VERT_COORD >= 615 - Block5[VGA_HORZ_COORD-320]))
+        if (VGA_VERT_COORD >= 615 - Block5[VGA_HORZ_COORD-320])
         begin
             case (depth_select)
                 2'b00:
@@ -236,15 +273,21 @@ module Draw_Joy_Waveform(
                     VGA_Green_waveform = (fill_counter == 5) ? 4'hf : 0;
                     VGA_Blue_waveform = (fill_counter == 5) ? 4'hf : 0;
                     end
+                default:
+                    begin
+                    VGA_Red_waveform = 0;
+                    VGA_Green_waveform = 0;
+                    VGA_Blue_waveform = 0;
+                    end
             endcase
         end
-        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && ((VGA_VERT_COORD - (662 - Block6[VGA_HORZ_COORD-320]))<3))
+        if ((VGA_VERT_COORD == (662 - Block6[VGA_HORZ_COORD-320])))
         begin
             VGA_Red_waveform = R_colour;
             VGA_Green_waveform = G_colour;
             VGA_Blue_waveform = B_colour;
         end 
-        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && (VGA_VERT_COORD >= 665 - Block6[VGA_HORZ_COORD-320]))
+        if (VGA_VERT_COORD >= 665 - Block6[VGA_HORZ_COORD-320])
         begin
             case (depth_select)
                 2'b00:
@@ -259,15 +302,21 @@ module Draw_Joy_Waveform(
                     VGA_Green_waveform = (fill_counter == 6) ? 4'hf : 0;
                     VGA_Blue_waveform = (fill_counter == 6) ? 4'hf : 0;
                     end
+                default:
+                    begin
+                    VGA_Red_waveform = 0;
+                    VGA_Green_waveform = 0;
+                    VGA_Blue_waveform = 0;
+                    end
             endcase
         end
-        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && ((VGA_VERT_COORD - (712 - Block7[VGA_HORZ_COORD-320]))<3))
+        if ((VGA_VERT_COORD == (712 - Block7[VGA_HORZ_COORD-320])))
         begin
             VGA_Red_waveform = R_colour;
             VGA_Green_waveform = G_colour;
             VGA_Blue_waveform = B_colour;
         end 
-        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && (VGA_VERT_COORD >= 715 - Block7[VGA_HORZ_COORD-320]))
+        if (VGA_VERT_COORD >= 715 - Block7[VGA_HORZ_COORD-320])
         begin
             case (depth_select)
                 2'b00:
@@ -282,15 +331,21 @@ module Draw_Joy_Waveform(
                     VGA_Green_waveform = (fill_counter == 7) ? 4'hf : 0;
                     VGA_Blue_waveform = (fill_counter == 7) ? 4'hf : 0;
                     end
+                default:
+                    begin
+                    VGA_Red_waveform = 0;
+                    VGA_Green_waveform = 0;
+                    VGA_Blue_waveform = 0;
+                    end
             endcase
         end
-        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && ((VGA_VERT_COORD - (762 - Block8[VGA_HORZ_COORD-320]))<3))
+        if ((VGA_VERT_COORD == (762 - Block8[VGA_HORZ_COORD-320])))
         begin
             VGA_Red_waveform = R_colour;
             VGA_Green_waveform = G_colour;
             VGA_Blue_waveform = B_colour;
         end 
-        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && (VGA_VERT_COORD >= 765 - Block8[VGA_HORZ_COORD-320]))
+        if (VGA_VERT_COORD >= 765 - Block8[VGA_HORZ_COORD-320])
         begin
             case (depth_select)
                 2'b00:
@@ -305,36 +360,56 @@ module Draw_Joy_Waveform(
                     VGA_Green_waveform = (fill_counter == 8) ? 4'hf : 0;
                     VGA_Blue_waveform = (fill_counter == 8) ? 4'hf : 0;
                     end
-            endcase
-        end
-        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && ((VGA_VERT_COORD - (812 - Block9[VGA_HORZ_COORD-320]))<3))
-        begin
-            VGA_Red_waveform = R_colour;
-            VGA_Green_waveform = G_colour;
-            VGA_Blue_waveform = B_colour;
-        end 
-        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && (VGA_VERT_COORD >= 815 - Block9[VGA_HORZ_COORD-320]))
-        begin
-            case (depth_select)
-                2'b00:
+                default:
                     begin
                     VGA_Red_waveform = 0;
                     VGA_Green_waveform = 0;
                     VGA_Blue_waveform = 0;
                     end
-                2'b01:
-                    begin
-                    VGA_Red_waveform = (fill_counter == 9) ? 4'hf : 0;
-                    VGA_Green_waveform = (fill_counter == 9) ? 4'hf : 0;
-                    VGA_Blue_waveform = (fill_counter == 9) ? 4'hf : 0;
-                    end
             endcase
         end
-        if ((VGA_HORZ_COORD < 320) || (VGA_HORZ_COORD >= 960) || (VGA_VERT_COORD >= 900)) 
+//        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && ((VGA_VERT_COORD - (812 - Block9[VGA_HORZ_COORD-320]))<3))
+//        begin
+//            VGA_Red_waveform = R_colour;
+//            VGA_Green_waveform = G_colour;
+//            VGA_Blue_waveform = B_colour;
+//        end 
+//        if ((VGA_HORZ_COORD >= 320) && (VGA_HORZ_COORD < 960) && (VGA_VERT_COORD >= 815 - Block9[VGA_HORZ_COORD-320]))
+//        begin
+//            case (depth_select)
+//                2'b00:
+//                    begin
+//                    VGA_Red_waveform = 0;
+//                    VGA_Green_waveform = 0;
+//                    VGA_Blue_waveform = 0;
+//                    end
+//                2'b01:
+//                    begin
+//                    VGA_Red_waveform = (fill_counter == 9) ? 4'hf : 0;
+//                    VGA_Green_waveform = (fill_counter == 9) ? 4'hf : 0;
+//                    VGA_Blue_waveform = (fill_counter == 9) ? 4'hf : 0;
+//                    end
+//                default:
+//                    begin
+//                    VGA_Red_waveform = 0;
+//                    VGA_Green_waveform = 0;
+//                    VGA_Blue_waveform = 0;
+//                    end
+//            endcase
+//        end
+        if (VGA_VERT_COORD >= 815)
         begin
             VGA_Red_waveform = 0;
             VGA_Green_waveform = 0;
             VGA_Blue_waveform = 0;
-        end    
+        end
     end
+    else
+    begin
+        VGA_Red_waveform = 0;
+        VGA_Green_waveform = 0;
+        VGA_Blue_waveform = 0;
+    end    
+end
+    
 endmodule

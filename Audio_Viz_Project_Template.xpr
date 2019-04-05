@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="C:/Users/sujay/Desktop/ee2026_project/EE2026-Design-Project/Audio_Viz_Project_Template.xpr">
+<Project Version="7" Minor="38" Path="C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="388624c711544de28020c6e542b412fc"/>
@@ -282,6 +282,20 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/menu_bg.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/cycle_fill.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/block_filler.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

@@ -5,21 +5,19 @@ module rolling_average(
     input [11:0] sample,
     input freeze_sw,
     input ramp_sw,
-    output reg [11:0] avg = 0,
-    output reg slow_clock
+    output reg [11:0] avg = 0
     );
     
-    reg [7:0] i = 0;
-    reg [15:0] sum = 0;
+    reg i = 0;
+    reg [16:0] sum = 0;
     //reg [11:0] Memory[999:0];
     
     always @ (posedge cs) begin
         //Memory[i] = sample;
         sum = sum + sample;
-        avg = (i==99) ? sum/100 : avg;
-        sum = (i==99) ? 0: sum;
-        slow_clock = (i==99) ? 1-slow_clock : slow_clock;
-        i = (i==99) ? 0 : i + 1;
+        avg = (i==1) ? sum/2 : avg;
+        sum = (i==1) ? 0: sum;
+        i = (i==1) ? 0 : i + 1;
  
     end
     

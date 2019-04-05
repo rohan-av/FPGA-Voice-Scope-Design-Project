@@ -53,14 +53,17 @@ module Voice_Scope_TOP(
    
    wire [1:0] depth_select;
    cycle_depth dpt1 (CLK, depth_button, depth_select);
+   
+   wire [3:0] fill_select;
+   cycle_fill fll1 (CLK, fill_button, fill_select);
        
 // Please create a clock divider module to generate a 20kHz clock signal. 
 // Instantiate it below
     
     wire [11:0] MIC_in;
     wire new_clock;
-    //wire slow_clock; // 10 Hz clock
-    clk_div c0(CLK,new_clock);
+    wire newer_clock;
+    clk_div c0(CLK,new_clock,newer_clock);
    
        
 // Please instantiate the voice capturer module below
@@ -104,13 +107,14 @@ module Voice_Scope_TOP(
     wire [3:0] VGA_Blue_Joy_waveform;
     
     wire [9:0] wave_sample; 
-    wire [7:0] wave_sample_8;
-    //wire [11:0] avg;
+    wire [7:0] wave_sample_2;
+    //wire [7:0] wave_sample_8;
+    wire [11:0] avg;
   
-    //rolling_average ra(new_clock, MIC_in, freeze_sw, ramp_sw, avg, slow_clock);
+    rolling_average ra(new_clock, MIC_in, freeze_sw, ramp_sw, avg);
     assign wave_sample = (ramp_sw == 0)? MIC_in[11:2] : test_wave;
-   // assign wave_sample_2 = avg[11:4];
-    assign wave_sample_8 = (ramp_sw == 0)? MIC_in[11:4] : test_wave;
+    assign wave_sample_2 = avg[11:4];
+   //assign wave_sample_8 = (ramp_sw == 0)? MIC_in[11:4] : test_wave;
     
     Draw_Waveform d1 (
     .clk_sample(new_clock),
@@ -130,11 +134,11 @@ module Voice_Scope_TOP(
     .clk_sample(new_clock),
     .freeze_sw(freeze_sw),
     .advanced_sw(advanced_sw),
-    .wave_sample(wave_sample_8),
+    .wave_sample(wave_sample_2),
     .VGA_HORZ_COORD(VGA_HORZ_COORD),
     .VGA_VERT_COORD(VGA_VERT_COORD),
     .depth_select(depth_select),
-    .pushbutton(fill_button),
+    .fill_counter(fill_select),
     .VGA_Red_waveform(VGA_Red_Joy_waveform),
     .VGA_Green_waveform(VGA_Green_Joy_waveform),
     .VGA_Blue_waveform(VGA_Blue_Joy_waveform)

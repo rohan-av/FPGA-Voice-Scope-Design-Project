@@ -1,0 +1,2863 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 26932
+License: Customer
+
+Current time: 	Fri Apr 05 16:14:28 SGT 2019
+Time zone: 	Singapore Time (Asia/Singapore)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1536x864
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 207 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	Rohan
+User home directory: C:/Users/Rohan
+User working directory: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project
+User country: 	SG
+User language: 	en
+User locale: 	en_SG
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/Rohan/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/Rohan/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/Rohan/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/vivado.log
+Vivado journal file location: 	C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/vivado.jou
+Engine tmp dir: 	C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/.Xil/Vivado-26932-DESKTOP-K0CKIO3
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	148 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 497 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\Rohan\Desktop\Vivado\master\EE2026-Design-Project\Audio_Viz_Project_Template.xpr. Version: Vivado v2018.2 
+// bx (ck):  Open Project : addNotify
+// [GUI Memory]: 69 MB (+69402kb) [00:00:06]
+// [Engine Memory]: 480 MB (+351521kb) [00:00:06]
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// Tcl Message: open_project C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.xpr 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/sujay/Desktop/ee2026_project/EE2026-Design-Project' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 534 MB (+31746kb) [00:00:09]
+// [Engine Memory]: 593 MB (+33798kb) [00:00:11]
+// [GUI Memory]: 76 MB (+4533kb) [00:00:11]
+// HMemoryUtils.trashcanNow. Engine heap size: 598 MB. GUI used memory: 41 MB. Current time: 4/5/19 4:14:32 PM SGT
+// Tcl Message: open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 812.898 ; gain = 119.773 
+// Project name: Audio_Viz_Project_Template; location: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// bx (ck):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  5 16:14:42 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 16:14:42 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 328ms to process. Increasing delay to 2000 ms.
+// [Engine Memory]: 653 MB (+32104kb) [00:01:24]
+// HMemoryUtils.trashcanNow. Engine heap size: 653 MB. GUI used memory: 40 MB. Current time: 4/5/19 4:15:45 PM SGT
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 199 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+// [GUI Memory]: 80 MB (+248kb) [00:03:43]
+// [GUI Memory]: 85 MB (+665kb) [00:03:43]
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21); // u (O, ck)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21); // u (O, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 22, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bx (ck):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+dismissDialog("Open Hardware Manager"); // bx (ck)
+// bx (ck):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.2   **** Build date : Jun 14 2018-20:42:52     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183713893A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// [GUI Memory]: 92 MB (+2770kb) [00:03:54]
+// [Engine Memory]: 1,280 MB (+623199kb) [00:03:54]
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,285 MB. GUI used memory: 42 MB. Current time: 4/5/19 4:18:15 PM SGT
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,306 MB. GUI used memory: 43 MB. Current time: 4/5/19 4:18:40 PM SGT
+// Elapsed time: 62 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+selectMenu(PAResourceCommand.PACommandNames_CREATE_HARDWARE_DASHBOARDS, "Dashboard"); // aa (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_FILESET_WINDOW, "Sources"); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+// Run Command: PAResourceCommand.PACommandNames_FILESET_WINDOW
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, wrapper(Behavioral) (wrapper.vhd)]", 2, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rolling_average (rolling_average.v)]", 3, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v)]", 1, true); // B (D, ck) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v)]", 1); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), vc1 : Voice_Capturer (VOICE_CAPTURER.v)]", 6, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), c0 : clk_div (clk_div.v)]", 5, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "Source Node Properties..."); // ad (aj, Popup.HeavyWeightWindow)
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+selectButton(PAResourceEtoH.FileSetView_EXPAND_ALL, "Sources_expand_all"); // B (f, ck)
+selectButton(PAResourceEtoH.FileSetView_EXPAND_ALL, "Sources_expand_all"); // B (f, ck)
+selectButton(PAResourceEtoH.FileSetView_EXPAND_ALL, "Sources_expand_all"); // B (f, ck)
+selectButton(PAResourceEtoH.FileSetView_EXPAND_ALL, "Sources_expand_all"); // B (f, ck)
+selectButton(PAResourceEtoH.FileSetView_EXPAND_ALL, "Sources_expand_all"); // B (f, ck)
+selectButton(PAResourceEtoH.FileSetView_EXPAND_ALL, "Sources_expand_all"); // B (f, ck)
+selectButton(PAResourceEtoH.FileSetView_EXPAND_ALL, "Sources_expand_all"); // B (f, ck)
+selectButton(PAResourceEtoH.FileSetView_EXPAND_ALL, "Sources_expand_all"); // B (f, ck)
+selectButton(PAResourceEtoH.FileSetView_EXPAND_ALL, "Sources_expand_all"); // B (f, ck)
+selectButton(PAResourceEtoH.FileSetView_EXPAND_ALL, "Sources_expand_all"); // B (f, ck)
+selectButton(PAResourceEtoH.FileSetView_EXPAND_ALL, "Sources_expand_all"); // B (f, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), clr1 : cycle_colour (cycle_colour.v), sp1 : single_pulse (single_pulse.v), dff2 : dff (dff.v)]", 6, false); // B (D, ck)
+selectButton(PAResourceEtoH.FileSetView_EXPAND_ALL, "Sources_expand_all"); // B (f, ck)
+selectButton(PAResourceEtoH.FileSetView_COLLAPSE_ALL, "Sources_collapse_all"); // B (f, ck)
+selectButton(PAResourceEtoH.FileSetView_COLLAPSE_ALL, "Sources_collapse_all"); // B (f, ck)
+selectButton(PAResourceEtoH.FileSetView_COLLAPSE_ALL, "Sources_collapse_all"); // B (f, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v)]", 1); // B (D, ck)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v)]", 1); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v)]", 1); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), clr1 : cycle_colour (cycle_colour.v)]", 2, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), grd1 : cycle_grid (cycle_grid.v)]", 3, true, false, false, false, true, false); // B (D, ck) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), grd1 : cycle_grid (cycle_grid.v)]", 3, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), grd1 : cycle_grid (cycle_grid.v)]", 3, true, false, false, false, true, false); // B (D, ck) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), grd1 : cycle_grid (cycle_grid.v)]", 3, true); // B (D, ck) - Node
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), dpt1 : cycle_depth (cycle_depth.v)]", 4, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), grd1 : cycle_grid (cycle_grid.v)]", 3, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), dpt1 : cycle_depth (cycle_depth.v)]", 4, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), grd1 : cycle_grid (cycle_grid.v)]", 3, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), clr1 : cycle_colour (cycle_colour.v)]", 2, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), grd1 : cycle_grid (cycle_grid.v)]", 3, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), clr1 : cycle_colour (cycle_colour.v)]", 2, true, false, false, false, true, false); // B (D, ck) - Popup Trigger - Node
+// Elapsed time: 14 seconds
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // aa (aj, Popup.HeavyWeightWindow)
+selectCodeEditor("Voice_Scope_TOP.v", 391, 209); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 280, 210); // ce (w, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), clr1 : cycle_colour (cycle_colour.v)]", 2, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), clr1 : cycle_colour (cycle_colour.v)]", 2, true, false, false, false, true, false); // B (D, ck) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa (aj, Popup.HeavyWeightWindow)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), clr1 : cycle_colour (cycle_colour.v)]", 2, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), c0 : clk_div (clk_div.v)]", 5, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), d1 : Draw_Waveform (Draw_Waveform.v)]", 9, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), clr1 : cycle_colour (cycle_colour.v)]", 2, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), dj1 : Draw_Joy_Waveform (Draw_Joy_Waveform.v)]", 10, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), dj1 : Draw_Joy_Waveform (Draw_Joy_Waveform.v), sp2 : single_pulse (single_pulse.v)]", 12, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// Elapsed time: 86 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), d10 : VGA_DISPLAY (VGA_DISPLAY.v)]", 21, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), d10 : VGA_DISPLAY (VGA_DISPLAY.v)]", 21, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// Elapsed time: 41 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "cycle_fill"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 9 seconds
+dismissDialog("Add Sources"); // c (ck)
+// Tcl Message: close [ open C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/cycle_fill.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/cycle_fill.v 
+// I (ck): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("PAResourceAtoD.DefineModulesDialog_YOU_HAVE_MADE_CHANGES_TO_MODULE_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cycle_fill (cycle_fill.v)]", 25, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cycle_fill (cycle_fill.v)]", 25, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("cycle_fill.v", 112, 249); // ce (w, ck)
+typeControlKey((HResource) null, "cycle_fill.v", 'v'); // ce (w, ck)
+selectCodeEditor("cycle_fill.v", 7, 140); // ce (w, ck)
+selectCodeEditor("cycle_fill.v", 148, 208); // ce (w, ck)
+selectCodeEditor("cycle_fill.v", 208, 101); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v)]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cycle_fill.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("Voice_Scope_TOP.v", 404, 186); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cycle_fill.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,327 MB. GUI used memory: 51 MB. Current time: 4/5/19 4:24:26 PM SGT
+// Elapsed time: 25 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 3); // k (j, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 140, 182); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 221, 171); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 240, 194); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 56, 200); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 424, 141); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 199, 136); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Voice_Scope_TOP.v", 119, 177); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 100, 194); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 105, 198); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 318, 178); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cycle_fill.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 3); // k (j, ck)
+// Elapsed time: 31 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cycle_fill.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 3); // k (j, ck)
+// Elapsed time: 48 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 617, 248); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_DISPLAY.v", 4); // k (j, ck)
+selectCodeEditor("VGA_DISPLAY.v", 126, 186); // ce (w, ck)
+selectCodeEditor("VGA_DISPLAY.v", 126, 182); // ce (w, ck)
+// [GUI Memory]: 99 MB (+2799kb) [00:13:20]
+selectCodeEditor("VGA_DISPLAY.v", 276, 202); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_MODIFY
+// bx (ck):  Generate Bitstream : addNotify
+// Tcl Message: [Fri Apr  5 16:27:50 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 16:27:50 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// [GUI Memory]: 106 MB (+1934kb) [00:14:03]
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 401ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 87 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 3); // k (j, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 193, 268); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 166, 163); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 216, 287); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 214, 294); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 294, 366); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 111, 300); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 168, 265); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 180, 243); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 329, 338); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 326, 349); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 184, 232); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 318, 320); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 317, 328); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 191, 215); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 141, 230); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 345, 315); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 224, 319); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 196, 296); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 339, 361); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 223, 249); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 335, 340); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 317, 352); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 316, 351, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Draw_Joy_Waveform.v", 205, 283); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 320, 361); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 225, 257); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 220, 243); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 331, 353); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 332, 276); // ce (w, ck)
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // bx (ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 256, 218); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// TclEventType: DG_GRAPH_GENERATED
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  5 16:30:58 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 16:30:58 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+// Elapsed time: 21 seconds
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h (Q, ck)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 233ms to process. Increasing delay to 2000 ms.
+// Elapsed time: 40 seconds
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h (Q, ck)
+// aS (ck): Cancel Implementation: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (aS)
+dismissDialog("Cancel Implementation"); // aS (ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 429, 189); // ce (w, ck)
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 101 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v)]", 1); // B (D, ck)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 67 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_DISPLAY.v", 3); // k (j, ck)
+selectCodeEditor("VGA_DISPLAY.v", 95, 228); // ce (w, ck)
+selectCodeEditor("VGA_DISPLAY.v", 86, 232); // ce (w, ck)
+selectCodeEditor("VGA_DISPLAY.v", 456, 197); // ce (w, ck)
+selectCodeEditor("VGA_DISPLAY.v", 187, 182); // ce (w, ck)
+selectCodeEditor("VGA_DISPLAY.v", 327, 266); // ce (w, ck)
+selectCodeEditor("VGA_DISPLAY.v", 285, 177); // ce (w, ck)
+selectCodeEditor("VGA_DISPLAY.v", 170, 176); // ce (w, ck)
+selectCodeEditor("VGA_DISPLAY.v", 280, 226); // ce (w, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// aj (ck): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (aj)
+// bx (ck):  Save Constraints : addNotify
+dismissDialog("Save Project"); // aj (ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton("PAResourceQtoS.RunBitgen_BITSTREAM_GENERATION_HAS_ALREADY_COMPLETED_Cancel", "Cancel"); // JButton (A, G)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  5 16:35:32 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 16:35:32 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 244ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 113 MB (+1705kb) [00:23:32]
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 307 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 107 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 2); // k (j, ck)
+// Elapsed time: 66 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 201, 296); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 204, 91); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 0); // k (j, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("Voice_Scope_TOP.v", 302, 114); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 512, 198); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 275, 240); // ce (w, ck)
+typeControlKey((HResource) null, "Voice_Scope_TOP.v", 'v'); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 263, 362); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 50, 219); // ce (w, ck)
+// Elapsed time: 23 seconds
+selectCodeEditor("Voice_Scope_TOP.v", 230, 294); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 232, 210); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 2); // k (j, ck)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 2, true, false); // k (j, ck) - Popup Trigger
+selectMenuItem((HResource) null, "New Vertical Group"); // JMenuItem (JidePopupMenu)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 0); // k (j, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 122, 194); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 222, 190); // ce (w, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+// Elapsed time: 11 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "block_filler"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 16 seconds
+dismissDialog("Add Sources"); // c (ck)
+// Tcl Message: close [ open C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/block_filler.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/sources_1/new/block_filler.v 
+// I (ck): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+selectButton("PAResourceAtoD.DefineModulesDialog_YOU_HAVE_MADE_CHANGES_TO_MODULE_Yes", "Yes"); // JButton (A, H)
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // I (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, block_filler (block_filler.v)]", 22, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, block_filler (block_filler.v)]", 22, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("block_filler.v", 135, 318); // ce (w, ck)
+// Elapsed time: 47 seconds
+selectCodeEditor("block_filler.v", 26, 314); // ce (w, ck)
+typeControlKey((HResource) null, "block_filler.v", 'c'); // ce (w, ck)
+selectCodeEditor("block_filler.v", 133, 282); // ce (w, ck)
+selectCodeEditor("block_filler.v", 173, 324); // ce (w, ck)
+typeControlKey((HResource) null, "block_filler.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "block_filler.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "block_filler.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "block_filler.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "block_filler.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "block_filler.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "block_filler.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "block_filler.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "block_filler.v", 'v'); // ce (w, ck)
+selectCodeEditor("block_filler.v", 188, 211); // ce (w, ck)
+selectCodeEditor("block_filler.v", 116, 322); // ce (w, ck)
+selectCodeEditor("block_filler.v", 242, 301); // ce (w, ck)
+selectCodeEditor("block_filler.v", 237, 317); // ce (w, ck)
+selectCodeEditor("block_filler.v", 109, 341); // ce (w, ck)
+selectCodeEditor("block_filler.v", 112, 332); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 27, 179); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)
+selectCodeEditor("block_filler.v", 89, 368); // ce (w, ck)
+typeControlKey((HResource) null, "block_filler.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 26, 163); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 124, 197); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 32, 166); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 28, 166); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 158, 183); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 162, 181, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)
+selectCodeEditor("block_filler.v", 291, 334); // ce (w, ck)
+typeControlKey((HResource) null, "block_filler.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 25, 64); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)
+selectCodeEditor("block_filler.v", 160, 352); // ce (w, ck)
+selectCodeEditor("block_filler.v", 175, 334); // ce (w, ck)
+typeControlKey((HResource) null, "block_filler.v", 'v'); // ce (w, ck)
+selectCodeEditor("block_filler.v", 125, 332); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("block_filler.v", 119, 302); // ce (w, ck)
+selectCodeEditor("block_filler.v", 89, 297); // ce (w, ck)
+// Elapsed time: 33 seconds
+selectCodeEditor("block_filler.v", 236, 331); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("Draw_Joy_Waveform.v", 75, 200); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 75, 206); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 14 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 163, 243); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 219, 212); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 242, 266); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 239, 218); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 265, 132); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 307, 231); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 25, 62); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 192, 115); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 26, 111); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 4, 154); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 124, 161); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 126, 140); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 164, 162); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 155, 129); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 360, 114); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 376, 113); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 170, 133); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 146, 126); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 149, 127, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Draw_Joy_Waveform.v", 148, 127); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 152, 129); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 168, 127); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 177, 126); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 149, 144); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 155, 300); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 179, 292); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 272, 243); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 227, 144); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 119 MB (+678kb) [00:35:58]
+// Elapsed time: 14 seconds
+selectCodeEditor("block_filler.v", 9, 209); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 0); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectCodeEditor("Voice_Scope_TOP.v", 134, 190); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 131, 199); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 176, 41); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "block_filler.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "block_filler.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 0); // k (j, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 180, 161); // ce (w, ck)
+typeControlKey((HResource) null, "Voice_Scope_TOP.v", 'c'); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 49, 82); // ce (w, ck)
+typeControlKey((HResource) null, "Voice_Scope_TOP.v", 'v'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "block_filler.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 0); // k (j, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 221, 76); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 158, 121); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 132, 81); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "block_filler.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 0); // k (j, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 138, 244); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 234, 224); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 142, 300); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 204, 287); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 110, 322); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 210, 174); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "block_filler.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 0); // k (j, ck)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "block_filler.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 0); // k (j, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 148, 207); // ce (w, ck)
+typeControlKey((HResource) null, "Voice_Scope_TOP.v", 'c'); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 179, 210); // ce (w, ck)
+typeControlKey((HResource) null, "Voice_Scope_TOP.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Voice_Scope_TOP.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Voice_Scope_TOP.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Voice_Scope_TOP.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Voice_Scope_TOP.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Voice_Scope_TOP.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Voice_Scope_TOP.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Voice_Scope_TOP.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Voice_Scope_TOP.v", 'v'); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 30, 239); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 26, 231); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 72, 210); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("Voice_Scope_TOP.v", 126, 214); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("Voice_Scope_TOP.v", 175, 348); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 221, 201); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 214, 249); // ce (w, ck)
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "block_filler.v", 1); // k (j, ck)
+// Elapsed time: 15 seconds
+selectCodeEditor("block_filler.v", 171, 50); // ce (w, ck)
+selectCodeEditor("block_filler.v", 208, 198); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "block_filler.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 0); // k (j, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 56, 42); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 264, 137); // ce (w, ck)
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "block_filler.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 0); // k (j, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 50, 78); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 46, 62); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 49, 42); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "block_filler.v", 1); // k (j, ck)
+// [GUI Memory]: 126 MB (+179kb) [00:39:50]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 0); // k (j, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 210, 196); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "block_filler.v", 1); // k (j, ck)
+selectCodeEditor("block_filler.v", 253, 150); // ce (w, ck)
+selectCodeEditor("block_filler.v", 179, 95); // ce (w, ck)
+selectCodeEditor("block_filler.v", 125, 200); // ce (w, ck)
+selectCodeEditor("block_filler.v", 125, 200, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("block_filler.v", 134, 152); // ce (w, ck)
+selectCodeEditor("block_filler.v", 230, 161); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,340 MB. GUI used memory: 56 MB. Current time: 4/5/19 4:54:26 PM SGT
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 0); // k (j, ck)
+// Elapsed time: 41 seconds
+selectCodeEditor("Voice_Scope_TOP.v", 57, 46); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 202, 178); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 231, 141); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 218, 45); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 247, 80); // ce (w, ck)
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "block_filler.v", 1); // k (j, ck)
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "block_filler.v", 1); // k (j, ck)
+selectCodeEditor("block_filler.v", 193, 110); // ce (w, ck)
+selectCodeEditor("block_filler.v", 191, 110); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 0); // k (j, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 166, 132); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 175, 276); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 142, 322); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "block_filler.v", 1); // k (j, ck)
+selectCodeEditor("block_filler.v", 183, 112); // ce (w, ck)
+selectCodeEditor("block_filler.v", 191, 112); // ce (w, ck)
+selectCodeEditor("block_filler.v", 320, 161); // ce (w, ck)
+selectCodeEditor("block_filler.v", 201, 115); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("block_filler.v", 0, 10); // ce (w, ck)
+selectCodeEditor("block_filler.v", 79, 356); // ce (w, ck)
+typeControlKey((HResource) null, "block_filler.v", 'c'); // ce (w, ck)
+// k (ck): Text Changed: addNotify
+// Elapsed time: 19 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B (k, ck)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a (k)
+dismissDialog("Text Changed"); // k (ck)
+selectCodeEditor("Voice_Scope_TOP.v", 56, 316); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("Voice_Scope_TOP.v", 212, 243); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 212, 247); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 311, 150); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 254, 110); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 86, 148); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 220, 225); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 168, 288); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 344, 109); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 212, 83); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 183, 81); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 182, 63); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 193, 89); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 118, 152); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 242, 134); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 10 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 312, 158); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), d10 : VGA_DISPLAY (VGA_DISPLAY.v)]", 20, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), d10 : VGA_DISPLAY (VGA_DISPLAY.v)]", 20, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("VGA_DISPLAY.v", 108, 280); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  5 16:58:47 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 16:58:47 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 253ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 195 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), d10 : VGA_DISPLAY (VGA_DISPLAY.v), VGA_CONTROL : VGA_CONTROL(Behavioral) (VGA_CONTROL.vhd)]", 22, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), d10 : VGA_DISPLAY (VGA_DISPLAY.v), VGA_CLK_108M : CLK_108M(xilinx) (CLK_108M.vhd)]", 21, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), d10 : VGA_DISPLAY (VGA_DISPLAY.v), VGA_CLK_108M : CLK_108M(xilinx) (CLK_108M.vhd)]", 21, false, false, false, false, false, true); // B (D, ck) - Double Click
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 16 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_DISPLAY.v", 1); // k (j, ck)
+// Elapsed time: 52 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CLK_108M.vhd", 2); // k (j, ck)
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), d10 : VGA_DISPLAY (VGA_DISPLAY.v), VGA_CONTROL : VGA_CONTROL(Behavioral) (VGA_CONTROL.vhd)]", 22, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), d10 : VGA_DISPLAY (VGA_DISPLAY.v), VGA_CONTROL : VGA_CONTROL(Behavioral) (VGA_CONTROL.vhd)]", 22, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), d10 : VGA_DISPLAY (VGA_DISPLAY.v), VGA_CONTROL : VGA_CONTROL(Behavioral) (VGA_CONTROL.vhd)]", 22, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 117 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_DISPLAY.v", 1); // k (j, ck)
+selectCodeEditor("VGA_DISPLAY.v", 102, 228); // ce (w, ck)
+// Elapsed time: 12 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectCodeEditor("VGA_DISPLAY.v", 213, 128); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+// Elapsed time: 58 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 92, 179); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)
+// Elapsed time: 19 seconds
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Draw_Joy_Waveform.v", 291, 224); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_DISPLAY.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// bx (ck):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  5 17:07:45 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 17:07:45 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// Elapsed time: 250 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_DISPLAY.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_CONTROL.vhd", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h (Q, ck)
+// bx (ck):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.StateMonitor_OK_TO_CANCEL_YOUR_RUNNING_SYNTHESIS_Cancel Process", "Cancel Process"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // bx (ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 92, 32); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 89, 128); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// f (ck): Launch Runs: addNotify
+dismissDialog("No Implementation Results Available"); // A (ck)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  5 17:12:24 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 17:12:24 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 281ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 198 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+applyEnter(PAResourceOtoP.ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE, "C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit"); // al (ak, bB)
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 207, 125); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Draw_Joy_Waveform.v", 140, 129); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 111, 132); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  5 17:16:30 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 17:16:30 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 276ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 230 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,340 MB. GUI used memory: 56 MB. Current time: 4/5/19 5:24:54 PM SGT
+// Elapsed time: 300 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 234, 99); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 51, 103); // ce (w, ck)
+// [GUI Memory]: 136 MB (+4659kb) [01:11:07]
+selectCodeEditor("Draw_Joy_Waveform.v", 49, 76); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 184, 109); // ce (w, ck)
+// Elapsed time: 42 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 113, 179); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 135, 226); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 145 MB (+1826kb) [01:11:55]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [GUI Memory]: 158 MB (+5660kb) [01:11:56]
+// [GUI Memory]: 168 MB (+2297kb) [01:11:56]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  5 17:26:19 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 17:26:19 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+// [GUI Memory]: 177 MB (+1170kb) [01:12:08]
+// Elapsed time: 25 seconds
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h (Q, ck)
+// bx (ck):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.StateMonitor_OK_TO_CANCEL_YOUR_RUNNING_SYNTHESIS_Cancel Process", "Cancel Process"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // bx (ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 382, 250); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// f (ck): Launch Runs: addNotify
+dismissDialog("No Implementation Results Available"); // A (ck)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  5 17:27:19 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 17:27:19 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h (Q, ck)
+// bx (ck):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.StateMonitor_OK_TO_CANCEL_YOUR_RUNNING_SYNTHESIS_Cancel Process", "Cancel Process"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // bx (ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 92, 324); // ce (w, ck)
+// Elapsed time: 20 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 321, 300); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 113, 193); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 209, 176); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 115, 93); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 86, 250); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 28, 182); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// f (ck): Launch Runs: addNotify
+dismissDialog("No Implementation Results Available"); // A (ck)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  5 17:28:40 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 17:28:40 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 220ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 155 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 258, 177); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 177, 276); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 163, 154); // ce (w, ck)
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 34 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 29 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 167, 124); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 96, 162); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 93, 163); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 97, 138); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 63, 146); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 397, 156); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 386, 130); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 389, 139); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 133, 230); // ce (w, ck)
+// PAResourceOtoP.PAViews_CODE: Code: close view
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectCodeEditor("Draw_Joy_Waveform.v", 415, 172); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 85, 211); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 501, 213); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 199, 96); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 204, 96); // ce (w, ck)
+// Elapsed time: 38 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 387, 125); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 190, 90); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 215, 108); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 207, 132); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 456, 162); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 471, 158); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 263, 192); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 261, 194, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Draw_Joy_Waveform.v", 260, 194); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 260, 198); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 456, 196); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 454, 200); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 455, 196); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 527, 196); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 91, 200); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 411, 262); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 455, 248); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 457, 244); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 257, 228); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 203, 234); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 253, 280); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 255, 280, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Draw_Joy_Waveform.v", 259, 281); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 256, 227); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 456, 230); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 519, 232); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 83, 230); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 485, 234); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 204, 264); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 457, 334); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 458, 333); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 257, 162); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 111, 180); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 273, 213); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 262, 215); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 86, 116); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 281, 172); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 265, 143); // ce (w, ck)
+// Elapsed time: 23 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 57, 162); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 55, 62); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 173, 367); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 89, 330); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 149, 360); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 78, 266); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 175, 369); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 79, 246); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 175, 313); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 103, 201); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 177, 366); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 217, 231); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 105, 241); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 211, 365); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 135, 240); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 154, 368); // ce (w, ck)
+// Elapsed time: 69 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 99, 347); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 165, 366); // ce (w, ck)
+// Elapsed time: 21 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 343, 235); // ce (w, ck)
+// Elapsed time: 54 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 406, 284); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 406, 316); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 205, 231); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 402, 277); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 204, 107); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 405, 265); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 413, 304); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 204, 244); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 407, 249); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 201, 177); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 407, 232); // ce (w, ck)
+// Elapsed time: 46 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 403, 267); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 201, 216); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 200, 198); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 170, 197); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 121, 202); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 141, 245); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 141, 205); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 152, 226); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 152, 186); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 160, 237); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 158, 212); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 160, 243); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 161, 196); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 166, 230); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 170, 221); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 312, 229); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 379, 219); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 408, 296); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 458, 161); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 469, 155); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 82, 164); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 84, 114); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 496, 115); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 83, 112); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 85, 129); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 440, 137); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 472, 128); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 85, 232); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 535, 234); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 86, 251); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 468, 250); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 85, 199); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 518, 198); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 92, 198); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 491, 302); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 85, 111); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 511, 115); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 92, 113); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 445, 265); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 87, 268); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 501, 268); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 422, 314); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 530, 271); // ce (w, ck)
+// Elapsed time: 28 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 452, 231); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 463, 240); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 463, 230); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 81, 232); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 85, 130); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 507, 123); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 88, 127); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 485, 124); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 84, 146); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 457, 146); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 309, 265); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 335, 252); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 86, 147); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 496, 142); // ce (w, ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 455, 249); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 263, 247); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 79, 252); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 87, 249); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 367, 289); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 298, 238); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 191, 262); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 308, 251); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  5 17:45:51 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 17:45:51 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 253ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 209 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 77 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 206, 278); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 177, 212); // ce (w, ck)
+// Elapsed time: 36 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 467, 250); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 180, 215); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 175, 213); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 211, 282); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 222, 249); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 215, 268); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 469, 128); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 470, 210); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 468, 82); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 469, 96); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 470, 179); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 467, 160); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 470, 196); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 467, 176); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 466, 166); // ce (w, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), d10 : VGA_DISPLAY (VGA_DISPLAY.v), VGA_CLK_108M : CLK_108M(xilinx) (CLK_108M.vhd)]", 21, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), c0 : clk_div (clk_div.v)]", 6, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), c0 : clk_div (clk_div.v)]", 6, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), c0 : clk_div (clk_div.v)]", 6, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v)]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("Voice_Scope_TOP.v", 85, 200); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 196, 203); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clk_div.v", 3); // k (j, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("clk_div.v", 341, 232); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("clk_div.v", 457, 324); // ce (w, ck)
+selectCodeEditor("clk_div.v", 74, 249); // ce (w, ck)
+selectCodeEditor("clk_div.v", 225, 240); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("clk_div.v", 198, 291); // ce (w, ck)
+selectCodeEditor("clk_div.v", 461, 319); // ce (w, ck)
+selectCodeEditor("clk_div.v", 444, 332); // ce (w, ck)
+selectCodeEditor("clk_div.v", 428, 313); // ce (w, ck)
+selectCodeEditor("clk_div.v", 406, 315); // ce (w, ck)
+typeControlKey((HResource) null, "clk_div.v", 'c'); // ce (w, ck)
+selectCodeEditor("clk_div.v", 91, 329); // ce (w, ck)
+typeControlKey((HResource) null, "clk_div.v", 'v'); // ce (w, ck)
+selectCodeEditor("clk_div.v", 90, 333); // ce (w, ck)
+selectCodeEditor("clk_div.v", 251, 331); // ce (w, ck)
+selectCodeEditor("clk_div.v", 271, 333); // ce (w, ck)
+selectCodeEditor("clk_div.v", 324, 333); // ce (w, ck)
+selectCodeEditor("clk_div.v", 129, 336); // ce (w, ck)
+selectCodeEditor("clk_div.v", 378, 331); // ce (w, ck)
+selectCodeEditor("clk_div.v", 447, 338); // ce (w, ck)
+selectCodeEditor("clk_div.v", 442, 332); // ce (w, ck)
+typeControlKey((HResource) null, "clk_div.v", 'c'); // ce (w, ck)
+selectCodeEditor("clk_div.v", 102, 353); // ce (w, ck)
+typeControlKey((HResource) null, "clk_div.v", 'v'); // ce (w, ck)
+selectCodeEditor("clk_div.v", 109, 348); // ce (w, ck)
+selectCodeEditor("clk_div.v", 234, 347); // ce (w, ck)
+selectCodeEditor("clk_div.v", 336, 352); // ce (w, ck)
+selectCodeEditor("clk_div.v", 423, 352); // ce (w, ck)
+selectCodeEditor("clk_div.v", 435, 348); // ce (w, ck)
+selectCodeEditor("clk_div.v", 428, 349); // ce (w, ck)
+selectCodeEditor("clk_div.v", 515, 352); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 4); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("Voice_Scope_TOP.v", 185, 228); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Voice_Scope_TOP.v", 277, 230); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 188, 208); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 193, 270); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clk_div.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 4); // k (j, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 387, 99); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clk_div.v", 3); // k (j, ck)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_CONTROL.vhd", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_DISPLAY.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_CONTROL.vhd", 2); // k (j, ck)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_DISPLAY.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_DISPLAY.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 2); // k (j, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 183, 219); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 183, 244); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 348, 250); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,340 MB. GUI used memory: 55 MB. Current time: 4/5/19 5:54:54 PM SGT
+// Elapsed time: 10 seconds
+selectCodeEditor("Voice_Scope_TOP.v", 169, 199); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 103, 196); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 184, 200); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 391, 201); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 355, 210); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 329, 193); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 140, 242); // ce (w, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v)]", 1); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), vc1 : Voice_Capturer (VOICE_CAPTURER.v)]", 7, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), vc1 : Voice_Capturer (VOICE_CAPTURER.v)]", 7, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 2); // k (j, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 105, 233); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VOICE_CAPTURER.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VOICE_CAPTURER.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VOICE_CAPTURER.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VOICE_CAPTURER.v", 3); // k (j, ck)
+selectCodeEditor("VOICE_CAPTURER.v", 330, 216); // ce (w, ck)
+selectCodeEditor("VOICE_CAPTURER.v", 307, 217); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_DISPLAY.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 160, 22); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 182, 21); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 164, 22); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 205, 23); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 21 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 2); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Voice_Scope_TOP.v", 104, 180); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 133, 251); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 113, 161); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 132, 130); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 296, 169); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VOICE_CAPTURER.v", 3); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 2); // k (j, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 214, 164); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// bx (ck):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  5 17:56:57 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 17:56:57 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 228ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 207 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 63 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 2); // k (j, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 157, 198); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 157, 237); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 151, 206); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 136, 148); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 147, 132); // ce (w, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), c0 : clk_div (clk_div.v)]", 6, false); // B (D, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 218, 211); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 124, 110); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VOICE_CAPTURER.v", 3); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_DISPLAY.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+// Elapsed time: 20 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 129, 329); // ce (w, ck)
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  5 18:02:47 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 18:02:47 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 245ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 143 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 106, 110); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 514, 85); // ce (w, ck)
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 62 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 15 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 207, 161); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 224, 178); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 215, 200); // ce (w, ck)
+// Elapsed time: 23 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 300, 149); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 202, 163); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 212, 198); // ce (w, ck)
+// Elapsed time: 76 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 216, 130); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 208, 132); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 204, 132); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 477, 132); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 478, 114); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 479, 134); // ce (w, ck)
+// Elapsed time: 32 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 201, 266); // ce (w, ck)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("Draw_Joy_Waveform.v", 483, 22); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 468, 263); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 202, 268); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 286, 260); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 507, 218); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 469, 193); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 204, 198); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 469, 232); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 204, 232); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 466, 216); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 200, 220); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 468, 146); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 201, 150); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 469, 234); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 204, 225); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 466, 214); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 204, 216); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 468, 198); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 201, 198); // ce (w, ck)
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// aj (ck): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (aj)
+// bx (ck):  Save Constraints : addNotify
+dismissDialog("Save Project"); // aj (ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton("PAResourceQtoS.RunBitgen_BITSTREAM_GENERATION_HAS_ALREADY_COMPLETED_Cancel", "Cancel"); // JButton (A, G)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  5 18:10:19 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 18:10:19 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+// Elapsed time: 28 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 195, 115); // ce (w, ck)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 297ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 90 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 307, 166); // ce (w, ck)
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 134 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+applyEnter(PAResourceOtoP.ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE, "C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit"); // al (ak, bB)
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 30 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 590, 149); // ce (w, ck)
+// Elapsed time: 39 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 72, 366); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 191, 212); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 277, 177); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 282, 165); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 273, 182); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 266, 144); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 273, 82); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 279, 65); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 264, 49); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 272, 180); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 278, 168); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 268, 149); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 213, 132); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 222, 114); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 212, 98); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 271, 196); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 278, 183); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 266, 163); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 272, 96); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 278, 80); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 266, 64); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 270, 192); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 278, 180); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 265, 162); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 220, 147); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 225, 130); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 211, 117); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 269, 112); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 278, 96); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 264, 82); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 271, 112); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 276, 99); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 266, 74); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 274, 112); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 281, 96); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 266, 82); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 216, 165); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 223, 147); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 209, 130); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 269, 128); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 268, 128); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 261, 128); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 281, 114); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 266, 94); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 273, 81); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 281, 64); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 265, 42); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 272, 231); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 280, 216); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 264, 198); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 218, 229); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 222, 215); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 207, 199); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 210, 216); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 270, 94); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 280, 81); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 267, 64); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 273, 98); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 280, 80); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 267, 60); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 272, 147); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 281, 127); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 264, 107); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 216, 146); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 224, 133); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 209, 116); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 270, 110); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 278, 92); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 265, 85); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 267, 81); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 270, 164); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 279, 151); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 264, 128); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 273, 158); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 281, 146); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 263, 128); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 217, 168); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 222, 150); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 208, 132); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 270, 185); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 276, 167); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 264, 147); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 271, 81); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 280, 62); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 266, 44); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 269, 60); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 268, 48); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 274, 176); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 280, 164); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 268, 148); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 215, 177); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 223, 166); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 212, 146); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 276, 198); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 277, 179); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 265, 165); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 274, 94); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 281, 81); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 265, 61); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 271, 146); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 278, 132); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 266, 114); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 215, 142); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 222, 130); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 208, 114); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 268, 160); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 268, 160, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Draw_Joy_Waveform.v", 274, 162); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 277, 146); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 264, 132); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 271, 63); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 279, 48); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 266, 32); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 272, 162); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 280, 148); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 266, 130); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 216, 164); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 222, 150); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 211, 134); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 357, 115); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 429, 152); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 435, 148); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 268, 152); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 169, 112); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 58, 248); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 61, 270); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 153, 242); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 171, 246); // ce (w, ck)
+// Elapsed time: 23 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 27, 252); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 119, 330); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 72, 332); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 67, 350); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 79, 338); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 79, 227); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 152, 320); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 155, 336); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 108, 353); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 56, 230); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 95, 349); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 97, 281); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 78, 264); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 101, 268); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 102, 255); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 73, 247); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 75, 260); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 80, 249); // ce (w, ck)
+// Elapsed time: 26 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 104, 299); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 57, 321); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 38, 334); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 49, 333); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 56, 301); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 100, 310); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 57, 298); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 81, 111); // ce (w, ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 55, 316); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 29, 333); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 69, 312); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 83, 196); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 65, 306); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 58, 306); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 77, 293); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 87, 282); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 97, 296); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 49, 300); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 84, 334); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 239, 266); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 85, 354); // ce (w, ck)
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1480 ms. Increasing delay to 3000 ms.
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1656 ms. Increasing delay to 3000 ms.
+selectCodeEditor("Draw_Joy_Waveform.v", 270, 294); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 292, 280); // ce (w, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// aj (ck): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (aj)
+// bx (ck):  Save Constraints : addNotify
+dismissDialog("Save Project"); // aj (ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton("PAResourceQtoS.RunBitgen_BITSTREAM_GENERATION_HAS_ALREADY_COMPLETED_Cancel", "Cancel"); // JButton (A, G)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// bx (ck):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  5 18:22:20 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 18:22:20 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 431ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,340 MB. GUI used memory: 58 MB. Current time: 4/5/19 6:24:54 PM SGT
+// Elapsed time: 253 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 51, 154); // ce (w, ck)
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 120 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 40 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), fll1 : cycle_fill (cycle_fill.v)]", 5, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), fll1 : cycle_fill (cycle_fill.v), slowclk : button_clk (button_clk.v)]", 6, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("cycle_fill.v", 183, 202); // ce (w, ck)
+selectCodeEditor("cycle_fill.v", 322, 194); // ce (w, ck)
+selectCodeEditor("cycle_fill.v", 504, 194); // ce (w, ck)
+selectCodeEditor("cycle_fill.v", 594, 194); // ce (w, ck)
+// Elapsed time: 54 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// aj (ck): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_CANCEL, "Cancel"); // a (aj)
+dismissDialog("Save Project"); // aj (ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+// Elapsed time: 85 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// aj (ck): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (aj)
+// bx (ck):  Save Constraints : addNotify
+dismissDialog("Save Project"); // aj (ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton("PAResourceQtoS.RunBitgen_BITSTREAM_GENERATION_HAS_ALREADY_COMPLETED_Cancel", "Cancel"); // JButton (A, G)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_MODIFY
+// bx (ck):  Generate Bitstream : addNotify
+// Tcl Message: [Fri Apr  5 18:31:55 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 18:31:55 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 384ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 236 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 479, 110); // ce (w, ck)
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 72 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 69 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 112, 214); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 292, 272); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 295, 268, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Draw_Joy_Waveform.v", 291, 266); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 240, 251); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 300, 262); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 287, 266); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 318, 269); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 143, 232); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 294, 317); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'c'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 102, 81); // ce (w, ck)
+typeControlKey((HResource) null, "Draw_Joy_Waveform.v", 'v'); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 231, 108); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 130, 70); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 133, 59); // ce (w, ck)
+// Elapsed time: 15 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 235, 235); // ce (w, ck)
+// Elapsed time: 14 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("Draw_Joy_Waveform.v", 332, 197); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VOICE_CAPTURER.v", 3); // k (j, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("VOICE_CAPTURER.v", 413, 128); // ce (w, ck)
+selectCodeEditor("VOICE_CAPTURER.v", 451, 164); // ce (w, ck)
+selectCodeEditor("VOICE_CAPTURER.v", 463, 151); // ce (w, ck)
+// Elapsed time: 35 seconds
+selectCodeEditor("VOICE_CAPTURER.v", 445, 238); // ce (w, ck)
+selectCodeEditor("VOICE_CAPTURER.v", 343, 177); // ce (w, ck)
+selectCodeEditor("VOICE_CAPTURER.v", 432, 200); // ce (w, ck)
+selectCodeEditor("VOICE_CAPTURER.v", 427, 194); // ce (w, ck)
+selectCodeEditor("VOICE_CAPTURER.v", 587, 122); // ce (w, ck)
+selectCodeEditor("VOICE_CAPTURER.v", 499, 172); // ce (w, ck)
+selectCodeEditor("VOICE_CAPTURER.v", 461, 198); // ce (w, ck)
+selectCodeEditor("VOICE_CAPTURER.v", 432, 202); // ce (w, ck)
+selectCodeEditor("VOICE_CAPTURER.v", 472, 167); // ce (w, ck)
+selectCodeEditor("VOICE_CAPTURER.v", 446, 200); // ce (w, ck)
+selectCodeEditor("VOICE_CAPTURER.v", 402, 195); // ce (w, ck)
+selectCodeEditor("VOICE_CAPTURER.v", 435, 200); // ce (w, ck)
+selectCodeEditor("VOICE_CAPTURER.v", 416, 146); // ce (w, ck)
+selectCodeEditor("VOICE_CAPTURER.v", 434, 192); // ce (w, ck)
+selectCodeEditor("VOICE_CAPTURER.v", 441, 194); // ce (w, ck)
+// Elapsed time: 139 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rolling_average (rolling_average.v)]", 25, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rolling_average (rolling_average.v)]", 25, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rolling_average (rolling_average.v)]", 25, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("rolling_average.v", 133, 233); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 140, 232); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 66, 111); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 137, 230); // ce (w, ck)
+// Elapsed time: 31 seconds
+selectCodeEditor("rolling_average.v", 68, 113); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 137, 230); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 208, 230); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 138, 250); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 185, 270); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 129, 282); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 309, 285); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 203, 135); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 196, 148); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 2); // k (j, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 41, 164); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 43, 194); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 495, 214); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 497, 198); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rolling_average.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_DISPLAY.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 2); // k (j, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 519, 206); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 497, 188); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 42, 148); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 253, 146); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 541, 250); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 43, 181); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 333, 170); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 241, 180); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 245, 180, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("Voice_Scope_TOP.v", 128, 181); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 209, 234); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 314, 312); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 304, 274); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 201, 186); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 206, 200); // ce (w, ck)
+typeControlKey((HResource) null, "Voice_Scope_TOP.v", 'c'); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 206, 188); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 206, 188); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 206, 186, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Voice_Scope_TOP.v", 206, 186); // ce (w, ck)
+typeControlKey((HResource) null, "Voice_Scope_TOP.v", 'v'); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 242, 210); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 204, 230); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_DISPLAY.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_DISPLAY.v", 1); // k (j, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  5 18:46:05 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 18:46:05 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rolling_average.v", 5); // k (j, ck)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 214ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 153 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_DISPLAY.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 2); // k (j, ck)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 99 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 31 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 193, 130); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 157, 253); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 158, 245); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rolling_average.v", 2); // k (j, ck)
+// Elapsed time: 44 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+// Elapsed time: 48 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+// Elapsed time: 32 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rolling_average.v", 2); // k (j, ck)
+selectCodeEditor("rolling_average.v", 131, 230); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 73, 116); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 91, 111); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 130, 184); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 146, 233); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 132, 226); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 197, 229); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 159, 249); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 152, 240); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 80, 251); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 135, 246); // ce (w, ck)
+// Elapsed time: 20 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rolling_average.v", 2); // k (j, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 173, 265); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 192, 218); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 178, 249); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,340 MB. GUI used memory: 58 MB. Current time: 4/5/19 6:54:54 PM SGT
+selectCodeEditor("Voice_Scope_TOP.v", 142, 224); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 167, 183); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 179, 199); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 187, 201); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 206, 188); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 187, 162); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 190, 146); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 205, 146); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 211, 147); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rolling_average.v", 2); // k (j, ck)
+// Elapsed time: 96 seconds
+selectCodeEditor("rolling_average.v", 192, 227); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 202, 232); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 187, 234); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 30, 127); // ce (w, ck)
+// Elapsed time: 20 seconds
+selectCodeEditor("rolling_average.v", 77, 127); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 298, 236); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 307, 281); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  5 18:57:31 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 18:57:31 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 234ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 208 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 24 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rolling_average.v", 2); // k (j, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("rolling_average.v", 126, 133); // ce (w, ck)
+// Elapsed time: 29 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+// Elapsed time: 15 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 148, 27); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 215, 187); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 164, 199); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 353, 203); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 408, 192); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 527, 192); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 299, 205); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 267, 228); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 335, 239); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 339, 229); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rolling_average.v", 2); // k (j, ck)
+selectCodeEditor("rolling_average.v", 310, 250); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 260, 201); // ce (w, ck)
+// Elapsed time: 48 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rolling_average.v", 2); // k (j, ck)
+// Elapsed time: 47 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+// Elapsed time: 15 seconds
+selectCodeEditor("Voice_Scope_TOP.v", 209, 247); // ce (w, ck)
+// Elapsed time: 40 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rolling_average.v", 2); // k (j, ck)
+selectCodeEditor("rolling_average.v", 157, 231); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 178, 209); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 233, 223); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 56, 130); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 206, 258); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 227, 212); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 77, 134); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 104, 127); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 418, 350); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 278, 279); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 229, 272); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rolling_average.v", 2); // k (j, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Voice_Scope_TOP.v", 141, 253); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 388, 204); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  5 19:06:55 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 19:06:55 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 218ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 203 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rolling_average.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 93 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 222, 173); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rolling_average.v", 2); // k (j, ck)
+selectCodeEditor("rolling_average.v", 152, 126); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 216, 144); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 417, 268); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 127, 124); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 21, 66); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 10, 76); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 35, 79); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 26, 85); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 25, 84, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("rolling_average.v", 56, 68); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 238, 113); // ce (w, ck)
+selectCodeEditor("rolling_average.v", 355, 119); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rolling_average.v", 2); // k (j, ck)
+selectCodeEditor("rolling_average.v", 266, 100); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Voice_Scope_TOP.v", 216, 157); // ce (w, ck)
+// Elapsed time: 29 seconds
+selectCodeEditor("Voice_Scope_TOP.v", 31, 140); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 28, 146); // ce (w, ck)
+// Elapsed time: 27 seconds
+selectCodeEditor("Voice_Scope_TOP.v", 80, 196); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 98, 258); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 94, 202); // ce (w, ck)
+// Elapsed time: 112 seconds
+selectCodeEditor("Voice_Scope_TOP.v", 24, 146); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 26, 46); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 39, 149); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 132, 294); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("Voice_Scope_TOP.v", 187, 147); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 360, 139); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 452, 150); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 531, 184); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 523, 148); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rolling_average.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 1); // k (j, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 459, 120); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (A)
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
+// Elapsed time: 52 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Apr  5 19:16:59 2019] Launched synth_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/runme.log [Fri Apr  5 19:16:59 2019] Launched impl_1... Run output will be captured here: C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 225ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 212 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 184 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 203, 159); // ce (w, ck)
+selectCodeEditor("Draw_Joy_Waveform.v", 260, 232); // ce (w, ck)
