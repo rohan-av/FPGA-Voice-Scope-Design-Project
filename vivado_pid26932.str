@@ -3011,3 +3011,13 @@ dismissDialog("Program Device"); // bB (ck)
 // Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
 // 'I' command handler elapsed time: 4 seconds
 dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 160 seconds
+selectCodeEditor("Draw_Joy_Waveform.v", 827, 131); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Background.v", 3); // k (j, ck)
+selectCodeEditor("Draw_Background.v", 228, 182); // ce (w, ck)
+selectCodeEditor("Draw_Background.v", 655, 187); // ce (w, ck)
+selectCodeEditor("Draw_Background.v", 19, 201); // ce (w, ck)
+selectCodeEditor("Draw_Background.v", 285, 52); // ce (w, ck)
+selectCodeEditor("Draw_Background.v", 444, 60); // ce (w, ck)
+// Elapsed time: 37 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Draw_Joy_Waveform.v", 0); // k (j, ck)
