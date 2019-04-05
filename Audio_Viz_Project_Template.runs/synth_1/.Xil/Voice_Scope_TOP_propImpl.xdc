@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/sujay/Desktop/ee2026_project/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc rfile:../../../Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc rfile:../../../Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W5 [get_ports CLK]
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]
@@ -103,3 +103,7 @@ set_property src_info {type:XDC file:1 line:290 export:INPUT save:INPUT read:REA
 set_property PACKAGE_PIN P19 [get_ports VGA_HS]
 set_property src_info {type:XDC file:1 line:292 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN R19 [get_ports VGA_VS]
+set_property src_info {type:XDC file:1 line:304 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN C17 [get_ports Mouse_Clk]
+set_property src_info {type:XDC file:1 line:307 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN B17 [get_ports Mouse_Data]
