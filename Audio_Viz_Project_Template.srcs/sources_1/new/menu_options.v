@@ -23,6 +23,7 @@
 module menu_options(
     input freeze_sw,
     input ramp_sw,
+    input waveform_sw,
     
     input [11:0] VGA_HORZ_COORD,
     input [11:0] VGA_VERT_COORD,
@@ -39,9 +40,11 @@ module menu_options(
     
     wire freeze_op;
     wire test_op;
+    wire wave_op;
      
     wire freeze_option;
     wire test_option;
+    wire wave_option;
     
     Pixel_On_Text2 #(.displayText("Freeze")) m0(
        CLK_VGA,
@@ -61,16 +64,29 @@ module menu_options(
        test_op // result, 1 if current pixel is on text, 0 otherwise
     );
     
+    Pixel_On_Text2 #(.displayText("Waveform")) m2(
+       CLK_VGA,
+       x_left, // text position.x (top left)
+       y_top + sep*2, // text position.y (top left)
+       VGA_HORZ_COORD, // current position.x
+       VGA_VERT_COORD, // current position.y
+       wave_op // result, 1 if current pixel is on text, 0 otherwise
+    );
+    
     assign freeze_option = (freeze_op == 1 && freeze_sw == 1)? 1: 0;
     assign test_option = (test_op == 1 && ramp_sw == 1)? 1: 0;
+    assign wave_option = (wave_op == 1 && waveform_sw == 1)? 1: 0;
       
     always@(*) begin
+        MENU_TEXTG <= 4'h0;
+        MENU_TEXTR <= 4'h0;
+        
         if ((freeze_option && VGA_VERT_COORD < y_top + sep*1 && VGA_VERT_COORD >= y_top + sep*0) || (test_option && VGA_VERT_COORD < y_top + sep*2 && VGA_VERT_COORD >= y_top + sep*1)) begin
-            MENU_TEXTG = 4'hF;
+            MENU_TEXTG <= 4'hF;
         end
         
-        else begin
-            MENU_TEXTG = 4'h0;
+        if ((wave_option && VGA_VERT_COORD < y_top + sep*3 && VGA_VERT_COORD >= y_top + sep*2)) begin
+            MENU_TEXTR <= 4'hF;
         end
     end   
 endmodule
