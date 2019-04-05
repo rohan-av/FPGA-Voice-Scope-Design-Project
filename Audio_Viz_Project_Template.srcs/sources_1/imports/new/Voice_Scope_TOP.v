@@ -8,6 +8,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module Voice_Scope_TOP(
+    input Mouse_Clk,
+    input Mouse_Data,
     input CLK,
     input waveform_sw,
     input ramp_sw,
@@ -246,12 +248,44 @@ module Voice_Scope_TOP(
     wire [3:0] VGA_CBOXG;
     wire [3:0] VGA_CBOXB;
     
+    wire [7:0] x_coord;
+    wire [7:0] y_coord;
+    wire left_click;
+    wire right_click;
+    
+    mouse_sync m1 (
+    .clock_100Mhz(CLK),
+    .Mouse_Data(Mouse_Data),
+    .Mouse_Clk(Mouse_Clk),
+    .x_coord(x_coord),
+    .y_coord(y_coord),
+    .left_click(left_click),
+    .right_click(right_click)
+    );
+    
+    wire [3:0] VGA_BGR;
+    wire [3:0] VGA_BGG;
+    wire [3:0] VGA_BGB;
+    wire [3:0] VGA_GRR;
+    wire [3:0] VGA_GRG;
+    wire [3:0] VGA_GRB;
+    
     colour_boxes d8(
+    .x_coord(x_coord),
+    .y_coord(y_coord),
+    .left_click(left_click),
+    .right_click(right_click),
     .VGA_HORZ_COORD(VGA_HORZ_COORD),
     .VGA_VERT_COORD(VGA_VERT_COORD),
     .VGA_CBOXR(VGA_CBOXR),
     .VGA_CBOXG(VGA_CBOXG),
-    .VGA_CBOXB(VGA_CBOXB)
+    .VGA_CBOXB(VGA_CBOXB),
+    .VGA_BGR(VGA_BGR),
+    .VGA_BGG(VGA_BGG),
+    .VGA_BGB(VGA_BGB),
+    .VGA_GRR(VGA_GRR),
+    .VGA_GRG(VGA_GRG),
+    .VGA_GRB(VGA_GRB)
     );
     
     wire [3:0] VGA_MENUR;
