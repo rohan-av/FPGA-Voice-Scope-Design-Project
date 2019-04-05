@@ -25,7 +25,8 @@ module Draw_Background(
     input [11:0] VGA_HORZ_COORD,
     input [11:0] VGA_VERT_COORD,
     input advanced_sw,
-    input axis_sw,   
+    input axis_sw,
+    input tick_sw,   
     input [2:0] colour_select,
     input [2:0] grid_select,
     output reg [3:0] VGA_Red_Grid,
@@ -50,9 +51,10 @@ module Draw_Background(
     parameter [1:0] tt = 1; // tick thickness
 
 // Using the gridline example, insert your code below to draw ticks on the x-axis and y-axis.
-    wire Condition_For_Ticks = (axis_sw == 0) && (advanced_sw == 0) && ((((VGA_HORZ_COORD % 20 > 20 - tt) || (VGA_HORZ_COORD % 20 < tt)) && (VGA_VERT_COORD > 505 && VGA_VERT_COORD < 519 )) 
-                               || (((VGA_VERT_COORD % 16 > 16 - tt) || (VGA_VERT_COORD % 16 < tt)) && (VGA_HORZ_COORD > 633 && VGA_HORZ_COORD < 647)) 
-                               || (VGA_VERT_COORD > 510 && VGA_VERT_COORD < 514 ) || (VGA_HORZ_COORD > 638 && VGA_HORZ_COORD < 642));
+    wire Condition_For_Ticks = (tick_sw == 0) && (advanced_sw == 0) && ((((VGA_HORZ_COORD % 20 > 20 - tt) || (VGA_HORZ_COORD % 20 < tt)) && (VGA_VERT_COORD > 505 && VGA_VERT_COORD < 519 )) 
+                               || (((VGA_VERT_COORD % 16 > 16 - tt) || (VGA_VERT_COORD % 16 < tt)) && (VGA_HORZ_COORD > 633 && VGA_HORZ_COORD < 647))); 
+                               
+    wire Condition_For_Axis =  (axis_sw == 0) && (advanced_sw == 0) && ((VGA_VERT_COORD > 510 && VGA_VERT_COORD < 514 ) || (VGA_HORZ_COORD > 638 && VGA_HORZ_COORD < 642));
 
 
 // Black box for menu booleans
@@ -148,21 +150,21 @@ module Draw_Background(
         case(grid_select)
             3'b000: 
             begin
-                VGA_Red_Grid = Condition_For_Ticks ? R_tickcolour : Condition_For_Grid_0 ? R_gridcolour : (menu_horz && menu_vert)? 4'h0:  R_bgcolour;
-                VGA_Green_Grid = Condition_For_Ticks ? G_tickcolour : Condition_For_Grid_0 ? G_gridcolour : (menu_horz && menu_vert)? 4'h0:  G_bgcolour;
-                VGA_Blue_Grid = Condition_For_Ticks ? B_tickcolour : Condition_For_Grid_0 ? B_gridcolour : (menu_horz && menu_vert)? 4'h0:  B_bgcolour;
+                VGA_Red_Grid = (Condition_For_Ticks || Condition_For_Axis) ? R_tickcolour : Condition_For_Grid_0 ? R_gridcolour : (menu_horz && menu_vert)? 4'h0:  R_bgcolour;
+                VGA_Green_Grid = (Condition_For_Ticks || Condition_For_Axis) ? G_tickcolour : Condition_For_Grid_0 ? G_gridcolour : (menu_horz && menu_vert)? 4'h0:  G_bgcolour;
+                VGA_Blue_Grid = (Condition_For_Ticks || Condition_For_Axis) ? B_tickcolour : Condition_For_Grid_0 ? B_gridcolour : (menu_horz && menu_vert)? 4'h0:  B_bgcolour;
             end
             3'b001: 
             begin
-                VGA_Red_Grid = Condition_For_Ticks ? R_tickcolour : Condition_For_Grid_1 ? R_gridcolour : (menu_horz && menu_vert)? 4'h0:  R_bgcolour;
-                VGA_Green_Grid = Condition_For_Ticks ? G_tickcolour : Condition_For_Grid_1 ? G_gridcolour : (menu_horz && menu_vert)? 4'h0:  G_bgcolour;
-                VGA_Blue_Grid = Condition_For_Ticks ? B_tickcolour : Condition_For_Grid_1 ? B_gridcolour : (menu_horz && menu_vert)? 4'h0:  B_bgcolour;
+                VGA_Red_Grid = (Condition_For_Ticks || Condition_For_Axis) ? R_tickcolour : Condition_For_Grid_1 ? R_gridcolour : (menu_horz && menu_vert)? 4'h0:  R_bgcolour;
+                VGA_Green_Grid = (Condition_For_Ticks || Condition_For_Axis) ? G_tickcolour : Condition_For_Grid_1 ? G_gridcolour : (menu_horz && menu_vert)? 4'h0:  G_bgcolour;
+                VGA_Blue_Grid = (Condition_For_Ticks || Condition_For_Axis) ? B_tickcolour : Condition_For_Grid_1 ? B_gridcolour : (menu_horz && menu_vert)? 4'h0:  B_bgcolour;
             end
             3'b010:
             begin
-                VGA_Red_Grid = Condition_For_Ticks ? R_tickcolour : Condition_For_Grid_2 ? R_gridcolour : (menu_horz && menu_vert)? 4'h0:  R_bgcolour;
-                VGA_Green_Grid = Condition_For_Ticks ? G_tickcolour : Condition_For_Grid_2 ? G_gridcolour : (menu_horz && menu_vert)? 4'h0:  G_bgcolour;
-                VGA_Blue_Grid = Condition_For_Ticks ? B_tickcolour : Condition_For_Grid_2 ? B_gridcolour : (menu_horz && menu_vert)? 4'h0:  B_bgcolour;
+                VGA_Red_Grid = (Condition_For_Ticks || Condition_For_Axis) ? R_tickcolour : Condition_For_Grid_2 ? R_gridcolour : (menu_horz && menu_vert)? 4'h0:  R_bgcolour;
+                VGA_Green_Grid = (Condition_For_Ticks || Condition_For_Axis) ? G_tickcolour : Condition_For_Grid_2 ? G_gridcolour : (menu_horz && menu_vert)? 4'h0:  G_bgcolour;
+                VGA_Blue_Grid = (Condition_For_Ticks || Condition_For_Axis) ? B_tickcolour : Condition_For_Grid_2 ? B_gridcolour : (menu_horz && menu_vert)? 4'h0:  B_bgcolour;
             end
         endcase
     end    

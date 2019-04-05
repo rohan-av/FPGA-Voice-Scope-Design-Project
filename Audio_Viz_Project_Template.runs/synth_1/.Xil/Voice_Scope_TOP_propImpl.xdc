@@ -3,6 +3,8 @@ set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ}
 set_property PACKAGE_PIN W5 [get_ports CLK]
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN V17 [get_ports {advanced_sw}]
+set_property src_info {type:XDC file:1 line:34 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN R3 [get_ports {tick_sw}]
 set_property src_info {type:XDC file:1 line:36 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W2 [get_ports {axis_sw}]
 set_property src_info {type:XDC file:1 line:38 export:INPUT save:INPUT read:READ} [current_design]

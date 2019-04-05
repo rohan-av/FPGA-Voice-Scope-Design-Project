@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Fri Apr  5 19:17:56 2019
+| Date         : Fri Apr  5 19:36:24 2019
 | Host         : DESKTOP-K0CKIO3 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Voice_Scope_TOP_utilization_synth.rpt -pb Voice_Scope_TOP_utilization_synth.pb
 | Design       : Voice_Scope_TOP
@@ -30,8 +30,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 4984 |     0 |     20800 | 23.96 |
-|   LUT as Logic             | 2288 |     0 |     20800 | 11.00 |
+| Slice LUTs*                | 4977 |     0 |     20800 | 23.93 |
+|   LUT as Logic             | 2281 |     0 |     20800 | 10.97 |
 |   LUT as Memory            | 2696 |     0 |      9600 | 28.08 |
 |     LUT as Distributed RAM | 2696 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
@@ -94,7 +94,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   51 |     0 |       106 | 48.11 |
+| Bonded IOB                  |   52 |     0 |       106 | 49.06 |
 | Bonded IPADs                |    0 |     0 |        10 |  0.00 |
 | Bonded OPADs                |    0 |     0 |         4 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         5 |  0.00 |
@@ -155,18 +155,18 @@ Table of Contents
 +------------+------+---------------------+
 | RAMD64E    | 2616 |  Distributed Memory |
 | LUT6       |  938 |                 LUT |
-| LUT5       |  477 |                 LUT |
-| LUT2       |  415 |                 LUT |
-| LUT4       |  385 |                 LUT |
+| LUT5       |  466 |                 LUT |
+| LUT2       |  411 |                 LUT |
+| LUT4       |  387 |                 LUT |
 | FDRE       |  380 |        Flop & Latch |
 | CARRY4     |  238 |          CarryLogic |
 | LUT1       |  217 |                 LUT |
-| LUT3       |  175 |                 LUT |
+| LUT3       |  178 |                 LUT |
 | RAMD32     |   80 |  Distributed Memory |
 | MUXF7      |   69 |               MuxFx |
 | OBUF       |   40 |                  IO |
 | LDCE       |   30 |        Flop & Latch |
-| IBUF       |   11 |                  IO |
+| IBUF       |   12 |                  IO |
 | BUFG       |    6 |               Clock |
 | RAMB18E1   |    4 |        Block Memory |
 | FDSE       |    4 |        Flop & Latch |
