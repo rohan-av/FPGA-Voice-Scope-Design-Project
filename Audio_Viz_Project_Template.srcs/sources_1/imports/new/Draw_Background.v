@@ -26,9 +26,13 @@ module Draw_Background(
     input [11:0] VGA_VERT_COORD,
     input advanced_sw,
     input axis_sw,
-    input tick_sw,   
+    input tick_sw,
+    input custom_sw,   
     input [2:0] colour_select,
     input [2:0] grid_select,
+    input [3:0] VGA_CSTR,
+    input [3:0] VGA_CSTG,
+    input [3:0] VGA_CSTB,
     output reg [3:0] VGA_Red_Grid,
     output reg [3:0] VGA_Green_Grid,
     output reg [3:0] VGA_Blue_Grid,
@@ -144,6 +148,11 @@ module Draw_Background(
             B_tickcolour = 4'h0;
             end
         endcase
+        if (custom_sw) begin
+            R_bgcolour <= VGA_CSTR;
+            G_bgcolour <= VGA_CSTG;
+            B_bgcolour <= VGA_CSTB;
+            end
     end
     
     always@(*) begin

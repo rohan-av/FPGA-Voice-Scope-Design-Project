@@ -21,6 +21,7 @@
 
 
 module mouse_sync(
+    input advanced_sw,
     input clock_100Mhz, // 100 Mhz clock source on Basys 3 FPGA
     input Mouse_Data, // Mouse PS2 data
     input Mouse_Clk, // Mouse PS2 Clock
@@ -49,9 +50,9 @@ module mouse_sync(
                 if (Mouse_Data == 1)
                 begin
                     case (vert_select)
-                        0: counter0 <= (counter0 == 3) ? 0 : counter0 + 1;
-                        1: counter1 <= (counter1 == 3) ? 0 : counter1 + 1;
-                        2: counter2 <= (counter2 == 3) ? 0 : counter2 + 1;
+                        0: counter0 <= (advanced_sw)? ((counter0 == 3) ? 0 : counter0 + 1) : counter0;
+                        1: counter1 <= (advanced_sw)? ((counter1 == 3) ? 0 : counter1 + 1) : counter1;
+                        2: counter2 <= (advanced_sw)? ((counter2 == 3) ? 0 : counter2 + 1) : counter2;
                     endcase
                 end
             end
@@ -60,9 +61,9 @@ module mouse_sync(
                 if (Mouse_Data == 1)
                 begin
                     case (vert_select)
-                        0: counter0 <= (counter0 == 0) ? 3 : counter0 - 1;
-                        1: counter1 <= (counter1 == 0) ? 3 : counter1 - 1;
-                        2: counter2 <= (counter2 == 0) ? 3 : counter2 - 1;
+                        0: counter0 <= (advanced_sw)? ((counter0 == 0) ? 3 : counter0 - 1) : counter0;
+                        1: counter1 <= (advanced_sw)? ((counter1 == 0) ? 3 : counter1 - 1) : counter1;
+                        2: counter2 <= (advanced_sw)? ((counter2 == 0) ? 3 : counter2 - 1) : counter2;
                     endcase
                 end
             end

@@ -17,6 +17,7 @@ module Voice_Scope_TOP(
     input tick_sw,
     input freeze_sw,
     input advanced_sw,
+    input custom_sw,
     input depth_button,
     input fill_button,
     input colour_button,
@@ -159,20 +160,35 @@ module Voice_Scope_TOP(
     wire [3:0] bgcolour_g;
     wire [3:0] bgcolour_b;
     
+    wire [3:0] VGA_SLCTR0;
+    wire [3:0] VGA_SLCTG0;
+    wire [3:0] VGA_SLCTB0;
+    wire [3:0] VGA_SLCTR1;
+    wire [3:0] VGA_SLCTG1;
+    wire [3:0] VGA_SLCTB1;
+    wire [3:0] VGA_SLCTR2;
+    wire [3:0] VGA_SLCTG2;
+    wire [3:0] VGA_SLCTB2;
+    
     Draw_Background d2 (
     .VGA_HORZ_COORD(VGA_HORZ_COORD),
     .VGA_VERT_COORD(VGA_VERT_COORD),
     .advanced_sw(advanced_sw),
     .axis_sw(axis_sw),
     .tick_sw(tick_sw),
+    .custom_sw(custom_sw),
     .colour_select(colour_select),
     .grid_select(grid_select),
+    .VGA_CSTR(VGA_SLCTR0),
+    .VGA_CSTG(VGA_SLCTG1),
+    .VGA_CSTB(VGA_SLCTB2),
     .VGA_Red_Grid(VGA_Red_Grid),
     .VGA_Green_Grid(VGA_Green_Grid),
     .VGA_Blue_Grid(VGA_Blue_Grid),
     .R_bgcolour(bgcolour_r),
     .G_bgcolour(bgcolour_g),
     .B_bgcolour(bgcolour_b)
+    
     );
     
     wire [3:0] VGA_Rvol;
@@ -268,6 +284,7 @@ module Voice_Scope_TOP(
     //wire [1:0] vert_select;
     
     mouse_sync m1 (
+    .advanced_sw(advanced_sw),
     .clock_100Mhz(CLK),
     .Mouse_Data(Mouse_Data),
     .Mouse_Clk(Mouse_Clk),
@@ -284,7 +301,10 @@ module Voice_Scope_TOP(
     .vert_counter(0),
     .VGA_CSTR(VGA_CSTR0),
     .VGA_CSTG(VGA_CSTG0),
-    .VGA_CSTB(VGA_CSTB0)
+    .VGA_CSTB(VGA_CSTB0),
+    .VGA_SLCTR(VGA_SLCTR0),
+    .VGA_SLCTG(VGA_SLCTG0),
+    .VGA_SLCTB(VGA_SLCTB0)
     );
     
     clr_selection cs1 (
@@ -294,7 +314,10 @@ module Voice_Scope_TOP(
     .vert_counter(1),
     .VGA_CSTR(VGA_CSTR1),
     .VGA_CSTG(VGA_CSTG1),
-    .VGA_CSTB(VGA_CSTB1)
+    .VGA_CSTB(VGA_CSTB1),
+    .VGA_SLCTR(VGA_SLCTR1),
+    .VGA_SLCTG(VGA_SLCTG1),
+    .VGA_SLCTB(VGA_SLCTB1)
     );
     
     clr_selection cs2 (
@@ -304,7 +327,10 @@ module Voice_Scope_TOP(
     .vert_counter(2),
     .VGA_CSTR(VGA_CSTR2),
     .VGA_CSTG(VGA_CSTG2),
-    .VGA_CSTB(VGA_CSTB2)
+    .VGA_CSTB(VGA_CSTB2),
+    .VGA_SLCTR(VGA_SLCTR2),
+    .VGA_SLCTG(VGA_SLCTG2),
+    .VGA_SLCTB(VGA_SLCTB2)
     );
     
     wire [3:0] VGA_BGR;

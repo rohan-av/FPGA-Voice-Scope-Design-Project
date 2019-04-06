@@ -71,9 +71,9 @@ module text_manager(
      
      
      wire res;
-     Pixel_On_Text2 #(.displayText("CURRENT VOLUME")) t3(
+     Pixel_On_Text2 #(.displayText("VOLUME")) t3(
          CLK_VGA,
-         maxvol_x - 55, // text position.x (top left)
+         maxvol_x - 25, // text position.x (top left)
          maxvol_y, // text position.y (top left)
          VGA_HORZ_COORD, // current position.x
          VGA_VERT_COORD, // current position.y

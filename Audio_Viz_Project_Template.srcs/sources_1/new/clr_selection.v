@@ -7,7 +7,11 @@ module clr_selection(
     input [1:0] vert_counter,
     output reg [3:0] VGA_CSTR,
     output reg [3:0] VGA_CSTG,
-    output reg [3:0] VGA_CSTB
+    output reg [3:0] VGA_CSTB,
+    
+    output reg [3:0] VGA_SLCTR,
+    output reg [3:0] VGA_SLCTG,
+    output reg [3:0] VGA_SLCTB
     );
     
     parameter sep = 40;
@@ -26,6 +30,10 @@ module clr_selection(
     wire Vert_Condition_2 = (VGA_VERT_COORD > bluerow+10 && VGA_VERT_COORD < bluerow+30);
     
     always@(*) begin
+        VGA_SLCTR <= 4'h0;
+        VGA_SLCTG <= 4'h0;
+        VGA_SLCTB <= 4'h0;
+        
         case(vert_counter)
             0:
                 begin
@@ -35,24 +43,28 @@ module clr_selection(
                             VGA_CSTR <= (Horz_Condition_0 && Vert_Condition_0) ? 4'hf : 0;
                             VGA_CSTG <= (Horz_Condition_0 && Vert_Condition_0) ? 4'hf : 0;
                             VGA_CSTB <= (Horz_Condition_0 && Vert_Condition_0) ? 4'hf : 0;
+                            VGA_SLCTR <= 4'h3;
                         end
                     1:
                         begin
                             VGA_CSTR <= (Horz_Condition_1 && Vert_Condition_0) ? 4'hf : 0;
                             VGA_CSTG <= (Horz_Condition_1 && Vert_Condition_0) ? 4'hf : 0;
                             VGA_CSTB <= (Horz_Condition_1 && Vert_Condition_0) ? 4'hf : 0;
+                            VGA_SLCTR <= 4'h7;
                         end
                     2:
                         begin
                             VGA_CSTR <= (Horz_Condition_2 && Vert_Condition_0) ? 4'hf : 0;
                             VGA_CSTG <= (Horz_Condition_2 && Vert_Condition_0) ? 4'hf : 0;
                             VGA_CSTB <= (Horz_Condition_2 && Vert_Condition_0) ? 4'hf : 0;
+                            VGA_SLCTR <= 4'hB;
                         end
                     3:
                         begin
                             VGA_CSTR <= (Horz_Condition_3 && Vert_Condition_0) ? 4'hf : 0;
                             VGA_CSTG <= (Horz_Condition_3 && Vert_Condition_0) ? 4'hf : 0;
                             VGA_CSTB <= (Horz_Condition_3 && Vert_Condition_0) ? 4'hf : 0;
+                            VGA_SLCTR <= 4'hF;
                         end
                     endcase
                 end
@@ -64,24 +76,28 @@ module clr_selection(
                             VGA_CSTR <= (Horz_Condition_0 && Vert_Condition_1) ? 4'hf : 0;
                             VGA_CSTG <= (Horz_Condition_0 && Vert_Condition_1) ? 4'hf : 0;
                             VGA_CSTB <= (Horz_Condition_0 && Vert_Condition_1) ? 4'hf : 0;
+                            VGA_SLCTG <= 4'h3;
                         end
                     1:
                         begin
                             VGA_CSTR <= (Horz_Condition_1 && Vert_Condition_1) ? 4'hf : 0;
                             VGA_CSTG <= (Horz_Condition_1 && Vert_Condition_1) ? 4'hf : 0;
                             VGA_CSTB <= (Horz_Condition_1 && Vert_Condition_1) ? 4'hf : 0;
+                            VGA_SLCTG <= 4'h7;
                         end
                     2:
                         begin
                             VGA_CSTR <= (Horz_Condition_2 && Vert_Condition_1) ? 4'hf : 0;
                             VGA_CSTG <= (Horz_Condition_2 && Vert_Condition_1) ? 4'hf : 0;
                             VGA_CSTB <= (Horz_Condition_2 && Vert_Condition_1) ? 4'hf : 0;
+                            VGA_SLCTG <= 4'hB;
                         end
                     3:
                         begin
                             VGA_CSTR <= (Horz_Condition_3 && Vert_Condition_1) ? 4'hf : 0;
                             VGA_CSTG <= (Horz_Condition_3 && Vert_Condition_1) ? 4'hf : 0;
                             VGA_CSTB <= (Horz_Condition_3 && Vert_Condition_1) ? 4'hf : 0;
+                            VGA_SLCTG <= 4'hF;
                         end
                     endcase
                 end
@@ -93,24 +109,28 @@ module clr_selection(
                             VGA_CSTR <= (Horz_Condition_0 && Vert_Condition_2) ? 4'hf : 0;
                             VGA_CSTG <= (Horz_Condition_0 && Vert_Condition_2) ? 4'hf : 0;
                             VGA_CSTB <= (Horz_Condition_0 && Vert_Condition_2) ? 4'hf : 0;
+                            VGA_SLCTB <= 4'h3;
                         end
                     1:
                         begin
                             VGA_CSTR <= (Horz_Condition_1 && Vert_Condition_2) ? 4'hf : 0;
                             VGA_CSTG <= (Horz_Condition_1 && Vert_Condition_2) ? 4'hf : 0;
                             VGA_CSTB <= (Horz_Condition_1 && Vert_Condition_2) ? 4'hf : 0;
+                            VGA_SLCTB <= 4'h7;
                         end
                     2:
                         begin
                             VGA_CSTR <= (Horz_Condition_2 && Vert_Condition_2) ? 4'hf : 0;
                             VGA_CSTG <= (Horz_Condition_2 && Vert_Condition_2) ? 4'hf : 0;
                             VGA_CSTB <= (Horz_Condition_2 && Vert_Condition_2) ? 4'hf : 0;
+                            VGA_SLCTB <= 4'hB;
                         end
                     3:
                         begin
                             VGA_CSTR <= (Horz_Condition_3 && Vert_Condition_2) ? 4'hf : 0;
                             VGA_CSTG <= (Horz_Condition_3 && Vert_Condition_2) ? 4'hf : 0;
                             VGA_CSTB <= (Horz_Condition_3 && Vert_Condition_2) ? 4'hf : 0;
+                            VGA_SLCTB <= 4'hF;
                         end
                     endcase
                 end

@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Fri Apr  5 23:10:12 2019
-| Host         : DESKTOP-K0CKIO3 running 64-bit major release  (build 9200)
+| Date         : Sat Apr  6 15:27:52 2019
+| Host         : LAPTOP-P6DBKN0G running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Voice_Scope_TOP_utilization_synth.rpt -pb Voice_Scope_TOP_utilization_synth.pb
 | Design       : Voice_Scope_TOP
 | Device       : 7a35tcpg236-1
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 5036 |     0 |     20800 | 24.21 |
-|   LUT as Logic             | 2340 |     0 |     20800 | 11.25 |
+| Slice LUTs*                | 5032 |     0 |     20800 | 24.19 |
+|   LUT as Logic             | 2336 |     0 |     20800 | 11.23 |
 |   LUT as Memory            | 2696 |     0 |      9600 | 28.08 |
 |     LUT as Distributed RAM | 2696 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            |  443 |     0 |     41600 |  1.06 |
-|   Register as Flip Flop    |  413 |     0 |     41600 |  0.99 |
+| Slice Registers            |  451 |     0 |     41600 |  1.08 |
+|   Register as Flip Flop    |  421 |     0 |     41600 |  1.01 |
 |   Register as Latch        |   30 |     0 |     41600 |  0.07 |
 | F7 Muxes                   |   68 |     0 |     16300 |  0.42 |
 | F8 Muxes                   |    0 |     0 |      8150 |  0.00 |
@@ -59,7 +59,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 30    |          Yes |           - |        Reset |
 | 4     |          Yes |         Set |            - |
-| 409   |          Yes |       Reset |            - |
+| 417   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -94,7 +94,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   55 |     0 |       106 | 51.89 |
+| Bonded IOB                  |   56 |     0 |       106 | 52.83 |
 | Bonded IPADs                |    0 |     0 |        10 |  0.00 |
 | Bonded OPADs                |    0 |     0 |         4 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         5 |  0.00 |
@@ -154,19 +154,19 @@ Table of Contents
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
 | RAMD64E    | 2616 |  Distributed Memory |
-| LUT6       |  968 |                 LUT |
-| LUT5       |  479 |                 LUT |
-| LUT2       |  422 |                 LUT |
-| FDRE       |  409 |        Flop & Latch |
-| LUT4       |  408 |                 LUT |
+| LUT6       |  963 |                 LUT |
+| LUT5       |  489 |                 LUT |
+| FDRE       |  417 |        Flop & Latch |
+| LUT4       |  415 |                 LUT |
+| LUT2       |  410 |                 LUT |
 | CARRY4     |  244 |          CarryLogic |
-| LUT1       |  219 |                 LUT |
-| LUT3       |  182 |                 LUT |
+| LUT1       |  217 |                 LUT |
+| LUT3       |  179 |                 LUT |
 | RAMD32     |   80 |  Distributed Memory |
 | MUXF7      |   68 |               MuxFx |
 | OBUF       |   40 |                  IO |
 | LDCE       |   30 |        Flop & Latch |
-| IBUF       |   15 |                  IO |
+| IBUF       |   16 |                  IO |
 | BUFG       |    7 |               Clock |
 | RAMB18E1   |    4 |        Block Memory |
 | FDSE       |    4 |        Flop & Latch |
