@@ -51,7 +51,7 @@ module text_manager(
     wire advanced1;
     
      //Overall   
-     Pixel_On_Text2 #(.displayText("EE2026 VOICE SCOPE")) t1(
+     Pixel_On_Text2 #(.displayText("VOICE SCOPE")) t1(
          CLK_VGA,
          25, // text position.x (top left)
          25, // text position.y (top left)
@@ -60,9 +60,9 @@ module text_manager(
          basic1  // result, 1 if current pixel is on text, 0 otherwise
       );
        
-       Pixel_On_Text2 #(.displayText("(ADVANCED)")) t2(
+       Pixel_On_Text2 #(.displayText("++")) t2(
            CLK_VGA,
-           180, // text position.x (top left)
+           150, // text position.x (top left)
            25, // text position.y (top left)
            VGA_HORZ_COORD, // current position.x
            VGA_VERT_COORD, // current position.y

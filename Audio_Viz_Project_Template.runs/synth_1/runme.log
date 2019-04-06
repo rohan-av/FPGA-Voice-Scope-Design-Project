@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18284 
+INFO: Helper process launched with PID 9576 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 357.535 ; gain = 100.516
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 356.934 ; gain = 100.148
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Voice_Scope_TOP' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Voice_Scope_TOP.v:10]
 	Parameter scale bound to: 6 - type: integer 
@@ -185,7 +185,7 @@ INFO: [Synth 8-113] binding component instance 'clkf_buf' to cell 'BUFG' [C:/Use
 INFO: [Synth 8-113] binding component instance 'clkout1_buf' to cell 'BUFG' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/CLK_108M.vhd:194]
 INFO: [Synth 8-256] done synthesizing module 'CLK_108M' (23#1) [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/CLK_108M.vhd:83]
 INFO: [Synth 8-638] synthesizing module 'Pixel_On_Text2__parameterized3' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
-	Parameter displayText bound to: EE2026 VOICE SCOPE - type: string 
+	Parameter displayText bound to: VOICE SCOPE - type: string 
 WARNING: [Synth 8-6014] Unused sequential element inXRange_reg was removed.  [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:80]
 WARNING: [Synth 8-6014] Unused sequential element inYRange_reg was removed.  [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:81]
 WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:61]
@@ -193,7 +193,7 @@ INFO: [Synth 8-256] done synthesizing module 'Pixel_On_Text2__parameterized3' (2
 WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized3' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/text_manager.v:58]
 WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized3' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/text_manager.v:59]
 INFO: [Synth 8-638] synthesizing module 'Pixel_On_Text2__parameterized4' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
-	Parameter displayText bound to: (ADVANCED) - type: string 
+	Parameter displayText bound to: ++ - type: string 
 WARNING: [Synth 8-6014] Unused sequential element inXRange_reg was removed.  [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:80]
 WARNING: [Synth 8-6014] Unused sequential element inYRange_reg was removed.  [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:81]
 WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:61]
@@ -256,7 +256,7 @@ WARNING: [Synth 8-3331] design Draw_Joy_Waveform has unconnected port advanced_s
 WARNING: [Synth 8-3331] design rolling_average has unconnected port freeze_sw
 WARNING: [Synth 8-3331] design rolling_average has unconnected port ramp_sw
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 424.695 ; gain = 167.676
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 424.039 ; gain = 167.254
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -269,10 +269,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 424.695 ; gain = 167.676
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 424.039 ; gain = 167.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 424.695 ; gain = 167.676
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 424.039 ; gain = 167.254
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -291,22 +291,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 772.246 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 771.406 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 772.246 ; gain = 515.227
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 771.406 ; gain = 514.621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 772.246 ; gain = 515.227
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 771.406 ; gain = 514.621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 772.246 ; gain = 515.227
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 771.406 ; gain = 514.621
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "SLOW_CLK0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-802] inferred FSM for state register 'ss_enable_reg' in module 'volume_indicator'
@@ -337,7 +337,6 @@ INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To p
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:60]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:60]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:60]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:60]
 WARNING: [Synth 8-327] inferring latch for variable 'VGA_Red_Grid_reg' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Background.v:162]
 WARNING: [Synth 8-327] inferring latch for variable 'VGA_Green_Grid_reg' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Background.v:163]
 WARNING: [Synth 8-327] inferring latch for variable 'VGA_Blue_Grid_reg' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Background.v:164]
@@ -349,7 +348,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'B_gridcolour_reg' [C:/Users
 WARNING: [Synth 8-327] inferring latch for variable 'B_tickcolour_reg' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Background.v:82]
 WARNING: [Synth 8-327] inferring latch for variable 'VGA_CSTR_reg' [C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/clr_selection.v:43]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 772.246 ; gain = 515.227
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 771.406 ; gain = 514.621
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -363,9 +362,9 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   3 Input     33 Bit       Adders := 14    
-	   3 Input     32 Bit       Adders := 9     
+	   3 Input     32 Bit       Adders := 10    
 	   2 Input     32 Bit       Adders := 14    
-	   2 Input     31 Bit       Adders := 7     
+	   2 Input     31 Bit       Adders := 6     
 	   2 Input     21 Bit       Adders := 3     
 	   2 Input     17 Bit       Adders := 1     
 	   2 Input     13 Bit       Adders := 1     
@@ -377,7 +376,6 @@ Detailed RTL Component Info :
 	   2 Input      7 Bit       Adders := 7     
 	   2 Input      6 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 14    
-	   3 Input      5 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 4     
 	   3 Input      4 Bit       Adders := 4     
 	   2 Input      3 Bit       Adders := 6     
@@ -400,7 +398,7 @@ Detailed RTL Component Info :
 +---ROMs : 
 	                              ROMs := 7     
 +---Muxes : 
-	   2 Input     31 Bit        Muxes := 7     
+	   2 Input     31 Bit        Muxes := 6     
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 1     
 	   2 Input     11 Bit        Muxes := 3     
@@ -414,8 +412,8 @@ Detailed RTL Component Info :
 	   6 Input      7 Bit        Muxes := 2     
 	   9 Input      7 Bit        Muxes := 1     
 	   8 Input      7 Bit        Muxes := 1     
-	  10 Input      7 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 29    
+	  11 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 28    
 	   2 Input      4 Bit        Muxes := 138   
 	   6 Input      4 Bit        Muxes := 8     
 	   4 Input      4 Bit        Muxes := 42    
@@ -683,29 +681,26 @@ Detailed RTL Component Info :
 	   2 Input     31 Bit       Adders := 1     
 	   2 Input      7 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 2     
-	   3 Input      5 Bit       Adders := 1     
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     31 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 5     
-Module Pixel_On_Text2__parameterized4 
-Detailed RTL Component Info : 
-+---Adders : 
-	   3 Input     33 Bit       Adders := 2     
-	   2 Input     32 Bit       Adders := 2     
-	   3 Input     32 Bit       Adders := 1     
-	   2 Input     31 Bit       Adders := 1     
-	   2 Input      7 Bit       Adders := 1     
-	   2 Input      5 Bit       Adders := 2     
 	   3 Input      4 Bit       Adders := 1     
 +---Registers : 
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     31 Bit        Muxes := 1     
-	  10 Input      7 Bit        Muxes := 1     
+	  11 Input      7 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      4 Bit        Muxes := 1     
+Module Pixel_On_Text2__parameterized4 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 4     
 Module Pixel_On_Text2__parameterized5 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -852,7 +847,7 @@ INFO: [Synth 8-3886] merging instance 'd2/G_gridcolour_reg[1]' (LD) to 'd2/R_gri
 INFO: [Synth 8-3886] merging instance 'd1/B_colour_reg[1]' (FD) to 'd1/G_colour_reg[0]'
 INFO: [Synth 8-3886] merging instance 'd1/G_colour_reg[3]' (FD) to 'd1/R_colour_reg[3]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 772.246 ; gain = 515.227
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 771.406 ; gain = 514.621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -863,12 +858,10 @@ ROM:
 |Module Name    | RTL Object             | Depth x Width | Implemented As | 
 +---------------+------------------------+---------------+----------------+
 |Font_Rom       | fontRow_reg            | 2048x8        | Block RAM      | 
-|Pixel_On_Text2 | displayText[1]         | 32x7          | LUT            | 
 |menu_options   | m0/FontRom/fontRow_reg | 2048x8        | Block RAM      | 
 |menu_options   | m1/FontRom/fontRow_reg | 2048x8        | Block RAM      | 
 |menu_options   | m2/FontRom/fontRow_reg | 2048x8        | Block RAM      | 
 |menu_clrselect | m0/FontRom/fontRow_reg | 2048x8        | Block RAM      | 
-|text_manager   | t1/displayText[1]      | 32x7          | LUT            | 
 |text_manager   | t1/FontRom/fontRow_reg | 2048x8        | Block RAM      | 
 |text_manager   | t2/FontRom/fontRow_reg | 2048x8        | Block RAM      | 
 |text_manager   | t3/FontRom/fontRow_reg | 2048x8        | Block RAM      | 
@@ -925,13 +918,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 819.332 ; gain = 562.313
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 812.379 ; gain = 555.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 850.070 ; gain = 593.051
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 843.547 ; gain = 586.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -976,7 +969,7 @@ INFO: [Synth 8-4480] The timing for the instance d7/t1/FontRom/fontRow_reg (impl
 INFO: [Synth 8-4480] The timing for the instance d7/t1/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance d7/t3/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 909.914 ; gain = 652.895
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 903.938 ; gain = 647.152
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1000,7 +993,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 909.914 ; gain = 652.895
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 903.938 ; gain = 647.152
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1013,7 +1006,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 909.914 ; gain = 652.895
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 903.938 ; gain = 647.152
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1025,25 +1018,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:52 . Memory (MB): peak = 909.914 ; gain = 652.895
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 903.938 ; gain = 647.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:52 . Memory (MB): peak = 909.914 ; gain = 652.895
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 903.938 ; gain = 647.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:52 . Memory (MB): peak = 909.914 ; gain = 652.895
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 903.938 ; gain = 647.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:52 . Memory (MB): peak = 909.914 ; gain = 652.895
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 903.938 ; gain = 647.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1060,14 +1053,14 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |BUFG       |     7|
-|2     |CARRY4     |   244|
+|2     |CARRY4     |   239|
 |3     |DSP48E1    |     2|
-|4     |LUT1       |   217|
-|5     |LUT2       |   413|
-|6     |LUT3       |   180|
-|7     |LUT4       |   411|
-|8     |LUT5       |   490|
-|9     |LUT6       |   964|
+|4     |LUT1       |   208|
+|5     |LUT2       |   410|
+|6     |LUT3       |   179|
+|7     |LUT4       |   404|
+|8     |LUT5       |   486|
+|9     |LUT6       |   970|
 |10    |MMCME2_ADV |     2|
 |11    |MUXF7      |    28|
 |12    |RAM128X1D  |    20|
@@ -1075,7 +1068,7 @@ Report Cell Usage:
 |14    |RAM64M     |   432|
 |15    |RAM64X1D   |   404|
 |16    |RAMB18E1   |     4|
-|17    |FDRE       |   395|
+|17    |FDRE       |   404|
 |18    |FDSE       |     4|
 |19    |LD         |    30|
 |20    |IBUF       |    16|
@@ -1086,7 +1079,7 @@ Report Instance Areas:
 +------+-----------------+-------------------------------+------+
 |      |Instance         |Module                         |Cells |
 +------+-----------------+-------------------------------+------+
-|1     |top              |                               |  4343|
+|1     |top              |                               |  4329|
 |2     |  ra             |rolling_average                |    39|
 |3     |  c0             |clk_div                        |    22|
 |4     |  clr1           |cycle_colour                   |    86|
@@ -1095,9 +1088,9 @@ Report Instance Areas:
 |7     |      dff1       |dff_19                         |     4|
 |8     |      dff2       |dff_20                         |     1|
 |9     |  d1             |Draw_Waveform                  |   630|
-|10    |  d10            |VGA_DISPLAY                    |  1200|
+|10    |  d10            |VGA_DISPLAY                    |  1209|
 |11    |    VGA_CLK_108M |CLK_108M_16                    |     3|
-|12    |    VGA_CONTROL  |VGA_CONTROL                    |  1120|
+|12    |    VGA_CONTROL  |VGA_CONTROL                    |  1129|
 |13    |  d2             |Draw_Background                |    32|
 |14    |  d3             |volume_visual                  |    28|
 |15    |  d5             |menu_options                   |   102|
@@ -1108,13 +1101,13 @@ Report Instance Areas:
 |20    |      FontRom    |Font_Rom_14                    |     7|
 |21    |  d6             |menu_clrselect                 |    39|
 |22    |    m0           |Pixel_On_Text2__parameterized2 |    39|
-|23    |  d7             |text_manager                   |   119|
+|23    |  d7             |text_manager                   |    96|
 |24    |    VGA_CLK_108M |CLK_108M                       |     3|
-|25    |    t1           |Pixel_On_Text2__parameterized3 |    45|
+|25    |    t1           |Pixel_On_Text2__parameterized3 |    43|
 |26    |      FontRom    |Font_Rom_13                    |    26|
-|27    |    t2           |Pixel_On_Text2__parameterized4 |    30|
-|28    |    t3           |Pixel_On_Text2__parameterized5 |    41|
-|29    |      FontRom    |Font_Rom                       |    17|
+|27    |    t2           |Pixel_On_Text2__parameterized4 |    12|
+|28    |    t3           |Pixel_On_Text2__parameterized5 |    38|
+|29    |      FontRom    |Font_Rom                       |    15|
 |30    |  dj1            |Draw_Joy_Waveform              |  1373|
 |31    |  dpt1           |cycle_depth                    |    52|
 |32    |    slowclk      |button_clk_9                   |    36|
@@ -1142,13 +1135,13 @@ Report Instance Areas:
 |54    |      dff2       |dff_0                          |     1|
 +------+-----------------+-------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:52 . Memory (MB): peak = 909.914 ; gain = 652.895
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 903.938 ; gain = 647.152
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 35 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 909.914 ; gain = 305.344
-Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:52 . Memory (MB): peak = 909.914 ; gain = 652.895
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 903.938 ; gain = 299.785
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 903.938 ; gain = 647.152
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1222 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1217 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -1161,11 +1154,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 404 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-175 Infos, 97 Warnings, 0 Critical Warnings and 0 Errors encountered.
+174 Infos, 97 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:56 . Memory (MB): peak = 909.914 ; gain = 665.715
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 903.938 ; gain = 660.113
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/synth_1/Voice_Scope_TOP.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Voice_Scope_TOP_utilization_synth.rpt -pb Voice_Scope_TOP_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 909.914 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Apr  6 15:43:40 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 903.938 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Apr  6 16:42:32 2019...
