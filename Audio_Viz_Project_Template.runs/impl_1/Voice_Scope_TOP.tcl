@@ -65,15 +65,14 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir {C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.cache/wt} [current_project]
-  set_property parent.project_path {C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.xpr} [current_project]
+  set_property webtalk.parent_dir C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.xpr [current_project]
   set_property ip_cache_permissions disable [current_project]
-  add_files -quiet {{C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/synth_1/Voice_Scope_TOP.dcp}}
-  read_xdc {{C:/Users/sujay/Desktop/ee2026_project/ee2026 offline copy/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc}}
+  add_files -quiet C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.runs/synth_1/Voice_Scope_TOP.dcp
+  read_xdc C:/Users/Rohan/Desktop/Vivado/master/EE2026-Design-Project/Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc
   link_design -top Voice_Scope_TOP -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

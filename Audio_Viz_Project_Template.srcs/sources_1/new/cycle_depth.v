@@ -29,6 +29,6 @@ module cycle_depth(input CLK, input pushbutton, output reg [1:0] depth = 2'b00);
     
     always@(posedge slow_clock)
         begin
-        depth = (pulse == 1)? ((depth == 2'b11)? 2'b00 : depth + 1) : depth ;
+        depth = (pulse == 1)? ((depth == 2'b10)? 2'b00 : depth + 1) : depth ;
         end
 endmodule

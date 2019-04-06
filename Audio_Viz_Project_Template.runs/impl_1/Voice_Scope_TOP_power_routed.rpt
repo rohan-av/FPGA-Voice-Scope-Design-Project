@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Sat Apr  6 16:44:52 2019
-| Host             : LAPTOP-P6DBKN0G running 64-bit major release  (build 9200)
+| Date             : Sat Apr  6 17:01:03 2019
+| Host             : DESKTOP-K0CKIO3 running 64-bit major release  (build 9200)
 | Command          : report_power -file Voice_Scope_TOP_power_routed.rpt -pb Voice_Scope_TOP_power_summary_routed.pb -rpx Voice_Scope_TOP_power_routed.rpx
 | Design           : Voice_Scope_TOP
 | Device           : xc7a35tcpg236-1
@@ -54,14 +54,14 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.006 |        7 |       --- |             --- |
 | Slice Logic              |     0.013 |     6183 |       --- |             --- |
-|   LUT as Logic           |     0.010 |     2315 |     20800 |           11.13 |
+|   LUT as Logic           |     0.011 |     2314 |     20800 |           11.13 |
 |   LUT as Distributed RAM |     0.002 |     2656 |      9600 |           27.67 |
 |   CARRY4                 |    <0.001 |      239 |      8150 |            2.93 |
 |   Register               |    <0.001 |      450 |     41600 |            1.08 |
 |   F7/F8 Muxes            |    <0.001 |       68 |     32600 |            0.21 |
 |   BUFG                   |    <0.001 |        2 |        32 |            6.25 |
 |   Others                 |     0.000 |       93 |       --- |             --- |
-| Signals                  |     0.059 |     4616 |       --- |             --- |
+| Signals                  |     0.059 |     4608 |       --- |             --- |
 | Block RAM                |     0.008 |        2 |        50 |            4.00 |
 | MMCM                     |     0.246 |        2 |         5 |           40.00 |
 | DSPs                     |     0.001 |        2 |        90 |            2.22 |
@@ -334,9 +334,9 @@ Table of Contents
 |     Scaled_Memory_reg_64_127_3_5      |    <0.001 |
 |     Scaled_Memory_reg_64_127_6_8      |    <0.001 |
 |     Scaled_Memory_reg_64_127_9_9      |     0.000 |
-|   d10                                 |     0.147 |
+|   d10                                 |     0.148 |
 |     VGA_CLK_108M                      |     0.124 |
-|     VGA_CONTROL                       |     0.022 |
+|     VGA_CONTROL                       |     0.023 |
 |   d2                                  |    <0.001 |
 |   d3                                  |     0.002 |
 |   d5                                  |     0.006 |
